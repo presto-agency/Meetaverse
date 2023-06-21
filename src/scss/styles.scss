@@ -1,0 +1,24 @@
+@import "../../node_modules/tiny-slider/dist/tiny-slider.css";
+
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/reset";
+@import "./utils/typography";
+@import "./utils/layout";
+@import "./utils/section";
+
+
+@import "./components/boxes";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/main-menu";
+@import "./components/btn";
+@import "./components/form";
+@import "./components/banner";
+@import "./components/image";
+@import "./components/slider";
+@import "./components/podcasts";
+@import "./components/faq";
+@import "./components/post-list";
+@import "./components/blog";
+@import "./components/pricing";

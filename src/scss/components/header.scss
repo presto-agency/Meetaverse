@@ -1,0 +1,44 @@
+.page-header {
+    background-color: $color-white;
+    padding: 33px 0;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.15);
+    &-container {
+        @include f-between;
+    }
+}
+
+.menu-open {
+    overflow: hidden;
+}
+
+.logo {
+    width: 157px;
+    display: block;
+    position: relative;
+    z-index: 20;
+
+
+    @include min(md) {
+        width: 250px
+    }
+    //
+    //@include min(lg) {
+    //    width: 314px
+    //}
+
+    img {
+        display: block;
+        width: 100%;
+        position: relative;
+
+        @include min(xs) {
+            top: -6px;
+        }
+
+        @include min(md) {
+            top: -10px;
+        }
+    }
+}

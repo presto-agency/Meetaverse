@@ -1,0 +1,159 @@
+h1 {
+    font-weight: 600;
+    font-size: 50px;
+}
+
+h2,
+h3 {
+    font-weight: 500;
+}
+
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 18px;
+
+    @include min(md) {
+        font-size: 20px;
+    }
+}
+
+ul li,
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat';
+    //@include min(md) {
+    //    font-size: 20px;
+    //}
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-small {
+    font-size: 16px;
+}
+
+p {
+    margin: 20px 0
+}
+
+@each $name,
+$breakpoint in $breakpoints {
+    @include min($name) {
+        .text-#{$name}-left {
+            text-align: left;
+        }
+    }
+}
+
+@each $name,
+$breakpoint in $breakpoints {
+    @include min($name) {
+        .text-#{$name}-center {
+            text-align: center;
+        }
+    }
+}
+
+@each $name,
+$breakpoint in $breakpoints {
+    @include min($name) {
+        .text-#{$name}-right {
+            text-align: right;
+        }
+    }
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-wide {
+    letter-spacing: 1px
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.color-lighter {
+    color: rgba($color-black, 0.7);
+    transition: all ease 300ms;
+    &:hover{
+        box-shadow: 0 4px 14px rgba(42,42,42,.1);
+    }
+}
+
+.color-darker {
+    color: rgba($color-black, 0.8)
+}
+
+ul.list {
+
+    li {
+        line-height: 1.7;
+        font-size: 20px;
+        position: relative;
+        font-weight: 300;
+        padding-left: 30px;
+
+        &:before {
+            content: "";
+            @include circle(6px);
+            background-color: $color-white;
+            position: absolute;
+            left: 10px;
+            top: 14px
+        }
+    }
+}
+
+.color-blue {
+    color: $color-blue
+}
+
+.large-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1;
+
+    @include min(md) {
+        font-size: 96px;
+    }
+}
+
+.counter-value {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 45px;
+}
+
+.counter-circle {
+    margin-bottom: 30px;
+}
