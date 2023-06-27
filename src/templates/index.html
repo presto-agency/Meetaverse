@@ -23,7 +23,11 @@
 
     <div class="text-banner">
         <div class="text-banner-background">
-            <img src="img/banner-01.jpg" alt="">
+            <picture>
+                <source srcset="img/banner-01.webp" type="image/webp">
+                <source srcset="img/banner-01.jpg" type="image/jpg">
+                <img src="img/banner-01.jpg" alt="banner">
+            </picture>
         </div>
         <div class="text-banner-entry">
             <div class="container">
@@ -41,13 +45,17 @@
                     </div>
                     <div class="banner-buttons">
                         <a class="btn-cta" href="#">schedule a demo</a>
-                        <a class="btn-outline btn-outline-white" href="#">watch video</a>
+                        <button type="button" class="btn-outline btn-outline-white"  onclick="addClass()" >watch video</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- .offset-lg padding: 120px 0;-->
+    <!--  offset-md padding: 80px 0;-->
+    <!--  offset-sm padding: 40px 0;-->
 
+    <div class="section section-button offset-md"><a class="btn-cta btn-long" href="#">schedule a demo</a></div>
     <div class="section">
         <div class="container">
             <h3 class="section-header">POWERING DIGITAL EXPERIENCES FOR LEADING BRANDS</h3>
@@ -88,7 +96,11 @@
                         <a class="btn-outline btn-outline-blue" href="#">watch video</a>
                     </div>
                     <div class="content-box-image">
-                        <img src="img/image-1.png" alt="">
+                        <picture>
+                            <source srcset="img/image-1.webp" type="image/webp">
+                            <source srcset="img/image-1.png" type="image/png">
+                            <img src="img/image-1.png" alt="banner">
+                        </picture>
                     </div>
                 </div>
 
@@ -160,22 +172,35 @@
         <div class="text-banner h-screen">
             <div data-name="banner-switcher" data-toggle="banner-01"
                 class="text-banner-background text-banner-background--blue active">
-                <img src="img/banner-01.jpg" alt="">
+                <picture>
+                    <source srcset="img/banner-01.webp" type="image/webp">
+                    <source srcset="img/banner-01.jpg" type="image/jpg">
+                    <img src="img/banner-01.jpg" alt="banner">
+                </picture>
             </div>
             <div data-name="banner-switcher" data-toggle="banner-02"
                 class="text-banner-background text-banner-background--blue">
-                <img src="img/banner-02.jpg" alt="">
+                <picture>
+                    <source srcset="img/banner-02.webp" type="image/webp">
+                    <source srcset="img/banner-02.jpg" type="image/jpg">
+                    <img src="img/banner-02.jpg" alt="banner">
+                </picture>
             </div>
             <div data-name="banner-switcher" data-toggle="banner-03"
                 class="text-banner-background text-banner-background--blue">
-                <img src="img/banner-03.jpg" alt="">
+
+                <picture>
+                    <source srcset="img/banner-03.webp" type="image/webp">
+                    <source srcset="img/banner-03.jpg" type="image/jpg">
+                    <img src="img/banner-03.jpg" alt="banner">
+                </picture>
             </div>
 
             <div class="text-banner-entry text-banner-full">
                 <div class="container text-center">
                     <div data-name="banner-switcher" data-toggle="banner-01" class="active">
                         <h4 class="text-uppercase">SOLUTIONS</h4>
-                        <h1>digital workplace</h1>
+                        <h2>digital workplace</h2>
                         <p>Build a thriving workplace with Meetaverse™</p>
                         <a class="btn-outline btn-long btn-outline-white" href="#">Learn more</a>
                     </div>
@@ -212,7 +237,11 @@
         <div class="container">
             <div class="image-card-box">
                 <div class="image-card-box-image">
-                    <img src="img/image-2.jpg" alt="">
+                    <picture>
+                        <source srcset="img/image-2.webp" type="image/webp">
+                        <source srcset="img/image-2.jpg" type="image/jpg">
+                        <img src="img/image-2.jpg" alt="banner">
+                    </picture>
                 </div>
                 <div class="image-card-box-text">
                     <p>FULL ENGAGEMENT</p>
@@ -255,7 +284,11 @@
                         </ul>
                     </div>
                     <div class="content-box-image">
-                        <img src="img/image-3.png" alt="" class="float-md-left">
+                        <picture>
+                            <source srcset="img/image-3.webp" type="image/webp">
+                            <source srcset="img/image-3.png" type="image/png">
+                            <img src="img/image-3.png" alt="banner" class="float-md-left">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -311,7 +344,11 @@
         <div class="container">
             <div class="image-card-box">
                 <div class="image-card-box-image">
-                    <img src="img/image-4.jpg" alt="">
+                    <picture>
+                        <source srcset="img/image-4.webp" type="image/webp">
+                        <source srcset="img/image-4.jpg" type="image/jpg">
+                        <img src="img/image-4.jpg" alt="banner">
+                    </picture>
                 </div>
                 <div class="image-card-box-text image-card-box-text--white">
                     <p>MEETAVERSE™ BY ALLSEATED</p>

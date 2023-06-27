@@ -144,3 +144,13 @@ const addClassToSubmenu = el => {
 spans.forEach(span => {
     span.addEventListener('click', addClassToSubmenu)
 });
+function addClass() {
+    var popup = document.querySelector(".popup-video");
+    popup.classList.add("open");
+}
+function removeClass() {
+    var popup = document.querySelector(".popup-video");
+    var video = document.querySelector('.video');
+    popup.classList.remove("open");
+    video.pause();
+}
