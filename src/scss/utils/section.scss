@@ -109,7 +109,7 @@ ul.checkmark-list {
         }
 
         &:before {
-            content: url('img/checkmark.svg');
+            content: url('../img/checkmark.svg');
             height: 20px;
             width: 20px;
             margin-right: 10px;
@@ -127,7 +127,7 @@ ul.checkmark-list {
     &.color-blue {
         li {
             &:before {
-                content: url('img/checkmark-blue.svg');
+                content: url('../img/checkmark-blue.svg');
             }
         }
     }

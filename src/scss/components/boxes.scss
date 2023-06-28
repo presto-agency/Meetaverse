@@ -8,6 +8,7 @@
 
     @include min(md) {
         padding: 36px;
+        height: 100%;
     }
     h3{
         &.text-wide{
