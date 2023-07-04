@@ -111,10 +111,11 @@
     &:before {
         content: '';
         @include p_absolute_cover();
-        background: linear-gradient(180deg, rgba(16, 117, 187, 0.15) 51.56%, rgba(13, 95, 152, 0.58) 70.83%, rgba(0, 0, 0, 0.63) 100%),
+        background: linear-gradient(180deg, rgba(16, 117, 187, 0.15) 51.56%, rgba(13, 95, 152, 0.58) 70.83%, rgba(0, 0, 0, 0.63) 100%);
+        border-radius: inherit;
     }
 
-    &>img {
+    img {
         @include object_fit_cover;
     }
 }
