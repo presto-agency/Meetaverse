@@ -155,11 +155,13 @@ const popups = document.querySelectorAll('.popup-video');
 const playVideos = document.querySelectorAll('.js-play');
 
 const closeVideos = document.querySelectorAll('.popup-close');
+const videos = document.querySelectorAll('.video');
 
 playVideos.forEach((play) => {
 	// console.log(play);
 	play.addEventListener('click', (e) => {
-		e.target.nextElementSibling.nextElementSibling.classList.add('open');
+		// console.log(e.target.closest('div').lastElementChild);
+		e.target.closest('div').lastElementChild.classList.add('open');
 		document.querySelector('body').classList.add('menu-open');
 		sections.forEach((section) => {
 			section.style.zIndex = '-1';
@@ -169,7 +171,8 @@ playVideos.forEach((play) => {
 });
 
 closeVideos.forEach((close) => {
-	console.log(close);
+	// console.log(close);
+
 	close.addEventListener('click', (e) => {
 		// e.target.nextElementSibling.nextElementSibling.classList.add('open');
 		document.querySelector('body').classList.remove('menu-open');
@@ -180,5 +183,8 @@ closeVideos.forEach((close) => {
 			popup.classList.remove('open');
 		});
 		document.querySelector('.section-with-popup').style.zIndex = '1';
+		videos.forEach((video) => {
+			video.pause();
+		});
 	});
 });
