@@ -147,24 +147,38 @@ const addClassToSubmenu = (el) => {
 spans.forEach((span) => {
 	span.addEventListener('click', addClassToSubmenu);
 });
+
 const sections = document.querySelectorAll('.section');
 
-function addClass() {
-	var popup = document.querySelector('.popup-video');
-	popup.classList.add('open');
-	document.querySelector('body').classList.add('menu-open');
-	sections.forEach((section) => {
-		section.style.zIndex = '-1';
+const popups = document.querySelectorAll('.popup-video');
+
+const playVideos = document.querySelectorAll('.js-play');
+
+const closeVideos = document.querySelectorAll('.popup-close');
+
+playVideos.forEach((play) => {
+	// console.log(play);
+	play.addEventListener('click', (e) => {
+		e.target.nextElementSibling.nextElementSibling.classList.add('open');
+		document.querySelector('body').classList.add('menu-open');
+		sections.forEach((section) => {
+			section.style.zIndex = '-1';
+		});
+		document.querySelector('.section-with-popup').style.zIndex = '1';
 	});
-	document.querySelector('.section-with-popup').style.zIndex = '1';
-}
-function removeClass() {
-	var popup = document.querySelector('.popup-video');
-	var video = document.querySelector('.video');
-	popup.classList.remove('open');
-	video.pause();
-	document.querySelector('body').classList.remove('menu-open');
-	sections.forEach((section) => {
-		section.style.zIndex = '1';
+});
+
+closeVideos.forEach((close) => {
+	console.log(close);
+	close.addEventListener('click', (e) => {
+		// e.target.nextElementSibling.nextElementSibling.classList.add('open');
+		document.querySelector('body').classList.remove('menu-open');
+		sections.forEach((section) => {
+			section.style.zIndex = '-1';
+		});
+		popups.forEach((popup) => {
+			popup.classList.remove('open');
+		});
+		document.querySelector('.section-with-popup').style.zIndex = '1';
 	});
-}
+});

@@ -99,8 +99,7 @@
 							<a class="btn-cta" href="#">schedule a demo</a>
 							<button
 								type="button"
-								class="btn-outline btn-outline-white"
-								onclick="addClass()">
+								class="btn-outline btn-outline-white js-play">
 								watch video
 							</button>
 						</div>
@@ -170,7 +169,7 @@
 						<!-- TODO: commented for video below  -->
 
 						<div class="content-box-video">
-							<button onclick="addClass()" class="btn-play">
+							<button class="btn-play js-play">
 								<img src="./play.svg" alt="play" />
 							</button>
 							<div class="content-box-video__inner">
@@ -183,10 +182,7 @@
 							</div>
 							<div class="popup popup-video">
 								<div class="popup-wrap">
-									<button
-										type="button"
-										class="popup-close"
-										onclick="removeClass()"></button>
+									<button type="button" class="popup-close"></button>
 									<video
 										class="video"
 										id="video"
@@ -787,10 +783,7 @@
 		</footer>
 		<div class="popup popup-video">
 			<div class="popup-wrap">
-				<button
-					type="button"
-					class="popup-close"
-					onclick="removeClass()"></button>
+				<button type="button" class="popup-close"></button>
 				<video
 					class="video"
 					id="video"
