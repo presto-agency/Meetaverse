@@ -522,3 +522,35 @@ a {
 		}
 	}
 }
+
+.content-box-video,
+.content-box-autoplay {
+	width: 100%;
+	position: relative;
+	margin-top: 40px;
+	@include min(md) {
+		margin-top: 0;
+		margin-left: 40px;
+		max-width: 53%;
+	}
+	&__inner {
+		width: 100%;
+		video {
+			width: 100%;
+		}
+	}
+}
+
+.btn-play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0.8;
+	width: 100px;
+	height: 100px;
+	z-index: 1;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}

@@ -11,6 +11,9 @@
 	a {
 		@extend .color-lighter;
 		text-decoration: none;
+		&.btn-cta {
+			color: #fff;
+		}
 	}
 }
 

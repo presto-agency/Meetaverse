@@ -150,10 +150,12 @@ spans.forEach((span) => {
 function addClass() {
 	var popup = document.querySelector('.popup-video');
 	popup.classList.add('open');
+	document.querySelector('body').classList.add('menu-open');
 }
 function removeClass() {
 	var popup = document.querySelector('.popup-video');
 	var video = document.querySelector('.video');
 	popup.classList.remove('open');
 	video.pause();
+	document.querySelector('body').classList.remove('menu-open');
 }
