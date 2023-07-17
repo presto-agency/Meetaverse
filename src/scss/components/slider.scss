@@ -1,154 +1,159 @@
 .tns-controls {
-    button {
-        font-size: 0px;
-        width: 30px;
-        height: 15px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        @include clear-btn;
-    }
+	button {
+		font-size: 0px;
+		width: 30px;
+		height: 15px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		@include clear-btn;
+	}
 
-    [data-controls="prev"] {
-        background-image: url("../img/arrow-left.svg");
-    }
+	[data-controls='prev'] {
+		background-image: url('../img/arrow-left.svg');
+	}
 
-    [data-controls="next"] {
-        background-image: url("../img/arrow-right.svg");
-    }
+	[data-controls='next'] {
+		background-image: url('../img/arrow-right.svg');
+	}
 }
 
 .slider-nav-bottom {
-    position: relative;
-    padding-bottom: 75px;
+	position: relative;
+	padding-bottom: 75px;
 
-    .tns-controls {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
+	.tns-controls {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
 
-        button {
-            margin-left: 64px;
-            margin-right: 64px;
-            @include first_last_list_marign;
-        }
-    }
+		button {
+			margin-left: 64px;
+			margin-right: 64px;
+			@include first_last_list_marign;
+		}
+	}
 }
 
 .middle-controls-slider {
-    position: relative;
-    padding: 0 100px;
+	position: relative;
+	padding: 0 30px;
+	@include min(sm) {
+		padding: 0 100px;
+	}
+	.tns-controls {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		z-index: 1;
 
-    .tns-controls {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        z-index: 1;
+		[data-controls='prev'] {
+			float: left;
+		}
 
-        [data-controls="prev"] {
-            float: left;
-        }
-
-        [data-controls="next"] {
-            float: right;
-        }
-    }
-    .card{
-        img{
-            max-width: 100px;
-            max-height: 100px;
-        }
-    }
+		[data-controls='next'] {
+			float: right;
+		}
+	}
+	.card {
+		img {
+			max-width: 100px;
+			max-height: 100px;
+		}
+	}
 }
-
 
 .slider-dots {
-    button {
-        width: 26px;
-        height: 2px;
-        @include clear-btn;
-        margin-left: 4px;
-        margin-right: 4px;
-        background: rgba(0, 0, 0, 0.7);
+	button {
+		width: 26px;
+		height: 2px;
+		@include clear-btn;
+		margin-left: 4px;
+		margin-right: 4px;
+		background: rgba(0, 0, 0, 0.7);
 
-        &.tns-nav-active {
-            background-color: $color-blue;
-        }
-    }
+		&.tns-nav-active {
+			background-color: $color-blue;
+		}
+	}
 }
 
-
 .slider-nav-bottom.slider-dots {
-    padding-bottom: 0;
+	padding-bottom: 0;
 
-    .tns-inner {
-        padding: 10px;
-    }
+	.tns-inner {
+		padding: 10px;
+	}
 
-    .tns-controls {
-        [data-controls="prev"] {
-            float: left;
-        }
+	.tns-controls {
+		[data-controls='prev'] {
+			float: left;
+		}
 
-        [data-controls="next"] {
-            float: right;
-        }
-    }
+		[data-controls='next'] {
+			float: right;
+		}
+	}
 
-    .tns-nav {
-        margin-top: 100px;
-        text-align: center;
-    }
+	.tns-nav {
+		margin-top: 100px;
+		text-align: center;
+	}
 }
 
 .cover-slider-item {
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
+	border-radius: 20px;
+	position: relative;
+	overflow: hidden;
 
-    &:before {
-        content: '';
-        @include p_absolute_cover();
-        background: linear-gradient(180deg, rgba(16, 117, 187, 0.15) 51.56%, rgba(13, 95, 152, 0.58) 70.83%, rgba(0, 0, 0, 0.63) 100%);
-        border-radius: inherit;
-    }
+	&:before {
+		content: '';
+		@include p_absolute_cover();
+		background: linear-gradient(
+			180deg,
+			rgba(16, 117, 187, 0.15) 51.56%,
+			rgba(13, 95, 152, 0.58) 70.83%,
+			rgba(0, 0, 0, 0.63) 100%
+		);
+		border-radius: inherit;
+	}
 
-    img {
-        @include object_fit_cover;
-    }
+	img {
+		@include object_fit_cover;
+	}
 }
 
 .cover-slider-container {
-    position: relative;
+	position: relative;
 
-    // should be always inside
-    .cover-slider-controls {
-        position: absolute;
-        text-align: center;
-        left: 0;
-        bottom: 45px;
-        z-index: 1;
-        width: 100%;
+	// should be always inside
+	.cover-slider-controls {
+		position: absolute;
+		text-align: center;
+		left: 0;
+		bottom: 45px;
+		z-index: 1;
+		width: 100%;
 
-        &>button {
-            @include clear-btn;
-            @include first_last_list_marign;
-            margin: 0 33px;
-            &:hover{
-                opacity: .8;
-            }
-        }
-    }
+		& > button {
+			@include clear-btn;
+			@include first_last_list_marign;
+			margin: 0 33px;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
 }
-.tns-ovh{
-    .logo-slider {
-        .tns-item{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-    }
+.tns-ovh {
+	.logo-slider {
+		.tns-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
 }

@@ -1,488 +1,524 @@
 .card {
-    background: $color-white;
-    box-shadow: 0px 4px 4px rgba($color-black, 0.1);
-    border-radius: 20px;
-    margin-bottom: 27px;
-    @extend .color-lighter;
-    padding: 20px;
+	background: $color-white;
+	box-shadow: 0px 4px 4px rgba($color-black, 0.1);
+	border-radius: 20px;
+	// margin-bottom: 27px;
+	@extend .color-lighter;
+	padding: 20px;
 
-    @include min(md) {
-        padding: 36px;
-        height: 100%;
-    }
-    h3{
-        &.text-wide{
-            font-size: 16px;
-            line-height: 129.8%;
-            margin: 30px 0;
-        }
-    }
-    &-light-gray {
-        background-color: $color-light-gray;
-    }
+	@include min(md) {
+		padding: 36px;
+		height: 100%;
+	}
+	h3 {
+		&.text-wide {
+			font-size: 16px;
+			line-height: 129.8%;
+			margin: 30px 0;
+		}
+	}
+	&-light-gray {
+		background-color: $color-light-gray;
+	}
+	&-wrapper {
+		padding-bottom: 27px;
+		// display: flex;
+		height: 100%;
+	}
+	&-white-transparent {
+		background-color: transparent;
+		box-shadow: none;
+		border: 1px solid $color-white;
+		color: $color-white;
+	}
 
-    &-white-transparent {
-        background-color: transparent;
-        box-shadow: none;
-        border: 1px solid $color-white;
-        color: $color-white;
-    }
+	&-blue-transparent {
+		background-color: transparent;
+		box-shadow: none;
+		border: 1px solid $color-blue;
+		color: $color-blue;
+	}
 
-    &-blue-transparent {
-        background-color: transparent;
-        box-shadow: none;
-        border: 1px solid $color-blue;
-        color: $color-blue;
-    }
+	.card-subtitle {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.2em;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		@include min(md) {
+			font-size: 20px;
+		}
+		&.text-capitalize {
+			text-transform: capitalize;
+		}
+	}
 
-    .card-subtitle {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
+	.card-title {
+		font-weight: 500;
+		line-height: 1.25em;
+		text-align: center;
+		text-transform: capitalize;
+		font-size: 30px;
+		@include min(md) {
+			font-size: 36px;
+		}
+	}
 
-        &.text-capitalize {
-            text-transform: capitalize;
-        }
-    }
+	.card-text {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 1.75em;
+		margin: 10px 0;
+		@include min(md) {
+			font-size: 20px;
+			margin: 20px 0;
+		}
+	}
 
-    .card-title {
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 45px;
-        text-align: center;
-        text-transform: capitalize;
-    }
+	&--no-padding {
+		padding: 0 !important;
+	}
 
-    .card-text {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 35px;
-    }
+	.card-body {
+		padding: 20px;
 
-    &--no-padding {
-        padding: 0 !important;
-    }
+		@include min(md) {
+			padding: 34px;
+		}
 
-    .card-body {
-        padding: 20px;
+		p:first-of-type {
+			margin-top: 0;
+		}
 
-        @include min(md) {
-            padding: 34px;
-        }
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	}
 
-        p:first-of-type {
-            margin-top: 0;
-        }
+	.card-image {
+		height: 155px;
+		border-radius: 20px;
+		overflow: hidden;
+		box-shadow: 0px 4px 4px rgba($color-black, 0.1);
 
-        p:last-of-type {
-            margin-bottom: 0;
-        }
-    }
-
-    .card-image {
-        height: 155px;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0px 4px 4px rgba($color-black, 0.1);
-
-        >img {
-            @include object_fit_cover;
-        }
-    }
+		> img {
+			@include object_fit_cover;
+		}
+	}
 }
 
 .card-hover {
-    height: 375px;
-    top: 0;
-    transition: $t-time;
-    position: relative;
-    overflow: hidden;
+	height: 375px;
+	top: 0;
+	transition: $t-time;
+	position: relative;
+	overflow: hidden;
 
-    @include min(md) {
-        padding: 0;
-    }
+	@include min(md) {
+		padding: 0;
+	}
 
-    &-top,
-    &-back {
-        height: 100%;
-    }
+	&-top,
+	&-back {
+		height: 100%;
+	}
 
+	&-top {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: initial;
+		padding: 50px 70px;
 
-    &-top {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: initial;
-        padding: 50px 70px;
+		.card-subtitle {
+			margin-bottom: 60px;
+		}
+	}
 
-        .card-subtitle {
-            margin-bottom: 60px;
-        }
-    }
+	&-back {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: $t-time;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 50px 70px;
+		position: absolute;
+		color: $color-white;
+		z-index: 1;
 
-    &-back {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transition: $t-time;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 50px 70px;
-        position: absolute;
-        color: $color-white;
-        z-index: 1;
+		&-image {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
 
-        &-image {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+			&:before {
+				content: '';
+				@include p_absolute_cover;
+				background-color: rgba(#1075bb, 0.8);
+			}
 
-            &:before {
-                content: '';
-                @include p_absolute_cover;
-                background-color: rgba(#1075BB, .8);
-            }
+			> img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
 
-            >img {
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
+	&:hover {
+		top: -35px;
 
-    &:hover {
-        top: -35px;
+		.card-hover-top {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: $t-time;
+		}
 
-        .card-hover-top {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transition: $t-time;
-        }
-
-        .card-hover-back {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: initial;
-        }
-    }
+		.card-hover-back {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: initial;
+		}
+	}
 }
 
-
 .box {
-    box-shadow: 5px 10px 10px rgba($color-black, 0.03);
-    border-radius: 20px;
+	box-shadow: 5px 10px 10px rgba($color-black, 0.03);
+	border-radius: 20px;
 
-    &-lg {
-        padding: 40px 30px;
+	&-lg {
+		padding: 20px 15px;
+		@include min(sm) {
+			padding: 40px 30px;
+		}
+		@include min(md) {
+			padding: 68px 100px;
+		}
+	}
 
-        @include min(md) {
-            padding: 68px 100px;
-        }
-    }
-
-    &-white {
-        background-color: $color-white;
-    }
+	&-white {
+		background-color: $color-white;
+	}
 }
 
 .content-box {
+	&-text {
+		margin-bottom: 20px;
+	}
 
-    &-text {
-        margin-bottom: 20px;
-    }
+	@include min(md) {
+		display: flex;
+		align-items: center;
 
+		&-text {
+			width: 47%;
+		}
 
-    @include min(md) {
-        display: flex;
-        align-items: center;
+		&-image {
+			width: 53%;
+		}
 
-        &-text {
-            width: 47%;
-        }
+		&--bigger-image {
+			.content-box-text {
+				width: 40%;
+			}
 
-        &-image {
-            width: 53%;
-        }
+			.content-box-image {
+				width: 60%;
+			}
+		}
+	}
 
-        &--bigger-image {
-            .content-box-text {
-                width: 40%;
-            }
+	h3 {
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		font-size: 30px;
 
-            .content-box-image {
-                width: 60%;
-            }
-        }
-    }
+		@include min(md) {
+			line-height: 50px;
+			font-size: 40px;
+		}
+	}
 
-    h3 {
-        font-weight: 500;
-        text-transform: uppercase;
-        margin-bottom: 30px;
-        font-size: 30px;
+	p {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 129.8%;
+		margin: 30px 0;
 
-        @include min(md) {
-            line-height: 50px;
-            font-size: 40px;
-        }
+		@include min(md) {
+			font-size: 20px;
 
-    }
+			&:last-of-type {
+				margin-bottom: 70px;
+			}
+		}
+	}
 
-    p {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 129.8%;
-        margin: 30px 0;
+	b {
+		color: $color-light-blue;
+	}
 
-        @include min(md) {
-            font-size: 20px;
+	ul {
+		li {
+			margin-bottom: 20px;
+			font-size: 20px;
+			line-height: 1.7;
+			position: relative;
+			padding-left: 30px;
 
-            &:last-of-type {
-                margin-bottom: 70px;
-            }
-        }
-    }
-
-    b {
-        color: $color-light-blue
-    }
-
-    ul {
-        li {
-            margin-bottom: 20px;
-            font-size: 20px;
-            line-height: 1.7;
-            position: relative;
-            padding-left: 30px;
-
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 13px;
-                display: block;
-                background-color: $color-black;
-                @include circle(7px);
-            }
-        }
-    }
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 13px;
+				display: block;
+				background-color: $color-black;
+				@include circle(7px);
+			}
+		}
+	}
 }
 
 .image-card-box {
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: $color-blue;
-    color: $color-white;
-    display: flex;
+	border-radius: 20px;
+	overflow: hidden;
+	background-color: $color-blue;
+	color: $color-white;
+	display: flex;
 
-    &--transparent {
-        background-color: transparent;
-        color: $color-black;
-    }
+	&--transparent {
+		background-color: transparent;
+		color: $color-black;
+	}
 
-    @include min(md) {
+	@include min(md) {
+		&-text,
+		&-image {
+			width: 50%;
+		}
+	}
 
-        &-text,
-        &-image {
-            width: 50%;
-        }
-    }
+	&-image {
+		display: none;
 
-    &-image {
-        display: none;
+		@include min(md) {
+			display: block;
 
-        @include min(md) {
-            display: block;
+			img {
+				@include object_fit_cover;
+			}
+		}
+	}
 
-            img {
-                @include object_fit_cover;
-            }
-        }
-    }
+	&-text {
+		padding: 20px;
+		@include min(md) {
+			padding: 64px;
+		}
+		h2 {
+			font-size: 30px;
+			@include min(sm) {
+				font-size: 40px;
+			}
+		}
+		li {
+			&:before {
+				background-color: $color-white;
+			}
+		}
+		p {
+			font-family: 'Montserrat';
+			font-weight: 300;
+		}
+		&--white {
+			background-color: $color-white;
+			color: rgba($color-black, 0.8);
 
-    &-text {
-        padding: 64px;
+			li {
+				&:before {
+					background-color: $color-black;
+				}
+			}
+		}
 
-        li {
-            &:before {
-                background-color: $color-white;
-            }
-        }
-        p{
-            font-family: 'Montserrat';
-            font-weight: 300;
-        }
-        &--white {
-            background-color: $color-white;
-            color: rgba($color-black, 0.8);
-
-            li {
-                &:before {
-                    background-color: $color-black;
-                }
-            }
-        }
-
-        p:last-of-type {
-            margin-bottom: 50px;
-        }
-    }
+		p:last-of-type {
+			margin-bottom: 50px;
+		}
+	}
 }
 
 [data-toggle] {
-    display: none;
+	display: none;
 
-    &.active {
-        display: block;
-    }
+	&.active {
+		display: block;
+	}
 }
 
 .__top-offset-lg {
-    margin-top: 124px;
+	margin-top: 124px;
 }
 
 .__top-offset-md {
-    margin-top: 77px;
+	margin-top: 77px;
 }
 
 .quote-section {
-    text-align: center;
+	text-align: center;
 
-    &:before {
-        content: '';
-        display: inline-block;
-        background-image: url("../img/blockquote-symbol.png");
-        width: 45px;
-        height: 45px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+	&:before {
+		content: '';
+		display: inline-block;
+		background-image: url('../img/blockquote-symbol.png');
+		width: 45px;
+		height: 45px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
 
-    p {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 30px;
-        line-height: 45px;
-        color: rgba(0, 0, 0, 0.8);
-    }
+	p {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 30px;
+		line-height: 45px;
+		color: rgba(0, 0, 0, 0.8);
+	}
 
-    figcaption {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 32px;
-        line-height: 1.4;
-        color: $color-blue
-    }
+	figcaption {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 32px;
+		line-height: 1.4;
+		color: $color-blue;
+	}
 
-    &--sm {
-        p {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 150%;
+	&--sm {
+		p {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 150%;
 
-            @include min(md) {
-                margin-bottom: 30px;
-            }
-        }
-    }
+			@include min(md) {
+				margin-bottom: 30px;
+			}
+		}
+	}
 
-    &-person {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 170%;
-    }
+	&-person {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 170%;
+	}
 
-    &-company-name {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 170%;
-        text-transform: uppercase;
-        color: #1075BB;
-    }
+	&-company-name {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 170%;
+		text-transform: uppercase;
+		color: #1075bb;
+	}
 }
 
 .guide-card {
-    background: #F2F5F8;
-    border-radius: 20px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+	background: #f2f5f8;
+	border-radius: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
 
-    &--image {
-        height: 229px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        position: relative;
+	&--image {
+		height: 229px;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		position: relative;
 
-        &:before {
-            content: '';
-            background: -moz-linear-gradient(top, rgba(125, 185, 232, 1) 0%, rgba(125, 185, 232, 0.98) 1%, rgba(125, 185, 232, 0.16) 51%, rgba(125, 185, 232, 0) 61%);
-            background: -webkit-linear-gradient(top, rgba(125, 185, 232, 1) 0%, rgba(125, 185, 232, 0.98) 1%, rgba(125, 185, 232, 0.16) 51%, rgba(125, 185, 232, 0) 61%);
-            background: linear-gradient(to bottom, rgba(125, 185, 232, 1) 0%, rgba(125, 185, 232, 0.98) 1%, rgba(125, 185, 232, 0.16) 51%, rgba(125, 185, 232, 0) 61%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db9e8', endColorstr='#007db9e8', GradientType=0);
-            @include p_absolute_cover;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
+		&:before {
+			content: '';
+			background: -moz-linear-gradient(
+				top,
+				rgba(125, 185, 232, 1) 0%,
+				rgba(125, 185, 232, 0.98) 1%,
+				rgba(125, 185, 232, 0.16) 51%,
+				rgba(125, 185, 232, 0) 61%
+			);
+			background: -webkit-linear-gradient(
+				top,
+				rgba(125, 185, 232, 1) 0%,
+				rgba(125, 185, 232, 0.98) 1%,
+				rgba(125, 185, 232, 0.16) 51%,
+				rgba(125, 185, 232, 0) 61%
+			);
+			background: linear-gradient(
+				to bottom,
+				rgba(125, 185, 232, 1) 0%,
+				rgba(125, 185, 232, 0.98) 1%,
+				rgba(125, 185, 232, 0.16) 51%,
+				rgba(125, 185, 232, 0) 61%
+			);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db9e8', endColorstr='#007db9e8', GradientType=0);
+			@include p_absolute_cover;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		}
 
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
-    }
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		}
+	}
 
-    &--body {
-        padding: 30px;
+	&--body {
+		padding: 30px;
 
-        p {
-            color: #595959;
-            font-weight: 300;
-            font-size: 20px;
-        }
-    }
+		p {
+			color: #595959;
+			font-weight: 300;
+			font-size: 20px;
+		}
+	}
 
-    &--title {
-        margin: 0 20px 0 0;
-        color: $color-blue;
-        font-size: 32px;
-    }
+	&--title {
+		margin: 0 20px 0 0;
+		color: $color-blue;
+		font-size: 32px;
+	}
 
-    a {
-        text-decoration: none;
-    }
+	a {
+		text-decoration: none;
+	}
 }
-a{
-    &.text-link{
-        color: rgba(42,42,42,.7);
-        font-size: 18px;
-        margin-bottom: 10px;
-        font-family: 'Montserrat';
-        text-decoration: none;
-        display: inline-block;
-        min-height: 44px;
-        &:hover{
-            color: #1075bb;
-        }
-    }
+a {
+	&.text-link {
+		color: rgba(42, 42, 42, 0.7);
+		font-size: 18px;
+		margin-bottom: 10px;
+		font-family: 'Montserrat';
+		text-decoration: none;
+		display: inline-block;
+		min-height: 44px;
+		&:hover {
+			color: #1075bb;
+		}
+	}
 }

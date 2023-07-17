@@ -1,26 +1,29 @@
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .image-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 
-    >div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+	> div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 15px;
+	}
 
-    img {
-        max-width: 100%;
-        display: block
-    }
+	img {
+		max-width: 100%;
+		display: block;
+	}
 
-    &--small {
-        img {
-            max-width: 100px;
-        }
-    }
+	&--small {
+		img {
+			@include min(sm) {
+				max-width: 100px;
+			}
+		}
+	}
 }
