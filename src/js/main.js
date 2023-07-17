@@ -147,10 +147,16 @@ const addClassToSubmenu = (el) => {
 spans.forEach((span) => {
 	span.addEventListener('click', addClassToSubmenu);
 });
+const sections = document.querySelectorAll('.section');
+
 function addClass() {
 	var popup = document.querySelector('.popup-video');
 	popup.classList.add('open');
 	document.querySelector('body').classList.add('menu-open');
+	sections.forEach((section) => {
+		section.style.zIndex = '-1';
+	});
+	document.querySelector('.section-with-popup').style.zIndex = '1';
 }
 function removeClass() {
 	var popup = document.querySelector('.popup-video');
@@ -158,4 +164,7 @@ function removeClass() {
 	popup.classList.remove('open');
 	video.pause();
 	document.querySelector('body').classList.remove('menu-open');
+	sections.forEach((section) => {
+		section.style.zIndex = '1';
+	});
 }
