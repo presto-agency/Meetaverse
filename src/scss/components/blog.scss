@@ -23,8 +23,8 @@
 	color: rgba(0, 0, 0, 0.8);
 	font-family: 'Montserrat';
 	font-style: normal;
-	.size-medium {
-		max-width: 300px;
+	.size-full .size-medium .size-thumbnail {
+		width: auto;
 	}
 	figure {
 		margin: 30px 0;
