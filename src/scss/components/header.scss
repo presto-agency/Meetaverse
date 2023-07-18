@@ -7,6 +7,9 @@
 	&-container {
 		@include f-between;
 	}
+	&-menu {
+		margin-top: 5px;
+	}
 }
 
 .menu-open {
@@ -18,9 +21,9 @@
 	display: block;
 	position: relative;
 	z-index: 20;
-
+	// margin-top: -5px;
 	@include min(md) {
-		width: 250px;
+		width: 260px;
 	}
 
 	img {

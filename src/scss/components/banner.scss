@@ -12,7 +12,7 @@
 	}
 
 	@include min(md) {
-		min-height: 891px;
+		// min-height: 891px;
 	}
 	&-min {
 		@include min(md) {
@@ -213,9 +213,12 @@
 			font-weight: 600;
 			font-size: 30px;
 			letter-spacing: 0.7px;
-			line-height: 1.35;
-			margin: 50px 0 50px;
+			line-height: 1.35em;
+			margin: 20px 0;
 			@include min(sm) {
+				font-size: 40px;
+			}
+			@include min(md) {
 				font-size: 50px;
 			}
 		}
@@ -250,7 +253,7 @@
 	width: 100%;
 	border-top: 1px solid $color-white;
 	text-align: center;
-	padding: 29px 0;
+	padding: 29px 0 14px 0;
 
 	&-button {
 		font-family: 'Montserrat', sans-serif;
@@ -260,7 +263,7 @@
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		color: $color-white;
-
+		margin-bottom: 15px;
 		@include clear-btn;
 
 		&.active {
@@ -309,5 +312,17 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
+	}
+}
+
+.text-banner_spaces {
+	padding-bottom: 280px;
+	@include min(sm) {
+		padding-top: 100px;
+		padding-bottom: 180px;
+	}
+	@include min(lg) {
+		padding-top: 140px;
+		padding-bottom: 240px;
 	}
 }
