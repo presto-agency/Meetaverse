@@ -226,6 +226,8 @@
 
 		&-image {
 			width: 53%;
+			border-radius: 20px;
+			overflow: hidden;
 		}
 
 		&--bigger-image {
@@ -266,18 +268,18 @@
 		}
 	}
 
+	strong,
 	b {
-		color: $color-light-blue;
+		color: $color-blue;
 	}
 
 	ul {
 		li {
 			margin-bottom: 20px;
 			font-size: 20px;
-			line-height: 1.7;
+			line-height: 1.5em;
 			position: relative;
 			padding-left: 30px;
-
 			&:before {
 				content: '';
 				position: absolute;
@@ -362,12 +364,13 @@
 .image-card-box-autoplay {
 	position: relative;
 	padding: 0 20px;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: $color-white;
+	display: none;
 	@include min(md) {
 		width: 50%;
+		display: flex;
 	}
 	&_inner {
 	}
@@ -547,6 +550,9 @@ a {
 	}
 	&__inner {
 		width: 100%;
+		border-radius: 20px;
+		overflow: hidden;
+
 		video {
 			width: 100%;
 		}

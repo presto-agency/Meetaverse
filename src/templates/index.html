@@ -1,466 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home - Meetaverse™</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Meetaverse™</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-</head>
+	<body class="home">
+		@@include('./parts/header.html')
 
-<body class="home">
-    @@include('./parts/header.html')
+		<div class="text-banner">
+			<div class="text-banner-background">
+				<picture>
+					<source srcset="img/banner-01.webp" type="image/webp" />
+					<source srcset="img/banner-01.jpg" type="image/jpg" />
+					<img src="img/banner-01.jpg" alt="banner" />
+				</picture>
+			</div>
+			<div class="text-banner-entry">
+				<div class="container">
+					<div class="text-banner-entry--limiter">
+						<div class="text-banner-entry--body text-banner-hero">
+							<h1>A PLATFORM TO HELP YOU</h1>
+							<h2>
+								REVOLUTIONIZE YOUR DIGITAL EXPERIENCES WITH THE METAVERSE FOR
+								BUSINESS
+							</h2>
+							<h3>
+								Create a corporate metaverse that your entire organization will
+								love.
+							</h3>
 
-    <div class="text-banner">
-        <div class="text-banner-background">
-            <picture>
-                <source srcset="img/banner-01.webp" type="image/webp">
-                <source srcset="img/banner-01.jpg" type="image/jpg">
-                <img src="img/banner-01.jpg" alt="banner">
-            </picture>
-        </div>
-        <div class="text-banner-entry">
-            <div class="container">
-                <div class="text-banner-entry--limiter">
-                    <div class="text-banner-entry--body text-banner-hero">
-                        <h1>A PLATFORM TO HELP YOU</h1>
-                        <h2>START WORKING IN THE METAVERSE NOW</h2>
-                        <h3>Create a corporate metaverse that your entire organization will love.</h3>
+							<ul class="list">
+								<li>Empower Connectivity</li>
+								<li>Accelerate Sales</li>
+								<li>Drive Growth</li>
+							</ul>
+						</div>
+						<div class="banner-buttons">
+							<a class="btn-cta" href="#">schedule a demo</a>
+							<button
+								type="button"
+								class="btn-outline btn-outline-white"
+								onclick="addClass()">
+								watch video
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- .offset-lg padding: 120px 0;-->
+		<!--  offset-md padding: 80px 0;-->
+		<!--  offset-sm padding: 40px 0;-->
 
-                        <ul class="list">
-                            <li>Empower Connectivity</li>
-                            <li>Accelerate Sales</li>
-                            <li>Drive Growth</li>
-                        </ul>
-                    </div>
-                    <div class="banner-buttons">
-                        <a class="btn-cta" href="#">schedule a demo</a>
-                        <button type="button" class="btn-outline btn-outline-white"  onclick="addClass()" >watch video</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- .offset-lg padding: 120px 0;-->
-    <!--  offset-md padding: 80px 0;-->
-    <!--  offset-sm padding: 40px 0;-->
+		<div class="section section-button offset-md">
+			<a class="btn-cta btn-long" href="#">schedule a demo</a>
+		</div>
+		<div class="section">
+			<div class="container">
+				<h3 class="section-header">
+					POWERING DIGITAL EXPERIENCES FOR LEADING BRANDS
+				</h3>
 
-    <div class="section section-button offset-md"><a class="btn-cta btn-long" href="#">schedule a demo</a></div>
-    <div class="section">
-        <div class="container">
-            <h3 class="section-header">POWERING DIGITAL EXPERIENCES FOR LEADING BRANDS</h3>
+				<div class="logo-slider image-row image-row--small">
+					<div><img src="img/company-logo-1.png" alt="" /></div>
+					<div><img src="img/company-logo-2.png" alt="" /></div>
+					<div><img src="img/company-logo-3.png" alt="" /></div>
+					<div><img src="img/company-logo-4.png" alt="" /></div>
+					<div><img src="img/company-logo-5.png" alt="" /></div>
+					<div><img src="img/company-logo-6.png" alt="" /></div>
+					<div><img src="img/company-logo-7.png" alt="" /></div>
 
-            <div class="logo-slider image-row image-row--small">
+					<div><img src="img/company-logo-1.png" alt="" /></div>
+					<div><img src="img/company-logo-2.png" alt="" /></div>
+					<div><img src="img/company-logo-3.png" alt="" /></div>
+					<div><img src="img/company-logo-4.png" alt="" /></div>
+					<div><img src="img/company-logo-5.png" alt="" /></div>
+					<div><img src="img/company-logo-6.png" alt="" /></div>
+					<div><img src="img/company-logo-7.png" alt="" /></div>
+				</div>
+			</div>
+		</div>
 
-                <div><img src="img/company-logo-1.png" alt=""></div>
-                <div><img src="img/company-logo-2.png" alt=""></div>
-                <div><img src="img/company-logo-3.png" alt=""></div>
-                <div><img src="img/company-logo-4.png" alt=""></div>
-                <div><img src="img/company-logo-5.png" alt=""></div>
-                <div><img src="img/company-logo-6.png" alt=""></div>
-                <div><img src="img/company-logo-7.png" alt=""></div>
+		<div class="section">
+			<div class="container">
+				<div class="box box-white box-lg">
+					<div class="content-box">
+						<div class="content-box-text">
+							<h3>Your team works better in the metaverse</h3>
+							<p>
+								The way your team works online is limited by a static experience
+								you can't control. With Meetaverse™, it's easy to create a
+								tailored experience for everyone inside your own corporate
+								metaverse.
+							</p>
+							<a class="btn-outline btn-outline-blue" href="#">watch video</a>
+						</div>
+						<div class="content-box-image">
+							<picture>
+								<source srcset="img/image-1.webp" type="image/webp" />
+								<source srcset="img/image-1.png" type="image/png" />
+								<img src="img/image-1.png" alt="banner" />
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-
-                <div><img src="img/company-logo-1.png" alt=""></div>
-                <div><img src="img/company-logo-2.png" alt=""></div>
-                <div><img src="img/company-logo-3.png" alt=""></div>
-                <div><img src="img/company-logo-4.png" alt=""></div>
-                <div><img src="img/company-logo-5.png" alt=""></div>
-                <div><img src="img/company-logo-6.png" alt=""></div>
-                <div><img src="img/company-logo-7.png" alt=""></div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="box box-white box-lg">
-
-                <div class="content-box">
-                    <div class="content-box-text">
-                        <h3>Your team works better in the metaverse</h3>
-                        <p>The way your team works online is limited by a static experience you can't control. With
-                            Meetaverse™, it's easy to create a tailored experience for everyone inside your own
-                            corporate metaverse.</p>
-                        <a class="btn-outline btn-outline-blue" href="#">watch video</a>
-                    </div>
-                    <div class="content-box-image">
-                        <picture>
-                            <source srcset="img/image-1.webp" type="image/webp">
-                            <source srcset="img/image-1.png" type="image/png">
-                            <img src="img/image-1.png" alt="banner">
-                        </picture>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="text-center">
-                <div class="section-header">
-                    <div class="section-header-subtitle">EMPOWER YOUR ENTIRE ORGANIZATION</div>
-                    <div class="section-header-title">The metaverse for every aspect of your business</div>
-                    <a class="btn-cta btn-long" href="#">schedule a demo</a>
-                </div>
-                <!-- <div class="section-header section-header-sm">
+		<div class="section">
+			<div class="container">
+				<div class="text-center">
+					<div class="section-header">
+						<div class="section-header-subtitle">
+							EMPOWER YOUR ENTIRE ORGANIZATION
+						</div>
+						<div class="section-header-title">
+							The metaverse for every aspect of your business
+						</div>
+						<a class="btn-cta btn-long" href="#">schedule a demo</a>
+					</div>
+					<!-- <div class="section-header section-header-sm">
                     <h4 class="text-uppercase">EMPOWER YOUR ENTIRE ORGANIZATION</h4>
                     <h2 class="text-capitalize">The metaverse for every aspect of your business</h2>
                 </div> -->
 
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card text-center color-lighter">
-                            <h3 class="text-uppercase text-wide">operations</h3>
-                            <p>Everyday work runs faster and runs better when teams feel more connected to each other.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card text-center color-lighter">
-                            <h3 class="text-uppercase text-wide">marketing</h3>
-                            <p>Drive your customer journey with a brand experience that inspires your audience to take
-                                action.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card text-center color-lighter">
-                            <h3 class="text-uppercase text-wide">sales</h3>
-                            <p>Create immersive experiences that captivate your audience and accelerate sales.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card text-center color-lighter">
-                            <h3 class="text-uppercase text-wide">HUMAN RESOURCES</h3>
-                            <p>Revitalize your team and company culture and build a thriving workplace in the metaverse.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card text-center color-lighter">
-                            <h3 class="text-uppercase text-wide">product development</h3>
-                            <p>Collaborate to develop the next big thing, then host a launch party to share it with the
-                                world.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card text-center color-lighter">
-                            <h3 class="text-uppercase text-wide">Customer service</h3>
-                            <p>Elevate the customer experience with new ways to capture feedback and connect after the
-                                sale.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="card text-center color-lighter">
+								<h3 class="text-uppercase text-wide">operations</h3>
+								<p>
+									Everyday work runs faster and runs better when teams feel more
+									connected to each other.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="card text-center color-lighter">
+								<h3 class="text-uppercase text-wide">marketing</h3>
+								<p>
+									Drive your customer journey with a brand experience that
+									inspires your audience to take action.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="card text-center color-lighter">
+								<h3 class="text-uppercase text-wide">sales</h3>
+								<p>
+									Create immersive experiences that captivate your audience and
+									accelerate sales.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="card text-center color-lighter">
+								<h3 class="text-uppercase text-wide">HUMAN RESOURCES</h3>
+								<p>
+									Revitalize your team and company culture and build a thriving
+									workplace in the metaverse.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="card text-center color-lighter">
+								<h3 class="text-uppercase text-wide">product development</h3>
+								<p>
+									Collaborate to develop the next big thing, then host a launch
+									party to share it with the world.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="card text-center color-lighter">
+								<h3 class="text-uppercase text-wide">Customer service</h3>
+								<p>
+									Elevate the customer experience with new ways to capture
+									feedback and connect after the sale.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div class="section">
-        <div class="text-banner h-screen">
-            <div data-name="banner-switcher" data-toggle="banner-01"
-                class="text-banner-background text-banner-background--blue active">
-                <picture>
-                    <source srcset="img/banner-01.webp" type="image/webp">
-                    <source srcset="img/banner-01.jpg" type="image/jpg">
-                    <img src="img/banner-01.jpg" alt="banner">
-                </picture>
-            </div>
-            <div data-name="banner-switcher" data-toggle="banner-02"
-                class="text-banner-background text-banner-background--blue">
-                <picture>
-                    <source srcset="img/banner-02.webp" type="image/webp">
-                    <source srcset="img/banner-02.jpg" type="image/jpg">
-                    <img src="img/banner-02.jpg" alt="banner">
-                </picture>
-            </div>
-            <div data-name="banner-switcher" data-toggle="banner-03"
-                class="text-banner-background text-banner-background--blue">
+		<div class="section">
+			<div class="text-banner h-screen">
+				<div
+					data-name="banner-switcher"
+					data-toggle="banner-01"
+					class="text-banner-background text-banner-background--blue active">
+					<picture>
+						<source srcset="img/banner-01.webp" type="image/webp" />
+						<source srcset="img/banner-01.jpg" type="image/jpg" />
+						<img src="img/banner-01.jpg" alt="banner" />
+					</picture>
+				</div>
+				<div
+					data-name="banner-switcher"
+					data-toggle="banner-02"
+					class="text-banner-background text-banner-background--blue">
+					<picture>
+						<source srcset="img/banner-02.webp" type="image/webp" />
+						<source srcset="img/banner-02.jpg" type="image/jpg" />
+						<img src="img/banner-02.jpg" alt="banner" />
+					</picture>
+				</div>
+				<div
+					data-name="banner-switcher"
+					data-toggle="banner-03"
+					class="text-banner-background text-banner-background--blue">
+					<picture>
+						<source srcset="img/banner-03.webp" type="image/webp" />
+						<source srcset="img/banner-03.jpg" type="image/jpg" />
+						<img src="img/banner-03.jpg" alt="banner" />
+					</picture>
+				</div>
 
-                <picture>
-                    <source srcset="img/banner-03.webp" type="image/webp">
-                    <source srcset="img/banner-03.jpg" type="image/jpg">
-                    <img src="img/banner-03.jpg" alt="banner">
-                </picture>
-            </div>
+				<div class="text-banner-entry text-banner-full">
+					<div class="container text-center">
+						<div
+							data-name="banner-switcher"
+							data-toggle="banner-01"
+							class="active">
+							<h4 class="text-uppercase">SOLUTIONS</h4>
+							<h2>digital workplace</h2>
+							<p>Build a thriving workplace with Meetaverse™</p>
+							<a class="btn-outline btn-long btn-outline-white" href="#"
+								>Learn more</a
+							>
+						</div>
+						<div data-name="banner-switcher" data-toggle="banner-02">
+							<h4 class="text-uppercase">SOLUTIONS</h4>
+							<h1>SALES</h1>
+							<p>Build a thriving workplace with Meetaverse™</p>
+							<a class="btn-outline btn-long btn-outline-white" href="#"
+								>Learn more</a
+							>
+						</div>
+						<div data-name="banner-switcher" data-toggle="banner-03">
+							<h4 class="text-uppercase">SOLUTIONS</h4>
+							<h1>Brand acceleration</h1>
+							<p>Build a thriving workplace with Meetaverse™</p>
+							<a class="btn-outline btn-long btn-outline-white" href="#"
+								>Learn more</a
+							>
+						</div>
+					</div>
+				</div>
 
-            <div class="text-banner-entry text-banner-full">
-                <div class="container text-center">
-                    <div data-name="banner-switcher" data-toggle="banner-01" class="active">
-                        <h4 class="text-uppercase">SOLUTIONS</h4>
-                        <h2>digital workplace</h2>
-                        <p>Build a thriving workplace with Meetaverse™</p>
-                        <a class="btn-outline btn-long btn-outline-white" href="#">Learn more</a>
-                    </div>
-                    <div data-name="banner-switcher" data-toggle="banner-02">
-                        <h4 class="text-uppercase">SOLUTIONS</h4>
-                        <h1>SALES</h1>
-                        <p>Build a thriving workplace with Meetaverse™</p>
-                        <a class="btn-outline btn-long btn-outline-white" href="#">Learn more</a>
-                    </div>
-                    <div data-name="banner-switcher" data-toggle="banner-03">
-                        <h4 class="text-uppercase">SOLUTIONS</h4>
-                        <h1>Brand acceleration</h1>
-                        <p>Build a thriving workplace with Meetaverse™</p>
-                        <a class="btn-outline btn-long btn-outline-white" href="#">Learn more</a>
-                    </div>
-                </div>
-            </div>
+				<div class="banner-switcher">
+					<button
+						data-action="toggle"
+						data-name="banner-switcher"
+						data-target="banner-01"
+						type="button"
+						class="banner-switcher-button active">
+						DIGITAL WORKPLACE
+					</button>
+					<button
+						data-action="toggle"
+						data-name="banner-switcher"
+						data-target="banner-02"
+						type="button"
+						class="banner-switcher-button">
+						sales acceleration
+					</button>
+					<button
+						data-action="toggle"
+						data-name="banner-switcher"
+						data-target="banner-03"
+						type="button"
+						class="banner-switcher-button">
+						brand experiences
+					</button>
+				</div>
+			</div>
+		</div>
 
-            <div class="banner-switcher">
-                <button data-action="toggle" data-name="banner-switcher" data-target="banner-01" type="button"
-                    class="banner-switcher-button active">DIGITAL WORKPLACE</button>
-                <button data-action="toggle" data-name="banner-switcher" data-target="banner-02" type="button"
-                    class="banner-switcher-button">sales
-                    acceleration</button>
-                <button data-action="toggle" data-name="banner-switcher" data-target="banner-03" type="button"
-                    class="banner-switcher-button">brand
-                    experiences</button>
-            </div>
+		<div class="section">
+			<div class="container">
+				<div class="image-card-box">
+					<div class="image-card-box-image">
+						<picture>
+							<source srcset="img/image-2.webp" type="image/webp" />
+							<source srcset="img/image-2.jpg" type="image/jpg" />
+							<img src="img/image-2.jpg" alt="banner" />
+						</picture>
+					</div>
+					<div class="image-card-box-text">
+						<p>FULL ENGAGEMENT</p>
+						<h2 class="text-capitalize">
+							A natural way to connect with people from anywhere
+						</h2>
+						<ul class="list">
+							<li>
+								<b>Face-to-Face Interaction</b>. Engaging with people more
+								naturally facilitates a deeper connection.
+							</li>
+							<li>
+								<b>Meeting Experiences</b>. Meet one-on-one or bring a group
+								together for a more immersive experience.
+							</li>
+							<li>
+								<b>Showcase Content</b>. Communicate and share ideas like never
+								before with flexible ways to present content.
+							</li>
+							<li>
+								<b>Guided Tours</b>. Onboarding, product demos, and more become
+								interactive walkthrough experiences in your corporate metaverse.
+							</li>
+							<li>
+								<b>Messaging & Chat</b>. Send quick messages to stay connected
+								or get work done on the fly.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        </div>
-    </div>
+		<div class="section">
+			<div class="container">
+				<div class="box box-white box-lg">
+					<div class="content-box content-box--bigger-image">
+						<div class="content-box-text color-darker">
+							<h4>FULL CUSTOMIZATION</h4>
+							<h3>Create your space</h3>
+							<ul>
+								<li>
+									<strong>Creative Freedom.</strong> Create any work environment
+									you can imagine to suit your team's needs.
+								</li>
+								<li>
+									<strong>Custom Branding.</strong> Nearly every surface can
+									become a place to showcase your brand or promote sponsors.
+								</li>
+								<li>
+									<strong>Flexible Design.</strong> Swap elements, change
+									layouts, and more. Whatever you need, we'll help you build it.
+								</li>
+							</ul>
+						</div>
+						<div class="content-box-image">
+							<picture>
+								<source srcset="img/image-3.webp" type="image/webp" />
+								<source srcset="img/image-3.png" type="image/png" />
+								<img src="img/image-3.png" alt="banner" class="float-md-left" />
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="__top-offset-lg text-center">
+					<a class="btn-cta" href="#">schedule a demo</a>
+				</div>
+			</div>
+		</div>
 
-    <div class="section">
-        <div class="container">
-            <div class="image-card-box">
-                <div class="image-card-box-image">
-                    <picture>
-                        <source srcset="img/image-2.webp" type="image/webp">
-                        <source srcset="img/image-2.jpg" type="image/jpg">
-                        <img src="img/image-2.jpg" alt="banner">
-                    </picture>
-                </div>
-                <div class="image-card-box-text">
-                    <p>FULL ENGAGEMENT</p>
-                    <h2 class="text-capitalize">A natural way to connect with people from anywhere</h2>
-                    <ul class="list">
-                        <li><b>Face-to-Face Interaction</b>. Engaging with people more naturally facilitates a deeper
-                            connection.
-                        </li>
-                        <li><b>Meeting Experiences</b>. Meet one-on-one or bring a group together for a more immersive
-                            experience.
-                        </li>
-                        <li><b>Showcase Content</b>. Communicate and share ideas like never before with flexible ways to
-                            present
-                            content.</li>
-                        <li><b>Guided Tours</b>. Onboarding, product demos, and more become interactive walkthrough
-                            experiences in
-                            your corporate metaverse.</li>
-                        <li><b>Messaging & Chat</b>. Send quick messages to stay connected or get work done on the fly.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+		<div class="section">
+			<div class="container">
+				<div class="section-header">
+					<div class="section-header-subtitle">READY TO GET STARTED?</div>
+					<div class="section-header-title">
+						Lead your organization into the meetaverse today
+					</div>
+				</div>
 
-    <div class="section">
-        <div class="container">
-            <div class="box box-white box-lg">
-                <div class="content-box content-box--bigger-image">
-                    <div class="content-box-text color-darker">
-                        <h4>FULL CUSTOMIZATION</h4>
-                        <h3>Create your space</h3>
-                        <ul>
-                            <li><b>Creative Freedom.</b> Create any work environment you can imagine to suit your team's
-                                needs.</li>
-                            <li><b>Custom Branding.</b> Nearly every surface can become a place to showcase your brand
-                                or promote sponsors.</li>
-                            <li><b>Flexible Design.</b> Swap elements, change layouts, and more. Whatever you need,
-                                we'll help you build it.</li>
-                        </ul>
-                    </div>
-                    <div class="content-box-image">
-                        <picture>
-                            <source srcset="img/image-3.webp" type="image/webp">
-                            <source srcset="img/image-3.png" type="image/png">
-                            <img src="img/image-3.png" alt="banner" class="float-md-left">
-                        </picture>
-                    </div>
-                </div>
-            </div>
-            <div class="__top-offset-lg text-center">
-                <a class="btn-cta" href="#">schedule a demo</a>
-            </div>
+				<div class="row">
+					<div class="col-md-4">
+						<div
+							class="card color-lighter card-light-gray text-center text-md-left">
+							<div class="large-text color-blue">1</div>
+							<h3 class="text-uppercase text-wide">Schedule a demo</h3>
+							<p>
+								Visit our corporate metaverse and experience how it can be
+								customized to empower an entire organization.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div
+							class="card color-lighter card-light-gray text-center text-md-left">
+							<div class="large-text color-blue">2</div>
+							<h3 class="text-uppercase text-wide">Meet in the metaverse</h3>
+							<p>
+								Invite your team to experience a corporate meetaverse firsthand,
+								and see how your team can use it.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div
+							class="card color-lighter card-light-gray text-center text-md-left">
+							<div class="large-text color-blue">3</div>
+							<h3 class="text-uppercase text-wide">Create your metaverse</h3>
+							<p>
+								We'll work together to create your first corporate metaverse,
+								the next one, and the next one...
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="__top-offset-md text-center">
+					<a class="btn-cta" href="#">schedule a demo</a>
+				</div>
+			</div>
+		</div>
 
-        </div>
-    </div>
+		<div class="section">
+			<div class="container">
+				<div class="image-card-box">
+					<div class="image-card-box-image">
+						<picture>
+							<source srcset="img/image-4.webp" type="image/webp" />
+							<source srcset="img/image-4.jpg" type="image/jpg" />
+							<img src="img/image-4.jpg" alt="banner" />
+						</picture>
+					</div>
+					<div class="image-card-box-text image-card-box-text--white">
+						<p>MEETAVERSE™ BY ALLSEATED</p>
+						<h2 class="text-capitalize">
+							The easiest way to create a corporate metaverse
+						</h2>
+						<p>
+							Everyone is talking about the metaverse and how they plan to use
+							it for their everyday work. And while most companies are
+							overwhelmed by this, you see the metaverse as an opportunity to
+							gain a competitive edge.
+						</p>
+						<p class="color-blue">
+							But how do you enter the metaverse? We're here to help.
+						</p>
+						<p>
+							As the leader in digital experiences, Allseated is your guide into
+							the metaverse. With Meetaverse™, it's easy to create your own
+							corporate metaverse and get your team working in the metaverse
+							right away.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<div class="section">
+			<div class="container container-sm">
+				<div class="slider-nav-bottom">
+					<div class="blockquote-slider">
+						<blockquote class="quote-section">
+							<p>
+								Within the next two or three years, I predict most virtual
+								meetings will move from 2D camera image grids — which I call the
+								Hollywood Squares model, although I know that probably dates me
+								— to the metaverse, a 3D space with digital avatars.
+							</p>
+							<figcaption>Bill Gates, Microsoft</figcaption>
+						</blockquote>
+						<blockquote class="quote-section">
+							<p>
+								Within the next two or three years, I predict most virtual
+								meetings will move from 2D camera image grids — which I call the
+								Hollywood Squares model, although I know that probably dates me
+								— to the metaverse, a 3D space with digital avatars.
+							</p>
+							<figcaption>Bill Gates, Microsoft</figcaption>
+						</blockquote>
+						<blockquote class="quote-section">
+							<p>
+								Within the next two or three years, I predict most virtual
+								meetings will move from 2D camera image grids — which I call the
+								Hollywood Squares model, although I know that probably dates me
+								— to the metaverse, a 3D space with digital avatars.
+							</p>
+							<figcaption>Bill Gates, Microsoft</figcaption>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div class="section">
-        <div class="container">
+		<div class="light-gradient"></div>
+		<div class="section faq-section">
+			<div class="container">
+				<h2 class="faq-title">FAQ</h2>
+				<div class="faq-wrap">
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							How long does it take to create my Meetaverse campus?
+						</h4>
+						<div class="faq-item-text">
+							Creation of a Meetaverse campus typically takes a minimum of 3 to
+							4 weeks.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							Where is the information collected and stored on the Meetaverse
+							platform?
+						</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							Do I need to have a VR headset to access the Meetaverse platform?
+						</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							What is a Project Lead and how will they help me throughout my
+							Meetaverse experience?
+						</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							Will my project lead(s) run my Meetaverse?
+						</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							Can my Meetaverse campus have background music?
+						</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							Who is responsible for communicating with users?
+						</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							Does Meetaverse perform internal testing before my subscription
+							starts?
+						</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">Do users require any training?</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							Does Meetaverse have technical support?
+						</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							Does Meetaverse have technical support?
+						</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+					<div class="faq-item">
+						<h4 class="faq-item-title">
+							What kind of computer should I use? Can I use a tablet or iPad?
+						</h4>
+						<div class="faq-item-text">
+							Information from Meetaverse is collected and stored in the United
+							States, using Databank and Azure.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		@@include('./parts/footer.html')
 
-            <div class="section-header">
-                <div class="section-header-subtitle">READY TO GET STARTED?</div>
-                <div class="section-header-title">Lead your organization into the meetaverse today</div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card color-lighter card-light-gray text-center text-md-left">
-                        <div class="large-text color-blue">1</div>
-                        <h3 class="text-uppercase text-wide">Schedule a demo</h3>
-                        <p>Visit our corporate metaverse and experience how it can be customized to empower an entire
-                            organization.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card color-lighter card-light-gray text-center text-md-left">
-                        <div class="large-text color-blue">2</div>
-                        <h3 class="text-uppercase text-wide">Meet in the metaverse</h3>
-                        <p>Invite your team to experience a corporate meetaverse firsthand, and see how your team can
-                            use it.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card color-lighter card-light-gray text-center text-md-left">
-                        <div class="large-text color-blue">3</div>
-                        <h3 class="text-uppercase text-wide">Create your metaverse</h3>
-                        <p>We'll work together to create your first corporate metaverse, the next one, and the next
-                            one...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="__top-offset-md text-center">
-                <a class="btn-cta" href="#">schedule a demo</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="image-card-box">
-                <div class="image-card-box-image">
-                    <picture>
-                        <source srcset="img/image-4.webp" type="image/webp">
-                        <source srcset="img/image-4.jpg" type="image/jpg">
-                        <img src="img/image-4.jpg" alt="banner">
-                    </picture>
-                </div>
-                <div class="image-card-box-text image-card-box-text--white">
-                    <p>MEETAVERSE™ BY ALLSEATED</p>
-                    <h2 class="text-capitalize">The easiest way to create a corporate metaverse</h2>
-                    <p>Everyone is talking about the metaverse and how they plan to use it for their everyday work. And
-                        while most companies are overwhelmed by this, you see the metaverse as an opportunity to gain a
-                        competitive edge.</p>
-                    <p class="color-blue">But how do you enter the metaverse? We're here to help.</p>
-                    <p>As the leader in digital experiences, Allseated is your guide into the metaverse. With
-                        Meetaverse™, it's easy to create your own corporate metaverse and get your team working in the
-                        metaverse right away.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container container-sm">
-            <div class="slider-nav-bottom">
-                <div class="blockquote-slider">
-                    <blockquote class="quote-section">
-                        <p>Within the next two or three years, I predict most virtual meetings will move from 2D camera
-                            image
-                            grids — which I call the Hollywood Squares model, although I know that probably dates me —
-                            to
-                            the
-                            metaverse, a 3D space with digital avatars.</p>
-                        <figcaption>Bill Gates, Microsoft</figcaption>
-                    </blockquote>
-                    <blockquote class="quote-section">
-                        <p>Within the next two or three years, I predict most virtual meetings will move from 2D camera
-                            image
-                            grids — which I call the Hollywood Squares model, although I know that probably dates me —
-                            to
-                            the
-                            metaverse, a 3D space with digital avatars.</p>
-                        <figcaption>Bill Gates, Microsoft</figcaption>
-                    </blockquote>
-                    <blockquote class="quote-section">
-                        <p>Within the next two or three years, I predict most virtual meetings will move from 2D camera
-                            image
-                            grids — which I call the Hollywood Squares model, although I know that probably dates me —
-                            to
-                            the
-                            metaverse, a 3D space with digital avatars.</p>
-                        <figcaption>Bill Gates, Microsoft</figcaption>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="light-gradient"></div>
-    <div class="section faq-section">
-        <div class="container">
-            <h2 class="faq-title">FAQ</h2>
-            <div class="faq-wrap">
-                <div class="faq-item">
-                    <h4 class="faq-item-title">How long does it take to create my Meetaverse campus?</h4>
-                    <div class="faq-item-text">Creation of a Meetaverse campus typically takes a minimum of 3 to 4 weeks.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">Where is the information collected and stored on the Meetaverse platform?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">Do I need to have a VR headset to access the Meetaverse platform?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">What is a Project Lead and how will they help me throughout my Meetaverse experience?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">Will my project lead(s) run my Meetaverse?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">Can my Meetaverse campus have background music?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">Who is responsible for communicating with users?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">Does Meetaverse perform internal testing before my subscription starts?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">Do users require any training?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">Does Meetaverse have technical support?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">Does Meetaverse have technical support?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-                <div class="faq-item">
-                    <h4 class="faq-item-title">What kind of computer should I use? Can I use a tablet or iPad?</h4>
-                    <div class="faq-item-text">Information from Meetaverse is collected and stored in the United States, using Databank and Azure.</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    @@include('./parts/footer.html')
-
-    <script src="js/lib.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
+		<script src="js/lib.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>
