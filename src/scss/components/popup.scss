@@ -42,7 +42,7 @@
 			margin-top: -1px;
 			height: 2px;
 			width: 100%;
-			background: #fff;
+			background: $color-white;
 		}
 		&:before {
 			transform: rotate(45deg);
@@ -61,7 +61,7 @@
 		height: auto;
 		max-width: 948px;
 		max-height: 538px;
-		background: #fff;
+		background: $color-white;
 		padding: 6px;
 		border-radius: 26px;
 		box-sizing: border-box;

@@ -294,7 +294,6 @@
 .image-card-box {
 	border-radius: 20px;
 	overflow: hidden;
-	background-color: $color-blue;
 	color: $color-white;
 	display: flex;
 
@@ -324,6 +323,8 @@
 
 	&-text {
 		padding: 20px;
+		background-color: $color-blue;
+
 		@include min(md) {
 			padding: 64px;
 		}
@@ -358,7 +359,19 @@
 		}
 	}
 }
-
+.image-card-box-autoplay {
+	position: relative;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color-white;
+	@include min(md) {
+		width: 50%;
+	}
+	&_inner {
+	}
+}
 [data-toggle] {
 	display: none;
 
