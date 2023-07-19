@@ -1,22 +1,22 @@
 .post-title {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 600;
+	// font-family: 'Montserrat';
+	// font-style: normal;
+	// font-weight: 600;
 	text-transform: uppercase;
 	color: $color-white;
 
-	@include min(sm) {
-		font-size: 50px;
-	}
+	// @include min(sm) {
+	// font-size: 50px;
+	// }
 
-	@include min(md) {
-		font-size: 70px;
-	}
+	// @include min(md) {
+	// font-size: 70px;
+	// }
 
-	@include min(lg) {
-		font-size: 96px;
-		line-height: 110px;
-	}
+	// @include min(lg) {
+	// font-size: 96px;
+	// line-height: 110px;
+	// }
 }
 
 .text-entry {
