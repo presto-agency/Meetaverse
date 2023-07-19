@@ -78,7 +78,17 @@ p {
 		font-size: 18px;
 	}
 }
-
+ol {
+	li {
+		font-size: 16px;
+		margin-bottom: 10px;
+		font-family: 'Montserrat';
+		line-height: 1.7em;
+		@include min(md) {
+			font-size: 18px;
+		}
+	}
+}
 .text-center {
 	text-align: center;
 }
