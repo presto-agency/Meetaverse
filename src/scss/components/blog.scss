@@ -30,15 +30,6 @@
 	}
 	figure {
 		margin: 30px 0;
-		// @include min(sm) {
-		// 	margin-top: 50px;
-		// 	margin-bottom: 50px;
-		// }
-
-		// @include min(md) {
-		// 	margin-top: 70px;
-		// 	margin-bottom: 100px;
-		// }
 
 		@include min(lg) {
 			margin-left: -30px;
@@ -60,8 +51,7 @@
 	h4 {
 		font-size: 20px;
 		font-weight: 600;
-		font-size: 20px;
-		line-height: 180%;
+		line-height: 1.8em;
 	}
 
 	p {

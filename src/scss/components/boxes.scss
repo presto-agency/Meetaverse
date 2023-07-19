@@ -433,18 +433,30 @@
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 300;
-		font-size: 30px;
-		line-height: 45px;
+		line-height: 1.5em;
 		color: rgba(0, 0, 0, 0.8);
+		font-size: 18px;
+		@include min(sm) {
+			font-size: 24px;
+		}
+		@include min(lg) {
+			font-size: 30px;
+		}
 	}
 
 	figcaption {
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 300;
-		font-size: 32px;
+		font-size: 20px;
 		line-height: 1.4;
 		color: $color-blue;
+		@include min(sm) {
+			font-size: 26px;
+		}
+		@include min(lg) {
+			font-size: 32px;
+		}
 	}
 
 	&--sm {

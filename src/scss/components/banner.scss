@@ -11,9 +11,6 @@
 		text-align: left;
 	}
 
-	@include min(md) {
-		// min-height: 891px;
-	}
 	&-min {
 		@include min(md) {
 			min-height: 600px;
@@ -94,10 +91,10 @@
 		}
 
 		p {
-			font-size: 16px;
+			font-size: 18px;
 			font-weight: 500;
 			margin: 13px 0;
-			line-height: 1.3;
+			line-height: 1.5;
 
 			@include min(sm) {
 				font-size: 24px;
@@ -105,7 +102,7 @@
 		}
 
 		ul {
-			font-size: 16px;
+			font-size: 18px;
 			font-weight: 600;
 			margin: 25px 0;
 
@@ -174,7 +171,7 @@
 	}
 	&-hero {
 		h1 {
-			font-size: 14px;
+			font-size: 16px;
 			letter-spacing: 1.3px;
 
 			@include min(sm) {
@@ -183,47 +180,22 @@
 		}
 
 		h2 {
-			font-size: 30px;
 			letter-spacing: 0.7px;
-			line-height: 1.35;
 			margin: 30px 0 16px;
-
-			@include min(sm) {
-				font-size: 40px;
-			}
-			@include min(md) {
-				font-size: 50px;
-			}
-		}
-
-		h3 {
-			font-size: 20px;
-			font-weight: 500;
-			margin: 13px 0;
-			line-height: 1.3em;
-
-			@include min(sm) {
-				font-size: 24px;
-			}
 		}
 	}
 	&-full {
 		h2 {
 			text-transform: uppercase;
 			font-weight: 600;
-			font-size: 30px;
 			letter-spacing: 0.7px;
-			line-height: 1.35em;
 			margin: 20px 0;
-			@include min(sm) {
-				font-size: 40px;
-			}
-			@include min(md) {
-				font-size: 50px;
-			}
 		}
 		p {
-			margin: 20px 0 50px;
+			margin: 10px 0;
+			&:last-of-type {
+				margin-bottom: 50px;
+			}
 		}
 	}
 }

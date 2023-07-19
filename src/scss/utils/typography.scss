@@ -1,27 +1,67 @@
-h1 {
+h1,
+.title-1 {
 	font-weight: 600;
-	font-size: 50px;
+	font-size: 30px;
+	margin: 0;
+	line-height: 1.3em;
+	@include min(sm) {
+		font-size: 40px;
+	}
+	@include min(lg) {
+		font-size: 50px;
+	}
 }
 
 h2,
-h3 {
+h3,
+.title-3,
+.title-2 {
+	margin: 0;
 	font-weight: 500;
 }
 
-h2 {
-	font-size: 40px;
-}
-
-h3 {
-	font-size: 30px;
-}
-
-h4 {
-	font-size: 18px;
-
-	@include min(md) {
-		font-size: 20px;
+h2,
+.title-2 {
+	font-size: 28px;
+	line-height: 1.25em;
+	@include min(sm) {
+		font-size: 30px;
 	}
+	@include min(lg) {
+		font-size: 40px;
+	}
+}
+
+h3,
+.title-3 {
+	font-size: 26px;
+	line-height: 1.3em;
+	@include min(sm) {
+		font-size: 28px;
+	}
+	@include min(lg) {
+		font-size: 30px;
+	}
+}
+
+h4,
+.title-4 {
+	margin: 0;
+	font-size: 20px;
+	line-height: 1.3em;
+	letter-spacing: 1px;
+}
+h5,
+.title-5 {
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.25em;
+}
+h6,
+.title-6 {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.25em;
 }
 
 ul li,
@@ -29,10 +69,10 @@ p {
 	font-size: 16px;
 	margin-bottom: 10px;
 	font-family: 'Montserrat';
-
-	//@include min(md) {
-	//    font-size: 20px;
-	//}
+	line-height: 1.7em;
+	@include min(md) {
+		font-size: 18px;
+	}
 }
 
 .text-center {
@@ -110,8 +150,8 @@ p {
 
 ul.list {
 	li {
-		line-height: 1.7;
-		font-size: 20px;
+		// line-height: 1.7;
+		// font-size: 20px;
 		position: relative;
 		font-weight: 300;
 		padding-left: 30px;

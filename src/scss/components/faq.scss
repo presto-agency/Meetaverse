@@ -10,38 +10,25 @@
 	margin-bottom: 30px;
 	padding-bottom: 30px;
 
-	@include min(md) {
-		padding-bottom: 84px;
-		margin-bottom: 67px;
+	@include min(lg) {
+		padding-bottom: 40px;
+		margin-bottom: 40px;
 	}
 }
 
 .faq-item {
-	padding-bottom: 30px;
-	margin-bottom: 30px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 	position: relative;
-	// &::before {
-	// 	content: '';
-	// 	width: 20px;
-	// 	height: 20px;
-	// 	background-image: url(../img/plus.svg);
-	// 	position: absolute;
-	// 	right: 5px;
-	// 	top: 3px;
-	// 	background-size: cover;
-	// 	background-repeat: no-repeat;
-	// 	background-position: center;
-	// 	transform: rotate(0);
-	// 	transition: transform 0.4s ease;
-	// 	@include min(md) {
-	// 		width: 30px;
-	// 		height: 30px;
-	// 	}
-	// }
+
+	@include min(sm) {
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+	}
 	@include min(md) {
-		padding-bottom: 67px;
-		margin-bottom: 67px;
+		padding-bottom: 40px;
+		margin-bottom: 40px;
 	}
 
 	&:last-child {
@@ -59,6 +46,7 @@
 		text-transform: uppercase;
 		color: #1075bb;
 		padding-right: 60px;
+		// margin-top: 0;
 		&::before {
 			content: '';
 			width: 20px;
@@ -66,7 +54,7 @@
 			background-image: url(../img/plus.svg);
 			position: absolute;
 			right: 5px;
-			top: 3px;
+			top: 5px;
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -75,10 +63,11 @@
 			@include min(md) {
 				width: 30px;
 				height: 30px;
+				top: 10px;
 			}
 		}
 		@include min(md) {
-			font-size: 30px;
+			font-size: 26px;
 			margin-bottom: 40px;
 			line-height: 45px;
 		}
