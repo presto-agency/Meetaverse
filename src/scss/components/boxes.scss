@@ -40,30 +40,14 @@
 		color: $color-blue;
 	}
 
-	.card-subtitle {
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 1.2em;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		@include min(md) {
-			font-size: 20px;
-		}
+	.title-4 {
 		&.text-capitalize {
 			text-transform: capitalize;
 		}
 	}
 
-	.card-title {
-		font-weight: 500;
-		line-height: 1.25em;
-		text-align: center;
+	.title-2 {
 		text-transform: capitalize;
-		font-size: 30px;
-		@include min(md) {
-			font-size: 36px;
-		}
 	}
 
 	.card-text {
@@ -74,7 +58,7 @@
 		line-height: 1.75em;
 		margin: 10px 0;
 		@include min(md) {
-			font-size: 20px;
+			// font-size: 18px;
 			margin: 20px 0;
 		}
 	}
@@ -133,7 +117,7 @@
 		pointer-events: initial;
 		padding: 50px 70px;
 
-		.card-subtitle {
+		.title-4 {
 			margin-bottom: 60px;
 		}
 	}
@@ -264,7 +248,7 @@
 		margin: 30px 0;
 
 		@include min(md) {
-			// font-size: 20px;
+			// font-size: 18px;
 
 			&:last-of-type {
 				margin-bottom: 70px;
@@ -275,7 +259,7 @@
 	ul {
 		li {
 			margin-bottom: 20px;
-			// font-size: 20px;
+			// font-size: 18px;
 			line-height: 1.5em;
 			position: relative;
 			padding-left: 30px;
@@ -330,7 +314,7 @@
 			padding: 40px;
 		}
 		@include min(lg) {
-			padding: 64px;
+			padding: 50px;
 		}
 		// h2 {
 		// 	font-size: 30px;
@@ -450,7 +434,7 @@
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 300;
-		font-size: 20px;
+		// font-size: 18px;
 		line-height: 1.4;
 		color: $color-blue;
 		@include min(sm) {
@@ -465,7 +449,7 @@
 		p {
 			font-style: normal;
 			font-weight: 400;
-			font-size: 20px;
+			// font-size: 18px;
 			line-height: 150%;
 
 			@include min(md) {
@@ -478,7 +462,7 @@
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 600;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 170%;
 	}
 
@@ -486,7 +470,7 @@
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 400;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 170%;
 		text-transform: uppercase;
 		color: #1075bb;
@@ -548,7 +532,7 @@
 		p {
 			color: #595959;
 			font-weight: 300;
-			font-size: 20px;
+			font-size: 18px;
 		}
 	}
 

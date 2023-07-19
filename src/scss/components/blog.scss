@@ -49,31 +49,31 @@
 	}
 
 	h4 {
-		font-size: 20px;
-		font-weight: 600;
-		line-height: 1.8em;
+		// font-size: 18px;
+		// font-weight: 600;
+		// line-height: 1.8em;
 	}
 
 	p {
-		font-weight: 400;
-		line-height: 180%;
-		margin: 20px 0;
-		font-size: 16px;
+		// font-weight: 400;
+		// line-height: 180%;
+		// margin: 20px 0;
+		// font-size: 16px;
 
 		@include min(sm) {
-			font-size: 20px;
+			// font-size: 18px;
 		}
 	}
 
 	li {
-		font-weight: 400;
-		line-height: 180%;
+		// font-weight: 400;
+		// line-height: 180%;
 		position: relative;
 		padding-left: 30px;
-		font-size: 16px;
+		// font-size: 16px;
 
 		@include min(sm) {
-			font-size: 20px;
+			// font-size: 18px;
 		}
 
 		&:before {

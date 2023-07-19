@@ -15,7 +15,7 @@
 		font-weight: 400;
 		text-decoration: none;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 20px;
+		font-size: 18px;
 		padding: 10px 20px;
 
 		@include min(md) {
@@ -23,7 +23,7 @@
 		}
 
 		@include min(lg) {
-			font-size: 20px;
+			font-size: 18px;
 		}
 		&:hover {
 			color: $color-light-blue;

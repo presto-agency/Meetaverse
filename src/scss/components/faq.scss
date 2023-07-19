@@ -41,7 +41,7 @@
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 500;
-		font-size: 20px;
+		font-size: 18px;
 		margin-bottom: 20px;
 		text-transform: uppercase;
 		color: #1075bb;
@@ -67,7 +67,7 @@
 			}
 		}
 		@include min(md) {
-			font-size: 26px;
+			font-size: 24px;
 			margin-bottom: 40px;
 			line-height: 45px;
 		}
@@ -81,7 +81,7 @@
 		line-height: 129.8%;
 
 		@include min(md) {
-			font-size: 20px;
+			font-size: 18px;
 		}
 	}
 }

@@ -14,6 +14,18 @@
 		&.btn-cta {
 			color: $color-white;
 		}
+		&:hover {
+			color: $color-light-blue;
+			box-shadow: none;
+		}
+	}
+	&--right {
+		a {
+			display: block;
+			img {
+				width: 120px;
+			}
+		}
 	}
 }
 
