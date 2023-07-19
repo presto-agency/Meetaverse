@@ -4,10 +4,10 @@
 	// font-weight: 600;
 	text-transform: uppercase;
 	color: $color-white;
-
-	// @include min(sm) {
-	// font-size: 50px;
-	// }
+	max-width: 100%;
+	@include min(lg) {
+		max-width: 70%;
+	}
 
 	// @include min(md) {
 	// font-size: 70px;
