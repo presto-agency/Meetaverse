@@ -1,134 +1,141 @@
-body{
-    background-color: $color-light-200;
+body {
+	background-color: $color-light-200;
 }
 .section {
-    margin: 100px 0;
-    position: relative;
-    z-index: 1;
+	margin: 100px 0;
+	position: relative;
+	z-index: 1;
 
-    @include min(md) {
-        margin: 157px 0;
-    }
+	@include min(md) {
+		margin: 157px 0;
+	}
 
-    &--lg {
-        @include min(lg) {
-            margin: 240px 0;
-        }
-    }
+	&--lg {
+		@include min(lg) {
+			margin: 240px 0;
+		}
+	}
 
-    &--sm {
-        @include min(lg) {
-            margin: 125px 0;
-        }
-    }
-    &-gray{
-        margin: 0;
-        padding: 100px 0;
-        background-color: $color-light-gray-100;
-        @include min(md) {
-            margin: 0;
-        }
-    }
-    &-gray__gradient{
-        background-image: linear-gradient(180deg, #E5E5E5 0%, #1075BB33 100%);
-        padding: 100px 0;
-        @include min(md) {
-            margin: 0;
-        }
-    }
+	&--sm {
+		@include min(lg) {
+			margin: 125px 0;
+		}
+	}
+	&-gray {
+		margin: 0;
+		padding: 100px 0;
+		background-color: $color-light-gray-100;
+		@include min(md) {
+			margin: 0;
+		}
+	}
+	&-gray__gradient {
+		background-image: linear-gradient(180deg, #e5e5e5 0%, #1075bb33 100%);
+		padding: 100px 0;
+		@include min(md) {
+			margin: 0;
+		}
+	}
 }
 
 .section-header {
-    text-align: center;
-    margin-bottom: 40px;
+	text-align: center;
+	margin-bottom: 40px;
 
-    @include min(md) {
-        margin-bottom: 80px;
-    }
+	@include min(md) {
+		margin-bottom: 80px;
+	}
+	h1,
+	h2,
+	h3 {
+		text-transform: capitalize;
+		// margin-bottom: 80px;
+	}
+	&-title {
+		// font-weight: 500;
+		// font-size: 24px;
+		// font-family: 'Montserrat', sans-serif;
 
-    &-title {
-        font-weight: 500;
-        font-size: 24px;
-        text-transform: capitalize;
-        font-family: 'Montserrat', sans-serif;
+		// @include min(md) {
+		// 	font-size: 40px;
+		// 	line-height: 45px;
+		// }
 
-        @include min(md) {
-            font-size: 40px;
-            line-height: 45px;
-        }
+		&.__sm {
+			@include min(md) {
+				font-size: 35px;
+			}
+		}
+	}
 
-        &.__sm {
-            @include min(md) {
-                font-size: 35px;
-            }
-        }
-    }
+	// h2,
+	// h3 + .btn-cta {
+	// 	margin-top: 60px;
+	// }
 
-    &-title+.btn-cta {
-        margin-top: 60px;
-    }
+	&-subtitle {
+		// font-weight: 500;
+		// font-size: 18px;
+		// line-height: 129.8%;
+		// margin-bottom: 20px;
+		&__blue {
+			// margin-top: 20px;
+			// font-weight: 500;
+			// font-size: 28px;
+			// line-height: 129.8%;
+			// margin-bottom: 20px;
+			color: $color-blue;
+		}
+	}
 
-    &-subtitle {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 129.8%;
-        margin-bottom: 20px;
-        &__blue{
-            margin-top: 20px;
-            font-weight: 500;
-            font-size: 28px;
-            line-height: 129.8%;
-            margin-bottom: 20px;
-            color: $color-blue;
-        }
-    }
-
-    p {
-        font-weight: 300;
-        margin-bottom: 30px;
-    }
+	p {
+		font-weight: 300;
+		margin-bottom: 30px;
+	}
 }
 
 ul.checkmark-list {
-    font-size: 16px;
-    font-weight: 600;
-    margin: 25px 0;
+	font-size: 16px;
+	font-weight: 600;
+	margin: 25px 0;
+	text-align: center;
+	@include min(sm) {
+		font-size: 24px;
+	}
+	@include min(xs) {
+		text-align: left;
+	}
+	li {
+		margin: 7px 0px;
+		font-weight: 500;
+		padding-left: 0;
 
-    @include min(sm) {
-        font-size: 24px;
-    }
+		@include min(sm) {
+			padding-left: 33px;
+			position: relative;
+		}
 
-    li {
-        margin: 7px 0px;
-        font-weight: 500;
-        padding-left: 0;
+		&:before {
+			content: url('../img/checkmark.svg');
+			height: 20px;
+			width: 20px;
+			margin-right: 10px;
+			background-color: transparent;
+			position: static;
 
-        @include min(sm) {
-            padding-left: 33px;
-            position: relative;
-        }
+			@include min(sm) {
+				left: 0;
+				top: 0;
+				position: absolute;
+			}
+		}
+	}
 
-        &:before {
-            content: url('../img/checkmark.svg');
-            height: 20px;
-            width: 20px;
-            margin-right: 10px;
-            background-color: transparent;
-            position: static;
-
-            @include min(sm) {
-                left: 0;
-                top: 0;
-                position: absolute;
-            }
-        }
-    }
-
-    &.color-blue {
-        li {
-            &:before {
-                content: url('../img/checkmark-blue.svg');
-            }
-        }
-    }
+	&.color-blue {
+		li {
+			&:before {
+				content: url('../img/checkmark-blue.svg');
+			}
+		}
+	}
 }

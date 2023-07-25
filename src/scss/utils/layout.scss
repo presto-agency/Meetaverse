@@ -1,11 +1,12 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
 body {
-    font-family: 'Inter', sans-serif;
-    color: rgba(0, 0, 0, 0.8);
+	font-family: 'Inter', sans-serif;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 16px;
 }
 
 h1,
@@ -14,185 +15,189 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .container {
-    max-width: 1488px;
-    width: 100%;
-    padding: 0 30px;
-    margin: 0 auto;
+	max-width: 1488px;
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+	@include min(sm) {
+		padding: 0 30px;
+	}
+	&-md {
+		max-width: 1200px;
+	}
 
-    &-md {
-        max-width: 1200px;
-    }
+	&-sm {
+		max-width: 1012px;
+	}
 
-    &-sm {
-        max-width: 1012px;
-    }
-
-    &-xs {
-        max-width: 950px;
-    }
+	&-xs {
+		max-width: 950px;
+	}
 }
 
 .d-none {
-    display: none !important;
+	display: none !important;
 }
 
 .d-block {
-    display: block !important;
+	display: block !important;
 }
 
 .d-flex {
-    display: flex;
+	display: flex;
 }
 
+@each $name, $breakpoint in $breakpoints {
+	@include min($name) {
+		.d-#{$name}-flex {
+			display: flex !important;
+		}
 
-@each $name,
-$breakpoint in $breakpoints {
-    @include min($name) {
+		.d-#{$name}-block {
+			display: block !important;
+		}
 
-        .d-#{$name}-flex {
-            display: flex !important;
-        }
+		.d-#{$name}-none {
+			display: none !important;
+		}
 
-        .d-#{$name}-block {
-            display: block !important;
-        }
-
-        .d-#{$name}-none {
-            display: none !important;
-        }
-
-        .float-#{$name}-left {
-            float: left
-        }
-    }
+		.float-#{$name}-left {
+			float: left;
+		}
+	}
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 
-    &.row-lg-gutter {
-
-        @include min(lg) {
-
-            [class^="col-"],
-            [class*=" col-"] {
-                padding: 0 33px;
-            }
-        }
-    }
+	&.row-lg-gutter {
+		@include min(lg) {
+			[class^='col-'],
+			[class*=' col-'] {
+				padding: 0 33px;
+			}
+		}
+	}
 }
 
-[class^="col-"],
-[class*=" col-"] {
-    padding: 0 10px;
-    width: 100%;
+[class^='col-'],
+[class*=' col-'] {
+	padding: 0 10px;
+	width: 100%;
 }
 
 .col-xs-6 {
-    @include min(xs) {
-        width: 50%;
-    }
+	@include min(xs) {
+		width: 50%;
+	}
 }
 
 .col-sm-6 {
-    @include min(sm) {
-        width: 50%;
-    }
+	@include min(sm) {
+		width: 50%;
+	}
 }
 
 .col-sm-4 {
-    @include min(sm) {
-        width: 33.33%;
-    }
+	@include min(sm) {
+		width: 33.33%;
+	}
 }
 
 .col-md-4 {
-    @include min(md) {
-        width: 33.33%;
-    }
+	@include min(md) {
+		width: 33.33%;
+	}
 }
 
 .col-md-6 {
-    @include min(md) {
-        width: 50%;
-    }
+	@include min(md) {
+		width: 50%;
+	}
 }
 
 .col-lg-4 {
-    @include min(md) {
-        width: 33.33%;
-    }
+	@include min(md) {
+		width: 33.33%;
+	}
 }
 
 .h-screen {
-    height: 100vh;
+	height: 100vh;
 }
 
 .w-full {
-    width: 100%;
+	width: 100%;
 }
 
 .__flex-v-center_md {
-    @include min(md) {
-        display: flex;
-        align-items: center;
-    }
+	@include min(md) {
+		display: flex;
+		align-items: center;
+	}
 }
-
 
 .flex-md-middle-colls {
-    @include min(md) {
-        display: flex;
-        justify-content: space-between;
-    }
+	justify-content: center;
+	@include min(xs) {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
-
 .cta-top-offset {
-    margin-top: 40px;
+	margin-top: 40px;
 
-    @include min(md) {
-        margin-top: 125px;
-    }
+	@include min(md) {
+		margin-top: 125px;
+	}
 }
 
 .blue-gradient {
-    position: relative;
-    padding: 1px;
+	position: relative;
+	padding: 1px;
 
-    &:before {
-        content: '';
-        position: absolute;
-        background: rgb(16, 117, 187);
-        background: linear-gradient(0deg, rgba(16, 117, 187, 1) 0%, rgba(0, 212, 255, 0) 100%);
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1200px;
-    }
+	&:before {
+		content: '';
+		position: absolute;
+		background: rgb(16, 117, 187);
+		background: linear-gradient(
+			0deg,
+			rgba(16, 117, 187, 1) 0%,
+			rgba(0, 212, 255, 0) 100%
+		);
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1200px;
+	}
 }
 
 .light-gradient {
-    position: relative;
+	position: relative;
 
-    &:before {
-        content: "";
-        height: 540px;
-        bottom: 100%;
-        left: 0;
-        position: absolute;
-        pointer-events: none;
-        width: 100%;
-        z-index: 0;
-        background: linear-gradient(15deg, rgba(16, 117, 187, 0.5830707282913166) 0%, rgba(0, 212, 255, 0) 56%);
-    }
+	&:before {
+		content: '';
+		height: 540px;
+		bottom: 100%;
+		left: 0;
+		position: absolute;
+		pointer-events: none;
+		width: 100%;
+		z-index: 0;
+		background: linear-gradient(
+			15deg,
+			rgba(16, 117, 187, 0.5830707282913166) 0%,
+			rgba(0, 212, 255, 0) 56%
+		);
+	}
 }
 
 .bg-white {
-    background-color: $color-white;
+	background-color: $color-white;
 }

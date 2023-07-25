@@ -1,5 +1,14 @@
 .breadcrumb {
+	&-wrapper {
+		margin: 40px 0;
+	}
 	a {
 		color: $color-blue;
+	}
+}
+
+.home-page {
+	.breadcrumb-wrapper {
+		display: none;
 	}
 }

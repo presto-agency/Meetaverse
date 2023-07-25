@@ -1,174 +1,172 @@
 @mixin down($breakpoint) {
-    @media only screen and (max-width: "#{map-get($breakpoints, $breakpoint)}px") {
-        @content;
-    }
+	@media only screen and (max-width: "#{map-get($breakpoints, $breakpoint)}px") {
+		@content;
+	}
 }
 
 @mixin min($breakpoint) {
-    @media only screen and (min-width: "#{map-get($breakpoints, $breakpoint) + 1}px") {
-        @content;
-    }
+	@media only screen and (min-width: "#{map-get($breakpoints, $breakpoint) + 1}px") {
+		@content;
+	}
 }
 
 @mixin interval($start, $end) {
-    @media only screen and (max-width: "#{$start}px") and (min-width: "#{$end + 1}px") {
-        @content;
-    }
+	@media only screen and (max-width: "#{$start}px") and (min-width: "#{$end + 1}px") {
+		@content;
+	}
 }
 
 @mixin placeholder {
-    &::-webkit-input-placeholder {
-        @content;
-    }
+	&::-webkit-input-placeholder {
+		@content;
+	}
 
-    &:-moz-placeholder {
-        @content;
-    }
+	&:-moz-placeholder {
+		@content;
+	}
 
-    &::-moz-placeholder {
-        @content;
-    }
+	&::-moz-placeholder {
+		@content;
+	}
 
-    &:-ms-input-placeholder {
-        @content;
-    }
+	&:-ms-input-placeholder {
+		@content;
+	}
 }
 
 @mixin clear_list() {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 
 @mixin max_full_screen() {
-    @media only screen and (max-width: 1920px) {
-        @content;
-    }
+	@media only screen and (max-width: 1920px) {
+		@content;
+	}
 }
 
 @mixin min_full_screen() {
-    @media only screen and (min-width: 1921px) {
-        @content;
-    }
+	@media only screen and (min-width: 1921px) {
+		@content;
+	}
 }
 
 @mixin toggle_visibility($class_name) {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: $t-time;
 
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: $t-time;
-
-    &.#{$class_name} {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: initial;
-    }
+	&.#{$class_name} {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: initial;
+	}
 }
 
 @mixin first_last_list_marign() {
-    &:last-child {
-        margin-right: 0;
-    }
+	&:last-child {
+		margin-right: 0;
+	}
 
-    &:first-child {
-        margin-left: 0;
-    }
+	&:first-child {
+		margin-left: 0;
+	}
 }
 
 @mixin first_last_list() {
-    &:last-child {
-        padding-right: 0;
-    }
+	&:last-child {
+		padding-right: 0;
+	}
 
-    &:first-child {
-        padding-left: 0;
-    }
+	&:first-child {
+		padding-left: 0;
+	}
 }
 
 @mixin first_last_list_vertival_marg() {
-    &:last-child {
-        margin-bottom: 0;
-    }
+	&:last-child {
+		margin-bottom: 0;
+	}
 
-    &:first-child {
-        margin-top: 0;
-    }
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
-
 @mixin clear-btn {
-    outline: none !important;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+	outline: none !important;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 }
 
 @mixin f-between() {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 @mixin flex-center() {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @mixin _cover() {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 @mixin p_absolute_cover() {
-    position: absolute;
-    @include _cover();
+	position: absolute;
+	@include _cover();
 }
 
 @mixin __abs_center() {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 @mixin p_absolute_center($size) {
-    @include __abs_center();
-    width: $size;
-    height: auto;
+	@include __abs_center();
+	width: $size;
+	height: auto;
 }
 
 @mixin _size_full() {
-    display: block;
-    width: 100%;
-    height: 100%;
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 @mixin object_fit_cover {
-    @include _size_full();
-    object-fit: cover;
+	@include _size_full();
+	object-fit: cover;
 }
 
 @mixin object_fit_contain {
-    @include _size_full();
-    object-fit: contain;
+	@include _size_full();
+	object-fit: contain;
 }
 
 @mixin m_auto() {
-    margin-right: auto;
-    margin-left: auto
+	margin-right: auto;
+	margin-left: auto;
 }
 
 @mixin x_padding($size) {
-    padding-left: $size;
-    padding-right: $size;
+	padding-left: $size;
+	padding-right: $size;
 }
 
 @mixin circle($radius) {
-    width: $radius;
-    height: $radius;
-    border-radius: 100%;
+	width: $radius;
+	height: $radius;
+	border-radius: 100%;
 }
