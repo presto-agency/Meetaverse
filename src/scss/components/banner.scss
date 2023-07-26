@@ -8,6 +8,9 @@
 	overflow: hidden;
 	min-height: 400px;
 
+	@include max(md) {
+		padding: 80px 0 120px;
+	}
 	@include max(sm) {
 		padding: 60px 0 160px;
 		text-align: left;
