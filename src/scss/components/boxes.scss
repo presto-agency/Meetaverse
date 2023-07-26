@@ -10,6 +10,9 @@
 		padding: 36px;
 		height: 100%;
 	}
+	@include max(md) {
+		margin-bottom: 20px;
+	}
 	h4,
 	.title-4 {
 		&.text-wide {

@@ -88,7 +88,9 @@
 		}
 	}
 }
-
+.grecaptcha-badge{
+	z-index: 999;
+}
 // .footer-form {
 // 	@include down(sm) {
 // 		margin-bottom: 30px;

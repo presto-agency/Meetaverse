@@ -7,8 +7,9 @@
 	text-align: center;
 	overflow: hidden;
 	min-height: 400px;
-	@include min(sm) {
-		padding: 60px 0;
+
+	@include max(sm) {
+		padding: 60px 0 160px;
 		text-align: left;
 		min-height: 600px;
 	}
@@ -227,7 +228,11 @@
 	border-top: 1px solid $color-white;
 	text-align: center;
 	padding: 29px 0 14px 0;
-
+	@include max(sm) {
+		display: flex;
+		flex-direction: column;
+		padding: 10px 0;
+	}
 	&-button {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 500;
@@ -238,7 +243,9 @@
 		color: $color-white;
 		margin-bottom: 15px;
 		@include clear-btn;
-
+		@include max(sm) {
+			margin-bottom: 10px;
+		}
 		&.active {
 			font-weight: bold;
 			color: $color-light-blue;
