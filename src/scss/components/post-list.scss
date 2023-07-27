@@ -1,4 +1,7 @@
 .single-post, .single-podcasts{
+	.text-banner{
+		text-align: center;
+	}
 	.post-title{
 		margin: 0 auto;
 		max-width: 100%;
@@ -113,6 +116,6 @@
 	@include min(sm) {
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: 0;
+		margin: 0 -15px 0;
 	}
 }
