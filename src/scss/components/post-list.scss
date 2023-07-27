@@ -1,4 +1,8 @@
 .single-post, .single-podcasts{
+	.post-title{
+		margin: 0 auto;
+		max-width: 100%;
+	}
 	.breadcrumb-wrapper, .section{
 		.container{
 			max-width: 1080px;
@@ -19,16 +23,9 @@
 }
 
 .post-item {
-	border-bottom: 1px solid #1075bb;
+	//border-bottom: 1px solid #1075bb;
 	padding-bottom: 30px;
 	margin-bottom: 30px;
-
-	&:last-child {
-		border-bottom: none;
-		@include min(sm) {
-			border-bottom: 1px solid #1075bb;
-		}
-	}
 	.btn-cta{
 		margin: auto 0 0;
 	}
