@@ -183,7 +183,7 @@ closeVideos.forEach((close) => {
 		popups.forEach((popup) => {
 			popup.classList.remove('open');
 		});
-		document.querySelector('.section-with-popup').style.zIndex = '-1';
+		document.querySelector('.section-with-popup').style.zIndex = '1';
 		videos.forEach((video) => {
 			video.pause();
 		});
