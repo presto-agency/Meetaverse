@@ -165,9 +165,9 @@ playVideos.forEach((play) => {
 		e.target.closest('div').lastElementChild.classList.add('open');
 		document.querySelector('body').classList.add('menu-open');
 		sections.forEach((section) => {
-			//section.style.zIndex = '-1';
+			section.style.zIndex = '-1';
 		});
-		 // document.querySelector('.section-with-popup').style.zIndex = '1';
+		 document.querySelector('.section-with-popup').style.zIndex = '1';
 	});
 });
 
@@ -178,12 +178,12 @@ closeVideos.forEach((close) => {
 		// e.target.nextElementSibling.nextElementSibling.classList.add('open');
 		document.querySelector('body').classList.remove('menu-open');
 		sections.forEach((section) => {
-			//section.style.zIndex = '-1';
+			section.style.zIndex = '1';
 		});
 		popups.forEach((popup) => {
 			popup.classList.remove('open');
 		});
-		//document.querySelector('.section-with-popup').style.zIndex = '1';
+		document.querySelector('.section-with-popup').style.zIndex = '-1';
 		videos.forEach((video) => {
 			video.pause();
 		});
