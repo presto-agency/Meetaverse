@@ -1,3 +1,10 @@
+.single-post, .single-podcasts{
+	.breadcrumb-wrapper, .section{
+		.container{
+			max-width: 1080px;
+		}
+	}
+}
 .post-list-title {
 	text-align: center;
 	font-family: 'Montserrat';
@@ -18,12 +25,21 @@
 
 	&:last-child {
 		border-bottom: none;
+		@include min(sm) {
+			border-bottom: 1px solid #1075bb;
+		}
 	}
-
+	.btn-cta{
+		margin: auto 0 0;
+	}
 	@include min(sm) {
-		padding-bottom: 100px;
 		margin-bottom: 67px;
-		display: flex;
+		width: 50%;
+		padding: 0 15px 50px;
+	}
+	@include min(md) {
+		width: 33.3333%;
+		padding: 0 15px 100px;
 	}
 
 	&-image {
@@ -35,11 +51,9 @@
 		margin-bottom: 30px;
 		height: 200px;
 		overflow: hidden;
-
 		@include min(sm) {
-			margin-bottom: 0;
+			margin-bottom: 20px;
 			height: 340px;
-			width: 38%;
 		}
 
 		> img {
@@ -63,11 +77,11 @@
 
 	&-text {
 		@include min(sm) {
-			padding-left: 35px;
-			width: 62%;
-		}
-		@include min(lg) {
-			padding-left: 85px;
+			height: calc(100% - 340px);
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
 		}
 	}
 
@@ -78,11 +92,7 @@
 		text-transform: capitalize;
 		color: #1075bb;
 		font-size: 28px;
-
-		@include min(sm) {
-			font-size: 40px;
-			line-height: 45px;
-		}
+		min-height: 105px;
 	}
 
 	p {
@@ -104,6 +114,8 @@
 	margin-bottom: 30px;
 
 	@include min(sm) {
+		display: flex;
+		flex-wrap: wrap;
 		margin-bottom: 0;
 	}
 }

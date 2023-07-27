@@ -31,8 +31,7 @@
 		margin: 30px 0;
 
 		@include min(lg) {
-			margin-left: -30px;
-			width: calc(100% + 60px);
+			width: 100%;
 		}
 
 		img {
