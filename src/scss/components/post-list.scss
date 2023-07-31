@@ -43,8 +43,13 @@
 	&.blog-item{
 		border-bottom: 0;
 		.post-item-image{
+			a{
+				background: linear-gradient(180deg,rgba(16,117,187,.22) 8.63%,rgba(13,80,152,.68) 70.83%,#1075bb);
+			}
 			img{
 				object-fit: cover;
+				position: relative;
+				z-index: -1;
 			}
 		}
 		@include min(sm) {
