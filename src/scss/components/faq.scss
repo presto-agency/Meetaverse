@@ -79,7 +79,46 @@
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 129.8%;
+		p{
+			line-height: 1.7em;
+			margin: 20px 0;
+		}
+		ul{
+			li{
+				position: relative;
+				padding-left: 20px;
+				&:before{
+					position: absolute;
+					content: '';
+					left: 0;
+					top: 11px;
+					width: 6px;
+					height: 6px;
+					background: #1075bb;
+					border-radius: 50%;
+				}
+			}
+		}
+		ol {
+			list-style: none;
+			counter-reset: my-awesome-counter;
+			li {
+				counter-increment: my-awesome-counter;
+				&:before {
+					content: counter(my-awesome-counter) "";
+					color: #1075bb;
+					margin-right: 14px;
+				}
+			}
 
+		}
+		a{
+			color: #1075bb;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
 		@include min(md) {
 			font-size: 18px;
 		}
