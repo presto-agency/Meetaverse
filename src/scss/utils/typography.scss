@@ -1,14 +1,14 @@
 h1,
 .title-1 {
 	font-weight: 600;
-	font-size: 30px;
+	font-size: 3rem;
 	margin: 0;
 	line-height: 1.3em;
 	@include min(sm) {
-		font-size: 40px;
+		font-size: 4rem;
 	}
 	@include min(lg) {
-		font-size: 50px;
+		font-size: 5rem;
 	}
 }
 
@@ -16,38 +16,38 @@ h2,
 h3,
 .title-3,
 .title-2 {
-	margin: 20px 0;
+	margin: 2rem 0;
 	font-weight: 500;
 }
 
 h2,
 .title-2 {
-	font-size: 28px;
+	font-size: 2.8rem;
 	line-height: 1.25em;
 	@include min(sm) {
-		font-size: 30px;
+		font-size: 3rem;
 	}
 	@include min(lg) {
-		font-size: 40px;
+		font-size: 4rem;
 	}
 }
 
 h3,
 .title-3 {
-	font-size: 26px;
+	font-size: 2.6rem;
 	line-height: 1.3em;
 	@include min(sm) {
-		font-size: 28px;
+		font-size: 2.8rem;
 	}
 	@include min(lg) {
-		font-size: 30px;
+		font-size: 3rem;
 	}
 }
 
 h4,
 .title-4 {
-	margin: 20px 0;
-	font-size: 18px;
+	margin: 2rem 0;
+	font-size: 1.8rem;
 	line-height: 1.3em;
 	letter-spacing: 1px;
 	font-weight: 500;
@@ -56,36 +56,36 @@ h4,
 h5,
 .title-5 {
 	margin: 0;
-	font-size: 18px;
+	font-size: 1.8rem;
 	line-height: 1.25em;
 	font-weight: 500;
 }
 h6,
 .title-6 {
 	margin: 0;
-	font-size: 16px;
+	font-size: 1.6rem;
 	line-height: 1.25em;
 	font-weight: 500;
 }
 
 ul li,
 p {
-	font-size: 16px;
-	margin-bottom: 10px;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
 	font-family: 'Montserrat';
 	line-height: 1.7em;
 	@include min(md) {
-		font-size: 18px;
+		font-size: 1.8rem;
 	}
 }
 ol {
 	li {
-		font-size: 16px;
-		margin-bottom: 10px;
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
 		font-family: 'Montserrat';
 		line-height: 1.7em;
 		@include min(md) {
-			font-size: 18px;
+			font-size: 1.8rem;
 		}
 	}
 }
@@ -102,11 +102,11 @@ ol {
 }
 
 .text-small {
-	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 p {
-	margin: 20px 0;
+	margin: 2rem 0;
 	line-height: 1.7em;
 }
 
@@ -168,15 +168,15 @@ ul.list {
 		// font-size: 18px;
 		position: relative;
 		font-weight: 300;
-		padding-left: 30px;
+		padding-left: 3rem;
 
 		&:before {
 			content: '';
 			@include circle(6px);
 			background-color: $color-white;
 			position: absolute;
-			left: 10px;
-			top: 14px;
+			left: 1rem;
+			top: 1.4rem;
 		}
 	}
 }
@@ -189,11 +189,11 @@ ul.list {
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 800;
-	font-size: 60px;
+	font-size: 6rem;
 	line-height: 1;
 
 	@include min(md) {
-		font-size: 96px;
+		font-size: 9.6rem;
 	}
 }
 
@@ -201,10 +201,10 @@ ul.list {
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 500;
-	font-size: 64px;
-	line-height: 45px;
+	font-size: 6.4rem;
+	line-height: 4.5rem;
 }
 
 .counter-circle {
-	margin-bottom: 30px;
+	margin-bottom: 3rem;
 }

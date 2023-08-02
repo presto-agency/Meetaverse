@@ -29,7 +29,7 @@
 		width: auto;
 	}
 	figure {
-		margin: 30px 0;
+		margin: 3rem 0;
 
 		@include min(lg) {
 			width: 100%;
@@ -38,7 +38,7 @@
 		img {
 			display: block;
 			width: 100%;
-			border-radius: 20px;
+			border-radius: 2rem;
 			box-shadow: 0 4px 4px rgba(42, 42, 42, 0.1);
 			overflow: hidden;
 		}
@@ -68,7 +68,7 @@
 		// font-weight: 400;
 		// line-height: 180%;
 		position: relative;
-		padding-left: 30px;
+		padding-left: 3rem;
 		// font-size: 16px;
 
 		@include min(sm) {
@@ -77,10 +77,10 @@
 
 		&:before {
 			content: '';
-			@include circle(3px);
+			@include circle(.3rem);
 			position: absolute;
-			left: 10px;
-			top: 16px;
+			left: 1rem;
+			top: 1.6rem;
 			background-color: rgba(0, 0, 0, 0.8);
 		}
 	}

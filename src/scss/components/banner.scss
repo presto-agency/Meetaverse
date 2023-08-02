@@ -3,18 +3,18 @@
 	display: flex;
 	align-items: center;
 	z-index: 0;
-	padding: 80px 0 140px;
+	padding: 8rem 0 14rem;
 	overflow: hidden;
-	min-height: 400px;
+	min-height: 40rem;
 	@include max(sm) {
-		padding: 60px 0 160px;
+		padding: 6rem 0 16rem;
 		text-align: left;
-		min-height: 600px;
+		min-height: 60rem;
 	}
 
 	&-min {
 		@include min(md) {
-			min-height: 600px;
+			min-height: 60rem;
 		}
 	}
 	&-background {
@@ -83,7 +83,7 @@
 			// font-size: 26px;
 			// letter-spacing: 0.7px;
 			// line-height: 1.35;
-			margin: 30px 0 16px;
+			margin: 3rem 0 1.6rem;
 
 			// @include min(sm) {
 			// 	font-size: 50px;
@@ -91,46 +91,46 @@
 		}
 
 		p {
-			font-size: 18px;
+			font-size: 1.8rem;
 			font-weight: 500;
-			margin: 13px 0;
+			margin: 1.3rem 0;
 			line-height: 1.5;
 
 			@include min(sm) {
-				font-size: 24px;
+				font-size: 2.4rem;
 			}
 		}
 
 		ul {
-			font-size: 18px;
+			font-size: 1.8rem;
 			font-weight: 600;
-			margin: 25px 0;
+			margin: 2.5rem 0;
 
 			@include min(sm) {
-				font-size: 24px;
+				font-size: 2.4rem;
 			}
 
 			li {
-				margin: 7px 0px;
+				margin: .7rem 0px;
 				font-weight: 500;
 				padding-left: 0;
 
 				@include min(sm) {
-					padding-left: 33px;
+					padding-left: 3.3rem;
 					position: relative;
 				}
 
 				&:before {
 					content: url('../img/checkmark.svg');
-					height: 20px;
-					width: 20px;
-					margin-right: 10px;
+					height: 2rem;
+					width: 2rem;
+					margin-right: 1rem;
 					background-color: transparent;
 					position: static;
 
 					@include min(sm) {
-						left: 8px;
-						top: -2px;
+						left: .8rem;
+						top: -.2rem;
 						position: absolute;
 					}
 				}
@@ -138,35 +138,35 @@
 		}
 
 		&--limiter {
-			max-width: 500px;
+			max-width: 50rem;
 			margin: 0 auto;
 
 			@include min(sm) {
 				margin: 0;
-				max-width: 660px;
+				max-width: 66rem;
 			}
 		}
 
 		&--limiter-lg {
 			@include min(sm) {
-				max-width: 920px;
+				max-width: 92rem;
 			}
 		}
 
 		&--limiter-md {
 			@include min(sm) {
-				max-width: 800px;
+				max-width: 80rem;
 			}
 		}
 
 		&--limiter-sm {
 			@include min(sm) {
-				max-width: 500px;
+				max-width: 50rem;
 			}
 		}
 
 		&--body {
-			margin-bottom: 50px;
+			margin-bottom: 5rem;
 		}
 	}
 	&-hero {
@@ -181,7 +181,7 @@
 
 		h2 {
 			// letter-spacing: 0.7px;
-			margin: 30px 0 16px;
+			margin: 3rem 0 1.6rem;
 		}
 	}
 	&-full {
@@ -189,12 +189,12 @@
 			text-transform: uppercase;
 			// font-weight: 600;
 			// letter-spacing: 0.7px;
-			margin: 20px 0;
+			margin: 2rem 0;
 		}
 		p {
-			margin: 10px 0;
+			margin: 1rem 0;
 			&:last-of-type {
-				margin-bottom: 50px;
+				margin-bottom: 5rem;
 			}
 		}
 	}
@@ -209,10 +209,10 @@
 	> a {
 		width: 100%;
 		text-align: center;
-		margin: 10px 0;
+		margin: 1rem 0;
 
 		@include min(sm) {
-			margin: 0 10px;
+			margin: 0 1rem;
 			@include first_last_list_marign();
 		}
 	}
@@ -225,24 +225,24 @@
 	width: 100%;
 	border-top: 1px solid $color-white;
 	text-align: center;
-	padding: 29px 0 14px 0;
+	padding: 2.9rem 0 1.4rem 0;
 	@include max(sm) {
 		display: flex;
 		flex-direction: column;
-		padding: 10px 0;
+		padding: 1rem 0;
 	}
 	&-button {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 500;
-		font-size: 18px;
-		line-height: 24px;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		color: $color-white;
-		margin-bottom: 15px;
+		margin-bottom: 1.5rem;
 		@include clear-btn;
 		@include max(sm) {
-			margin-bottom: 10px;
+			margin-bottom: 1rem;
 		}
 		&.active {
 			font-weight: bold;
@@ -255,13 +255,13 @@
 	padding: 0;
 	margin: 0;
 	&.offset-lg {
-		padding: 120px 0;
+		padding: 12rem 0;
 	}
 	&.offset-md {
-		padding: 80px 0;
+		padding: 8rem 0;
 	}
 	&.offset-sm {
-		padding: 40px 0;
+		padding: 4rem 0;
 	}
 	@include min(md) {
 		margin: 0;
@@ -294,13 +294,13 @@
 }
 
 .text-banner_spaces {
-	padding-bottom: 280px;
+	padding-bottom: 28rem;
 	@include min(sm) {
-		padding-top: 100px;
-		padding-bottom: 180px;
+		padding-top: 10rem;
+		padding-bottom: 18rem;
 	}
 	@include min(lg) {
-		padding-top: 140px;
-		padding-bottom: 240px;
+		padding-top: 14rem;
+		padding-bottom: 24rem;
 	}
 }

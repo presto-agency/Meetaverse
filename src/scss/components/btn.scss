@@ -1,12 +1,12 @@
 .btn-cta {
 	background: linear-gradient(180deg, #36bee4 0%, #1075bb 100%);
-	border-radius: 40px;
+	border-radius: 4rem;
 	font-weight: 700;
 	color: $color-white;
 	display: inline-block;
 	text-transform: uppercase;
-	padding: 20px 22px;
-	font-size: 16px;
+	padding: 2rem 2.2rem;
+	font-size: 1.6rem;
 	letter-spacing: 1px;
 	text-decoration: none;
 	white-space: nowrap;
@@ -14,32 +14,32 @@
 
 	@include min(md) {
 		letter-spacing: 2px;
-		padding: 20px 28px;
-		font-size: 18px;
+		padding: 2rem 2.8rem;
+		font-size: 1.8rem;
 	}
 
 	@include min(lg) {
 		letter-spacing: 3px;
-		font-size: 18px;
-		padding: 20px 34px;
+		font-size: 1.8rem;
+		padding: 2rem 3.4rem;
 	}
 
 	&-sm {
 		@include min(lg) {
-			font-size: 16px;
-			padding: 17px 36px;
+			font-size: 1.6rem;
+			padding: 1.7rem 3.6rem;
 		}
 	}
 }
 
 .btn-outline {
 	background: transparent;
-	border-radius: 40px;
+	border-radius: 4rem;
 	font-weight: 700;
 	display: inline-block;
 	text-transform: uppercase;
-	padding: 20px 22px;
-	font-size: 16px;
+	padding: 2rem 2.2rem;
+	font-size: 1.6rem;
 	letter-spacing: 1px;
 	text-decoration: none;
 	@include clear-btn;
@@ -67,13 +67,13 @@
 
 	@include min(md) {
 		letter-spacing: 2px;
-		padding: 20px 28px;
-		font-size: 18px;
+		padding: 2rem 2.8rem;
+		font-size: 1.8rem;
 	}
 
 	@include min(lg) {
 		letter-spacing: 3px;
-		font-size: 18px;
-		padding: 20px 32px;
+		font-size: 1.8rem;
+		padding: 2rem 3.2rem;
 	}
 }

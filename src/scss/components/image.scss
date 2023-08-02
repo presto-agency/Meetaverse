@@ -11,7 +11,7 @@ img {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 15px;
+		padding: 1.5rem;
 	}
 
 	img {
@@ -22,7 +22,7 @@ img {
 	&--small {
 		img {
 			@include min(sm) {
-				max-width: 100px;
+				max-width: 10rem;
 			}
 		}
 	}

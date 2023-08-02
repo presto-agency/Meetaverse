@@ -2,33 +2,33 @@
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 500;
-	font-size: 40px;
-	line-height: 45px;
+	font-size: 4rem;
+	line-height: 4.5rem;
 	text-align: center;
 	text-transform: uppercase;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-	margin-bottom: 30px;
-	padding-bottom: 30px;
+	margin-bottom: 3rem;
+	padding-bottom: 3rem;
 
 	@include min(lg) {
-		padding-bottom: 40px;
-		margin-bottom: 40px;
+		padding-bottom: 4rem;
+		margin-bottom: 4rem;
 	}
 }
 
 .faq-item {
-	padding-bottom: 20px;
-	margin-bottom: 20px;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 	position: relative;
 
 	@include min(sm) {
-		padding-bottom: 30px;
-		margin-bottom: 30px;
+		padding-bottom: 3rem;
+		margin-bottom: 3rem;
 	}
 	@include min(md) {
-		padding-bottom: 40px;
-		margin-bottom: 40px;
+		padding-bottom: 4rem;
+		margin-bottom: 4rem;
 	}
 
 	&:last-child {
@@ -41,35 +41,35 @@
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 500;
-		font-size: 18px;
-		margin-bottom: 20px;
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
 		text-transform: uppercase;
 		color: #1075bb;
-		padding-right: 60px;
+		padding-right: 6rem;
 		// margin-top: 0;
 		&::before {
 			content: '';
-			width: 20px;
-			height: 20px;
+			width: 2rem;
+			height: 2rem;
 			background-image: url(../img/plus.svg);
 			position: absolute;
-			right: 5px;
-			top: 5px;
+			right: .5rem;
+			top: .5rem;
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
 			transform: rotate(0);
 			transition: transform 0.4s ease;
 			@include min(md) {
-				width: 30px;
-				height: 30px;
-				top: 10px;
+				width: 3rem;
+				height: 3rem;
+				top: 1rem;
 			}
 		}
 		@include min(md) {
-			font-size: 24px;
-			margin-bottom: 40px;
-			line-height: 45px;
+			font-size: 2.4rem;
+			margin-bottom: 4rem;
+			line-height: 4.5rem;
 		}
 	}
 
@@ -77,23 +77,23 @@
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 400;
-		font-size: 16px;
+		font-size: 1.6rem;
 		line-height: 129.8%;
 		p{
 			line-height: 1.7em;
-			margin: 20px 0;
+			margin: 2rem 0;
 		}
 		ul{
 			li{
 				position: relative;
-				padding-left: 20px;
+				padding-left: 2rem;
 				&:before{
 					position: absolute;
 					content: '';
 					left: 0;
-					top: 11px;
-					width: 6px;
-					height: 6px;
+					top: 1.1rem;
+					width: .6rem;
+					height: .6rem;
 					background: #1075bb;
 					border-radius: 50%;
 				}
@@ -107,7 +107,7 @@
 				&:before {
 					content: counter(my-awesome-counter) "";
 					color: #1075bb;
-					margin-right: 14px;
+					margin-right: 1.4rem;
 				}
 			}
 
@@ -120,18 +120,18 @@
 			}
 		}
 		@include min(md) {
-			font-size: 18px;
+			font-size: 1.8rem;
 		}
 	}
 }
 .faq {
 	&-section {
-		padding: 100px 0 0;
+		padding: 10rem 0 0;
 		.faq-item {
 			position: relative;
 			&.active {
 				.faq-item-title {
-					margin-bottom: 20px;
+					margin-bottom: 2rem;
 					&::before {
 						transform: rotate(45deg);
 					}
@@ -148,7 +148,7 @@
 			position: absolute;
 			left: -9999px;
 			top: -9999px;
-			margin-top: 50px;
+			margin-top: 5rem;
 			opacity: 0;
 			transition: margin-top 0.7s ease, opacity 0.4s ease;
 			&.active {

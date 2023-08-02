@@ -1,8 +1,8 @@
 .tns-controls {
 	button {
 		font-size: 0px;
-		width: 30px;
-		height: 15px;
+		width: 3rem;
+		height: 1.5rem;
 		background-size: contain;
 		background-repeat: no-repeat;
 		@include clear-btn;
@@ -19,7 +19,7 @@
 
 .slider-nav-bottom {
 	position: relative;
-	padding-bottom: 75px;
+	padding-bottom: 7.5rem;
 
 	.tns-controls {
 		position: absolute;
@@ -29,8 +29,8 @@
 		text-align: center;
 
 		button {
-			margin-left: 64px;
-			margin-right: 64px;
+			margin-left: 6.4rem;
+			margin-right: 6.4rem;
 			@include first_last_list_marign;
 		}
 	}
@@ -38,9 +38,9 @@
 
 .middle-controls-slider {
 	position: relative;
-	padding: 0 30px;
+	padding: 0 3rem;
 	@include min(sm) {
-		padding: 0 100px;
+		padding: 0 10rem;
 	}
 	.tns-controls {
 		position: absolute;
@@ -59,19 +59,19 @@
 	}
 	.card {
 		img {
-			max-width: 100px;
-			max-height: 100px;
+			max-width: 10rem;
+			max-height: 10rem;
 		}
 	}
 }
 
 .slider-dots {
 	button {
-		width: 26px;
-		height: 2px;
+		width: 2.6rem;
+		height: .2rem;
 		@include clear-btn;
-		margin-left: 4px;
-		margin-right: 4px;
+		margin-left: .4rem;
+		margin-right: .4rem;
 		background: rgba(0, 0, 0, 0.7);
 
 		&.tns-nav-active {
@@ -84,7 +84,7 @@
 	padding-bottom: 0;
 
 	.tns-inner {
-		padding: 10px;
+		padding: 1rem;
 	}
 
 	.tns-controls {
@@ -98,13 +98,13 @@
 	}
 
 	.tns-nav {
-		margin-top: 100px;
+		margin-top: 10rem;
 		text-align: center;
 	}
 }
 
 .cover-slider-item {
-	border-radius: 20px;
+	border-radius: 2rem;
 	position: relative;
 	overflow: hidden;
 
@@ -133,14 +133,14 @@
 		position: absolute;
 		text-align: center;
 		left: 0;
-		bottom: 45px;
+		bottom: 4.5rem;
 		z-index: 1;
 		width: 100%;
 
 		& > button {
 			@include clear-btn;
 			@include first_last_list_marign;
-			margin: 0 33px;
+			margin: 0 3.3rem;
 			&:hover {
 				opacity: 0.8;
 			}

@@ -52,10 +52,16 @@
 							<a class="btn-cta" href="#">schedule a demo</a>
 							<button
 								type="button"
-								class="btn-outline btn-outline-white"
-								onclick="addClass()">
+								class="btn-outline btn-outline-white js-play" >
 								watch video
 							</button>
+							<div class="popup popup-video">
+								<div class="popup-wrap">
+									<button type="button" class="popup-close"></button>
+									<video class="video" id="video" src="https://meetaverse.com/wp-content/uploads/2023/06/meetaverse-intro.mp4" loop="" controls="" playsinline="" controlslist="nodownload" poster="https://meetaverse.com/wp-content/themes/meetaverse/img/poster.jpg"></video>
+								</div>
+								<div class="popup-overlay"></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -359,7 +365,7 @@
 			</div>
 		</div>
 
-		<div class="section">
+		<div class="section section-with-popup">
 			<div class="container">
 				<div class="box box-white box-lg">
 					<div class="content-box content-box--bigger-image">

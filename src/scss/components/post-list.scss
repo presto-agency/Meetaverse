@@ -8,7 +8,7 @@
 	}
 	.breadcrumb-wrapper, .section{
 		.container{
-			max-width: 1080px;
+			max-width: 108rem;
 		}
 	}
 }
@@ -17,18 +17,18 @@
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 500;
-	font-size: 40px;
-	line-height: 45px;
+	font-size: 4rem;
+	line-height: 4.5rem;
 	border-bottom: 1px solid #1075bb;
 	text-transform: uppercase;
-	padding-bottom: 85px;
-	margin-bottom: 67px;
+	padding-bottom: 8.5rem;
+	margin-bottom: 6.7rem;
 }
 
 .post-item {
 	border-bottom: 1px solid #1075bb;
-	padding-bottom: 30px;
-	margin-bottom: 30px;
+	padding-bottom: 3rem;
+	margin-bottom: 3rem;
 	a{
 		text-decoration: none;
 	}
@@ -56,10 +56,10 @@
 			}
 		}
 		@include min(sm) {
-			margin-bottom: 67px;
+			margin-bottom: 6.7rem;
 			width: 50%;
 			.post-item-image{
-				height: 240px;
+				height: 24rem;
 			}
 		}
 		@include min(md) {
@@ -67,8 +67,8 @@
 			flex-direction: column;
 			border-bottom: 0;
 			.post-item-image{
-				height: 200px;
-				margin-bottom: 10px;
+				height: 20rem;
+				margin-bottom: 1rem;
 				a{
 					max-width: 100%;
 				}
@@ -78,19 +78,19 @@
 			}
 			.post-item-text{
 				padding: 0;
-				height: calc(100% - 200px);
+				height: calc(100% - 20rem);
 				p{
-					font-size: 16px;
-					margin: 10px 0;
+					font-size: 1.6rem;
+					margin: 1rem 0;
 				}
 			}
 			.post-item-title{
-				font-size: 20px;
-				min-height: 75px;
+				font-size: 2rem;
+				min-height: 7.5rem;
 				margin: 0;
 			}
 			.btn-cta{
-				padding: 16px 30px;
+				padding: 1.6rem 3rem;
 			}
 		}
 	}
@@ -102,35 +102,35 @@
 		}
 		@include min(md) {
 			.post-item-image{
-				width: 440px;
-				height: 295px;
+				width: 44rem;
+				height: 29.5rem;
 				img{
 					object-fit: cover;
 				}
 			}
 			.post-item-text{
-				width: calc(100% - 440px);
+				width: calc(100% - 44rem);
 			}
 		}
 	}
 	@include min(sm) {
-		margin-bottom: 67px;
-		padding: 0 15px 50px;
+		margin-bottom: 6.7rem;
+		padding: 0 1.5rem 5rem;
 	}
 	@include min(md) {
-		padding: 0 15px 100px;
+		padding: 0 1.5rem 10rem;
 		display: flex;
 
 	}
 
 	&-image {
 		border: 1px solid #1075bb;
-		border-radius: 20px;
+		border-radius: 2rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: 30px;
-		height: 200px;
+		margin-bottom: 3rem;
+		height: 20rem;
 		overflow: hidden;
 		width: 100%;
 
@@ -151,14 +151,14 @@
 			transition: all ease 300ms;
 		}
 		@include min(sm) {
-			margin-bottom: 20px;
-			height: 340px;
+			margin-bottom: 2rem;
+			height: 34rem;
 		}
 		@include min(md) {
-			max-width: 440px;
+			max-width: 44rem;
 			margin-bottom: 0;
 			a{
-				max-width: 440px;
+				max-width: 44rem;
 			}
 		}
 
@@ -169,7 +169,7 @@
 		}
 
 		&--offset {
-			padding: 50px;
+			padding: 5rem;
 
 			> img {
 				width: auto;
@@ -183,7 +183,7 @@
 
 	&-text {
 		@include min(sm) {
-			height: calc(100% - 340px);
+			height: calc(100% - 34rem);
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
@@ -191,7 +191,7 @@
 		}
 		@include min(md) {
 			height: auto;
-			padding: 0 20px;
+			padding: 0 2rem;
 		}
 	}
 
@@ -201,8 +201,8 @@
 		font-weight: 500;
 		text-transform: capitalize;
 		color: #1075bb;
-		font-size: 28px;
-		min-height: 105px;
+		font-size: 2.8rem;
+		min-height: 10.5rem;
 		text-decoration: none;
 		&:hover{
 			color: #1c85ce;
@@ -213,23 +213,23 @@
 		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 400;
-		font-size: 16px;
+		font-size: 1.6rem;
 		line-height: 129.8%;
-		margin-bottom: 20px;
+		margin-bottom: 2rem;
 
 		@include min(sm) {
-			margin-bottom: 40px;
-			font-size: 18px;
+			margin-bottom: 4rem;
+			font-size: 1.8rem;
 		}
 	}
 }
 
 .post-list {
-	margin-bottom: 30px;
+	margin-bottom: 3rem;
 
 	@include min(sm) {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -15px 0;
+		margin: 0 -1.5rem 0;
 	}
 }

@@ -167,7 +167,8 @@ playVideos.forEach((play) => {
 		sections.forEach((section) => {
 			section.style.zIndex = '-1';
 		});
-		 document.querySelector('.section-with-popup').style.zIndex = '1';
+		document.querySelector('header').style.zIndex = '-1';
+		 document.querySelector('.section-with-popup').style.zIndex = '4';
 	});
 });
 
@@ -176,6 +177,7 @@ closeVideos.forEach((close) => {
 
 	close.addEventListener('click', (e) => {
 		// e.target.nextElementSibling.nextElementSibling.classList.add('open');
+		document.querySelector('header').style.zIndex = '3';
 		document.querySelector('body').classList.remove('menu-open');
 		sections.forEach((section) => {
 			section.style.zIndex = '1';
@@ -187,6 +189,7 @@ closeVideos.forEach((close) => {
 		videos.forEach((video) => {
 			video.pause();
 		});
+
 	});
 });
 if (document.querySelector('.menu-item-has-children')) {

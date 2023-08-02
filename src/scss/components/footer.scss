@@ -1,6 +1,6 @@
 .page-footer {
 	@extend .color-lighter;
-	padding: 80px 0;
+	padding: 8rem 0;
 	text-align: center;
 	position: relative;
 	background-color: $color-light-200;
@@ -23,7 +23,7 @@
 		a {
 			display: block;
 			img {
-				width: 120px;
+				width: 12rem;
 			}
 		}
 	}
@@ -37,13 +37,13 @@
 	}
 
 	&--top {
-		margin-bottom: 50px;
+		margin-bottom: 5rem;
 
 		@include min(sm) {
-			margin-bottom: 200px;
+			margin-bottom: 20rem;
 
 			.page-footer--left {
-				max-width: 430px;
+				max-width: 43rem;
 			}
 		}
 	}
@@ -59,13 +59,13 @@
 	@include first_last_list_marign;
 
 	@include min(sm) {
-		margin-left: 10px;
-		margin-right: 10px;
+		margin-left: 1rem;
+		margin-right: 1rem;
 	}
 
 	@include min(md) {
-		margin-left: 40px;
-		margin-right: 40px;
+		margin-left: 4rem;
+		margin-right: 4rem;
 	}
 
 	ul {
@@ -74,7 +74,7 @@
 
 		li {
 			@include min(sm) {
-				margin: 20px 0;
+				margin: 2rem 0;
 			}
 
 			padding: 0;
@@ -83,8 +83,8 @@
 
 	h4 {
 		@include down(sm) {
-			margin-top: 20px;
-			margin-bottom: 10px;
+			margin-top: 2rem;
+			margin-bottom: 1rem;
 		}
 	}
 }
