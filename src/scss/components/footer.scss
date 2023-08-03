@@ -40,10 +40,18 @@
 		margin-bottom: 5rem;
 
 		@include min(sm) {
-			margin-bottom: 20rem;
+			margin-bottom: 10rem;
+
+			.page-footer--left {
+				max-width: 22rem;
+				margin-right: 2rem;
+			}
+		}
+		@include min(md) {
 
 			.page-footer--left {
 				max-width: 43rem;
+				margin-right: 1rem;
 			}
 		}
 	}
@@ -64,8 +72,8 @@
 	}
 
 	@include min(md) {
-		margin-left: 4rem;
-		margin-right: 4rem;
+		margin-left: 2rem;
+		margin-right: 2rem;
 	}
 
 	ul {
@@ -78,10 +86,24 @@
 			}
 
 			padding: 0;
+			a{
+				@include min(sm) {
+					font-size: 1.4rem;
+				}
+				@include min(md) {
+					font-size: 1.6rem;
+				}
+			}
 		}
 	}
 
 	h4 {
+		@include min(sm) {
+			font-size: 1.6rem;
+		}
+		@include min(md) {
+			font-size: 1.8rem;
+		}
 		@include down(sm) {
 			margin-top: 2rem;
 			margin-bottom: 1rem;

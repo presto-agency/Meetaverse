@@ -36,6 +36,7 @@
 
 		@include min(md) {
 			flex-direction: row;
+			height: 3.6rem;
 		}
 		> li {
 			display: inline-block;
@@ -82,6 +83,10 @@
 						background-repeat: no-repeat;
 						background-position: center;
 						@include min(md) {
+							right: -5.7rem;
+							top: 1.2rem;
+						}
+						@include min(lg) {
 							right: 0;
 							top: 1.4rem;
 						}
