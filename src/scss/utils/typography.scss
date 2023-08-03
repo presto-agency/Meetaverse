@@ -1,108 +1,95 @@
-@font-face {
-  font-family: 'Inter';
-  src: url('../fotns/Inter/Inter-Thin.ttf');
-  src: local('Inter Thin'), local('Inter-Thin'),
-  url('../fotns/Inter/Inter-Thin.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('../fotns/Inter/Inter-Medium.ttf');
-  src: local('Inter Medium'), local('Inter-Medium'),
-  url('../fotns/Inter/Inter-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('../fotns/Inter/Inter-Regular.ttf');
-  src: local('Inter Regular'), local('Inter-Thin'),
-  url('../fotns/Inter/Inter-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fotns/Montserrat/Montserrat-Light.ttf');
-  src: local('Montserrat Light'), local('Montserrat-Light'),
-  url('../fotns/Montserrat/Montserrat-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fotns/Montserrat/Montserrat-LightItalic.ttf');
-  src: local('Montserrat LightItalic'), local('Montserrat-LightItalic'),
-  url('../fotns/Montserrat/Montserrat-LightItalic.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fotns/Montserrat/Montserrat-Regular.ttf');
-  src: local('Montserrat Regular'), local('Montserrat-Regular'),
-  url('../fotns/Montserrat/Montserrat-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fotns/Montserrat/Montserrat-Italic.ttf');
-  src: local('Montserrat Italic'), local('Montserrat-Italic'),
-  url('../fotns/Montserrat/Montserrat-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fotns/Montserrat/Montserrat-Medium.ttf');
-  src: local('Montserrat Medium'), local('Montserrat-Medium'),
-  url('../fotns/Montserrat/Montserrat-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fotns/Montserrat/Montserrat-MediumItalic.ttf');
-  src: local('Montserrat MediumItalic'), local('Montserrat-MediumItalic'),
-  url('../fotns/Montserrat/Montserrat-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fotns/Montserrat/Montserrat-SemiBold.ttf');
-  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
-  url('../fotns/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fotns/Montserrat/Montserrat-Bold.ttf');
-  src: local('Montserrat Bold'), local('Montserrat-Bold'),
-  url('../fotns/Montserrat/Montserrat-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fotns/Montserrat/Montserrat-SemiBoldItalic.ttf');
-  src: local('Montserrat SemiBoldItalic'), local('Montserrat-SemiBoldItalic'),
-  url('../fotns/Montserrat/Montserrat-SemiBoldItalic.ttf') format('truetype');
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fotns/Montserrat/Montserrat-Italic.ttf');
-  src: local('Montserrat Italic'), local('Montserrat-Italic'),
-  url('../fotns/Montserrat/Montserrat-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
+//@font-face {
+//  font-family: 'Inter';
+//  src: local('Inter Thin'), local('Inter-Thin'),
+//  url('../fotns/Inter/Inter-Thin.ttf') format('truetype');
+//  font-weight: 300;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Inter';
+//  src: local('Inter Medium'), local('Inter-Medium'),
+//  url('../fotns/Inter/Inter-Medium.ttf') format('truetype');
+//  font-weight: 500;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Inter';
+//  src: local('Inter Regular'), local('Inter-Thin'),
+//  url('../fotns/Inter/Inter-Regular.ttf') format('truetype');
+//  font-weight: 400;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Light'), local('Montserrat-Light'),
+//  url('../fotns/Montserrat/Montserrat-Light.ttf') format('truetype');
+//  font-weight: 300;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat LightItalic'), local('Montserrat-LightItalic'),
+//  url('../fotns/Montserrat/Montserrat-LightItalic.ttf') format('truetype');
+//  font-weight: 300;
+//  font-style: italic;
+//}
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+//  url('../fotns/Montserrat/Montserrat-Regular.ttf') format('truetype');
+//  font-weight: 400;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Italic'), local('Montserrat-Italic'),
+//  url('../fotns/Montserrat/Montserrat-Regular.ttf') format('truetype');
+//  font-weight: 400;
+//  font-style: italic;
+//}
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+//  url('../fotns/Montserrat/Montserrat-Medium.ttf') format('truetype');
+//  font-weight: 500;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat MediumItalic'), local('Montserrat-MediumItalic'),
+//  url('../fotns/Montserrat/Montserrat-MediumItalic.ttf') format('truetype');
+//  font-weight: 500;
+//  font-style: italic;
+//}
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+//  url('../fotns/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+//  font-weight: 600;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+//  url('../fotns/Montserrat/Montserrat-Bold.ttf') format('truetype');
+//  font-weight: 700;
+//  font-style: normal;
+//}
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat SemiBoldItalic'), local('Montserrat-SemiBoldItalic'),
+//  url('../fotns/Montserrat/Montserrat-SemiBoldItalic.ttf') format('truetype');
+//  font-weight: 600;
+//  font-style: italic;
+//}
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Italic'), local('Montserrat-Italic'),
+//  url('../fotns/Montserrat/Montserrat-Regular.ttf') format('truetype');
+//  font-weight: 400;
+//  font-style: italic;
+//}
 h1,
 .title-1 {
 	font-weight: 600;

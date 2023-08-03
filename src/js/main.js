@@ -211,25 +211,57 @@ if (document.querySelector('.menu-item-has-children')) {
 			}
 		});
 	}
-	$(window).on('scroll', function() {
-		if ($(window).scrollTop() > 1) {
-			const imageData = $('img');
-			imageData.each(function () {
-				if ($(this).attr('data-src')) {
-					const imageDataSrc = $(this).attr('data-src');
-					$(this).attr('src', imageDataSrc);
+	var addClassOnScroll = function () {
+		const videoData = $('video');
+		if(videoData.length > 0){
+			videoData.each(function(){
+				if($(this).attr('data-src')){
+					const videoDataSrc = $(this).attr('data-src');
+					$(this).attr('src', videoDataSrc)
 				}
+
 			});
-			const videoData = $('video');
-			if(videoData.length > 0){
-				videoData.each(function(){
-					if($(this).attr('data-src')){
-						const videoDataSrc = $(this).attr('data-src');
-						$(this).attr('src', videoDataSrc);
-					}
-				});
-			}
+
 		}
+		const imageData = $('img');
+		imageData.each(function () {
+			if ($(this).attr('data-src')) {
+				const imageDataSrc = $(this).attr('data-src');
+				$(this).attr('src', imageDataSrc);
+			}
+		});
+	};
+
+
+
+	$(window).on('load', function() {
+		addClassOnScroll();
 	});
-	$(window).on('load', function() {});
+}
+function loadImages() {
+	// const pictures = document.getElementsByTagName('picture');
+	const images = document.getElementsByTagName('img');
+	//pictures
+	// for (let i = 0; i < pictures.length; i++) {
+	// 	const source = pictures[i].querySelector('source');
+	// 	const img = pictures[i].querySelector('img');
+	// 	let sourceSrc = source.getAttribute('data-srcset');
+	// 	let imgSrc = img.getAttribute('data-src');
+	// 	if (sourceSrc) {
+	// 		source.setAttribute('srcset', sourceSrc);
+	// 		source.removeAttribute('data-srcset');
+	// 	}
+	// 	if (imgSrc) {
+	// 		img.setAttribute('src', imgSrc);
+	// 		img.removeAttribute('data-src');
+	// 	}
+	// }
+	//images
+	for (let i = 0; i < images.length; i++) {
+		let imgSrc = images[i].getAttribute('data-src');
+		if (imgSrc) {
+			images[i].setAttribute('src', imgSrc);
+			images[i].removeAttribute('data-src');
+		}
+	}
 }
