@@ -211,57 +211,51 @@ if (document.querySelector('.menu-item-has-children')) {
 			}
 		});
 	}
-	var addClassOnScroll = function () {
-		const videoData = $('video');
-		if(videoData.length > 0){
-			videoData.each(function(){
-				if($(this).attr('data-src')){
-					const videoDataSrc = $(this).attr('data-src');
-					$(this).attr('src', videoDataSrc)
-				}
-
-			});
-
-		}
-		const imageData = $('img');
-		imageData.each(function () {
-			if ($(this).attr('data-src')) {
-				const imageDataSrc = $(this).attr('data-src');
-				$(this).attr('src', imageDataSrc);
+	function loadImages() {
+		const images = document.getElementsByTagName('img');
+		for (let i = 0; i < images.length; i++) {
+			let imgSrc = images[i].getAttribute('data-src');
+			if (imgSrc) {
+				images[i].setAttribute('src', imgSrc);
+				images[i].removeAttribute('data-src');
 			}
-		});
-	};
-
-
-
-	$(window).on('load', function() {
-		addClassOnScroll();
-	});
-}
-function loadImages() {
-	// const pictures = document.getElementsByTagName('picture');
-	const images = document.getElementsByTagName('img');
-	//pictures
-	// for (let i = 0; i < pictures.length; i++) {
-	// 	const source = pictures[i].querySelector('source');
-	// 	const img = pictures[i].querySelector('img');
-	// 	let sourceSrc = source.getAttribute('data-srcset');
-	// 	let imgSrc = img.getAttribute('data-src');
-	// 	if (sourceSrc) {
-	// 		source.setAttribute('srcset', sourceSrc);
-	// 		source.removeAttribute('data-srcset');
-	// 	}
-	// 	if (imgSrc) {
-	// 		img.setAttribute('src', imgSrc);
-	// 		img.removeAttribute('data-src');
-	// 	}
-	// }
-	//images
-	for (let i = 0; i < images.length; i++) {
-		let imgSrc = images[i].getAttribute('data-src');
-		if (imgSrc) {
-			images[i].setAttribute('src', imgSrc);
-			images[i].removeAttribute('data-src');
 		}
 	}
+	function loadVideo() {
+		const video = document.getElementsByTagName('video');
+		for (let i = 0; i < video.length; i++) {
+			let videoSrc = video[i].getAttribute('data-src');
+			if (videoSrc) {
+				videoSrc[i].setAttribute('src', videoSrc);
+				videoSrc[i].removeAttribute('data-src');
+			}
+		}
+	}
+	// var addClassOnScroll = function () {
+	// 	const videoData = $('video');
+	// 	if(videoData.length > 0){
+	// 		videoData.each(function(){
+	// 			if($(this).attr('data-src')){
+	// 				const videoDataSrc = $(this).attr('data-src');
+	// 				$(this).attr('src', videoDataSrc)
+	// 			}
+	//
+	// 		});
+	//
+	// 	}
+	// 	const imageData = $('img');
+	// 	imageData.each(function () {
+	// 		if ($(this).attr('data-src')) {
+	// 			const imageDataSrc = $(this).attr('data-src');
+	// 			$(this).attr('src', imageDataSrc);
+	// 		}
+	// 	});
+	// };
+
+
+
+	$(window).on('scroll', function() {
+		loadVideo();
+		loadImages();
+	});
 }
