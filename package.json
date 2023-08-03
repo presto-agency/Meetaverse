@@ -34,6 +34,7 @@
         "gulp-sourcemaps": "^3.0.0",
         "gulp-uglify": "^3.0.2",
         "intl-tel-input": "^18.1.6",
+        "is-in-viewport": "^3.0.4",
         "node-sass": "^9.0.0",
         "postcss": "^8.4.23",
         "pristinejs": "^1.1.0",
