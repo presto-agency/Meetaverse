@@ -211,51 +211,50 @@ if (document.querySelector('.menu-item-has-children')) {
 			}
 		});
 	}
-	function loadImages() {
-		const images = document.getElementsByTagName('img');
-		for (let i = 0; i < images.length; i++) {
-			let imgSrc = images[i].getAttribute('data-src');
-			if (imgSrc) {
-				images[i].setAttribute('src', imgSrc);
-				images[i].removeAttribute('data-src');
-			}
-		}
-	}
-	function loadVideo() {
-		const video = document.getElementsByTagName('video');
-		for (let i = 0; i < video.length; i++) {
-			let videoSrc = video[i].getAttribute('data-src');
-			if (videoSrc) {
-				videoSrc[i].setAttribute('src', videoSrc);
-				videoSrc[i].removeAttribute('data-src');
-			}
-		}
-	}
-	// var addClassOnScroll = function () {
-	// 	const videoData = $('video');
-	// 	if(videoData.length > 0){
-	// 		videoData.each(function(){
-	// 			if($(this).attr('data-src')){
-	// 				const videoDataSrc = $(this).attr('data-src');
-	// 				$(this).attr('src', videoDataSrc)
-	// 			}
-	//
-	// 		});
-	//
-	// 	}
-	// 	const imageData = $('img');
-	// 	imageData.each(function () {
-	// 		if ($(this).attr('data-src')) {
-	// 			const imageDataSrc = $(this).attr('data-src');
-	// 			$(this).attr('src', imageDataSrc);
+	// function loadImages() {
+	// 	const images = document.getElementsByTagName('img');
+	// 	for (let i = 0; i < images.length; i++) {
+	// 		let imgSrc = images[i].getAttribute('data-src');
+	// 		if (imgSrc) {
+	// 			images[i].setAttribute('src', imgSrc);
+	// 			images[i].removeAttribute('data-src');
 	// 		}
-	// 	});
-	// };
+	// 	}
+	// }
+	// function loadVideo() {
+	// 	const video = document.getElementsByTagName('video');
+	// 	for (let i = 0; i < video.length; i++) {
+	// 		let videoSrc = video[i].getAttribute('data-src');
+	// 		if (videoSrc) {
+	// 			videoSrc[i].setAttribute('src', videoSrc);
+	// 			videoSrc[i].removeAttribute('data-src');
+	// 		}
+	// 	}
+	// }
+	var addClassOnScroll = function () {
+		const videoData = $('video');
+		if(videoData.length > 0){
+			videoData.each(function(){
+				if($(this).attr('data-src')){
+					const videoDataSrc = $(this).attr('data-src');
+					$(this).attr('src', videoDataSrc)
+				}
+
+			});
+
+		}
+		const imageData = $('img');
+		imageData.each(function () {
+			if ($(this).attr('data-src')) {
+				const imageDataSrc = $(this).attr('data-src');
+				$(this).attr('src', imageDataSrc);
+			}
+		});
+	};
 
 
 
-	$(window).on('scroll', function() {
-		loadVideo();
-		loadImages();
+	$(window).on('load', function() {
+		addClassOnScroll();
 	});
 }
