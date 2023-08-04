@@ -211,27 +211,12 @@ if (document.querySelector('.menu-item-has-children')) {
 			}
 		});
 	}
-	// function loadImages() {
-	// 	const images = document.getElementsByTagName('img');
-	// 	for (let i = 0; i < images.length; i++) {
-	// 		let imgSrc = images[i].getAttribute('data-src');
-	// 		if (imgSrc) {
-	// 			images[i].setAttribute('src', imgSrc);
-	// 			images[i].removeAttribute('data-src');
-	// 		}
-	// 	}
-	// }
-	// function loadVideo() {
-	// 	const video = document.getElementsByTagName('video');
-	// 	for (let i = 0; i < video.length; i++) {
-	// 		let videoSrc = video[i].getAttribute('data-src');
-	// 		if (videoSrc) {
-	// 			videoSrc[i].setAttribute('src', videoSrc);
-	// 			videoSrc[i].removeAttribute('data-src');
-	// 		}
-	// 	}
+	// var imageDateInmages = $('img');
+	// for (let i = 0; i < imageDateInmages.length; i++) {
+	// 	console.log($(imageDateInmages[i]).offset().top);
 	// }
 	var addClassOnScroll = function () {
+
 		const videoData = $('video');
 		videoData.each(function(){
 			if($(this).attr('data-src')){
