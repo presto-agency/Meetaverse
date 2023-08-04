@@ -233,16 +233,15 @@ if (document.querySelector('.menu-item-has-children')) {
 	// }
 	var addClassOnScroll = function () {
 		const videoData = $('video');
-		if(videoData.length > 0){
-			videoData.each(function(){
-				if($(this).attr('data-src')){
-					const videoDataSrc = $(this).attr('data-src');
-					$(this).attr('src', videoDataSrc)
-				}
+		videoData.each(function(){
+			if($(this).attr('data-src')){
+				const videoDataSrc = $(this).attr('data-src');
+				$(this).attr('src', videoDataSrc);
+				$(this).removeAttr('data-src');
+				return false;
+			}
+		});
 
-			});
-
-		}
 		const imageData = $('img');
 		imageData.each(function () {
 			if ($(this).attr('data-src')) {
@@ -254,7 +253,8 @@ if (document.querySelector('.menu-item-has-children')) {
 
 
 
-	$(window).on('load', function() {
+	$(window).on('scroll', function() {
 		addClassOnScroll();
+
 	});
 }
