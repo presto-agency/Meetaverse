@@ -56,6 +56,8 @@ if (document.querySelector('.blockquote-slider')) {
 	tns({
 		container: '.blockquote-slider',
 		items: 1,
+		prevButton: '.blockquote-slider-prev',
+		nextButton: '.blockquote-slider-next',
 		slideBy: 'page',
 		nav: false,
 	});

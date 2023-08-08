@@ -157,3 +157,27 @@
 		}
 	}
 }
+.blockquote-controls{
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.blockquote-slider-prev,
+	.blockquote-slider-next{
+		width: 31px;
+		svg{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.blockquote-slider-prev{
+		margin-right: 6.4rem;
+	}
+	.blockquote-slider-next{
+		margin-left: 6.4rem;
+	}
+}
