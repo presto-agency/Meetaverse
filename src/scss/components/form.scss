@@ -63,6 +63,17 @@ input.form-control {
 		padding: 0 38px;
 	}
 }
+.legal-consent-container{
+	label{
+		display: flex;
+		align-items: flex-start;
+	}
+	p{
+		font-size: 1.6rem;
+		padding: 0;
+		margin: 0;
+	}
+}
 .hbspt-form{
 	.hs-error-msg{
 		font-size: 1.2rem;
