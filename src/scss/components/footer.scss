@@ -1,5 +1,5 @@
 .page-footer {
-	@extend .color-lighter;
+	//@extend .color-lighter;
 	padding: 8rem 0;
 	text-align: center;
 	position: relative;
@@ -9,7 +9,7 @@
 	}
 
 	a {
-		@extend .color-lighter;
+		//@extend .color-lighter;
 		text-decoration: none;
 		&.btn-cta {
 			color: $color-white;

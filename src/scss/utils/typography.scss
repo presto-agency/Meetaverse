@@ -126,7 +126,11 @@ h3,
 .title-3,
 .title-2 {
 	margin: 2rem 0;
-	font-weight: 500;
+	font-size: 3.6rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 128%; /* 46.08px */
+	letter-spacing: -1px;
 }
 
 h2,
@@ -137,7 +141,7 @@ h2,
 		font-size: 3rem;
 	}
 	@include min(lg) {
-		font-size: 4rem;
+		font-size: 3.6rem;
 	}
 }
 
@@ -261,11 +265,11 @@ p {
 }
 
 .color-lighter {
-	color: rgba($color-black, 0.7);
-	transition: all ease 300ms;
-	&:hover {
-		box-shadow: 0 4px 14px rgba(42, 42, 42, 0.1);
-	}
+	//color: rgba($color-black, 0.7);
+	//transition: all ease 300ms;
+	//&:hover {
+	//	box-shadow: 0 4px 14px rgba(42, 42, 42, 0.1);
+	//}
 }
 
 .color-darker {

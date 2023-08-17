@@ -150,10 +150,30 @@
 .tns-ovh {
 	.logo-slider {
 		.tns-item {
+			svg{
+				width: 100%;
+			}
+			.change-fill{
+				transition: all ease 300ms;
+			}
+			&:hover{
+				svg{
+					.change-fill{
+						fill: url('#paint_linear');
+					}
+				}
+			}
+		}
+		&__inner{
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			background: $color-white;
+			border-radius: 1.6rem;
+			width: 16rem;
+			height: 9rem;
+			padding: 0 1rem;
 		}
 	}
 }

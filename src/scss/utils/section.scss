@@ -2,12 +2,12 @@ body {
 	background-color: $color-light-200;
 }
 .section {
-	margin: 100px 0;
+	margin: 7.2rem 0;
 	position: relative;
 	z-index: 1;
 
 	@include min(md) {
-		margin: 15.7rem 0;
+		margin: 10.4rem 0;
 	}
 
 	&--lg {
@@ -43,13 +43,20 @@ body {
 	margin-bottom: 4rem;
 
 	@include min(md) {
-		margin-bottom: 8rem;
+		margin-bottom: 5.4rem;
 	}
 	h1,
 	h2,
 	h3 {
 		text-transform: capitalize;
 		// margin-bottom: 80px;
+	}
+	.title-4{
+		color: $brand-secondary;
+		margin-bottom: 1.2rem;
+	}
+	.title-2{
+		margin: 0;
 	}
 	&-title {
 		// font-weight: 500;

@@ -96,7 +96,7 @@ if (document.querySelector('.logo-slider')) {
 		loop: true,
 		controls: false,
 		nav: false,
-		gutter: 0,
+		gutter: 32,
 		mouseDrag: true,
 		slideBy: 1,
 		responsive: {
@@ -334,5 +334,13 @@ if (document.querySelector('.menu-item-has-children')) {
 	// 		}
 	// 	})
 	// }
-
+	$('.btn-primary').each(function (e) {
+		const $ths = $(this);
+		 $ths.on('mousemove', function (e) {
+			 const moveX = e.pageX - $(this).offset().left;
+			 const moveY = e.pageY - $(this).offset().top;
+			 $ths.css({'transform' : 'translate('+-moveX / 100+'%, ' -moveY / 5+'%)'})
+			// const $ths = e.pageX-$(this).offset().left-75
+		})
+	})
 }

@@ -60,9 +60,6 @@
 		color: $color-white;
 		position: relative;
 		z-index: 1;
-		button {
-			width: 100%;
-		}
 		h1,
 		h4 {
 			text-transform: uppercase;
@@ -207,12 +204,11 @@
 	}
 
 	> a {
-		width: 100%;
 		text-align: center;
 		margin: 1rem 0;
 
 		@include min(sm) {
-			margin: 0 1rem;
+			margin: 0 3.2rem 0 0;
 			@include first_last_list_marign();
 		}
 	}
