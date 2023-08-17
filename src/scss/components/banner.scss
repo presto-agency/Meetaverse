@@ -25,14 +25,11 @@
 		&:before {
 			content: '';
 			pointer-events: none;
+
 			background: linear-gradient(
-				180deg,
-				rgba(30, 34, 41, 0) 7.89%,
-				rgba(8, 9, 11, 0.514484) 53.94%,
-				rgba(6, 6, 8, 0.568383) 63.54%,
-				rgba(4, 4, 5, 0.616146) 69.78%,
-				rgba(0, 0, 0, 0.7) 100%
+				90deg, rgba(1, 28, 47, 1), rgba(5, 33, 53, 0.55)
 			);
+
 			@include p_absolute_cover;
 		}
 
@@ -83,7 +80,7 @@
 			// font-size: 26px;
 			// letter-spacing: 0.7px;
 			// line-height: 1.35;
-			margin: 3rem 0 1.6rem;
+			margin: 3rem 0 1.2rem;
 
 			// @include min(sm) {
 			// 	font-size: 50px;
@@ -104,17 +101,20 @@
 		ul {
 			font-size: 1.8rem;
 			font-weight: 600;
-			margin: 2.5rem 0;
-
+			margin: 1.6rem 0 5.4rem;
+			display: flex;
 			@include min(sm) {
 				font-size: 2.4rem;
 			}
 
 			li {
-				margin: .7rem 0px;
-				font-weight: 500;
-				padding-left: 0;
-
+				margin: 0 3.2rem 0 0;
+				padding-left: 2.6rem;
+				font-family: 'Inter';
+				font-size: 1.5rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 155%; /* 23.25px */
 				@include min(sm) {
 					padding-left: 3.3rem;
 					position: relative;
@@ -130,7 +130,7 @@
 
 					@include min(sm) {
 						left: .8rem;
-						top: -.2rem;
+						top: 0;
 						position: absolute;
 					}
 				}
@@ -143,7 +143,7 @@
 
 			@include min(sm) {
 				margin: 0;
-				max-width: 66rem;
+				max-width: 75.2rem;
 			}
 		}
 
@@ -276,13 +276,7 @@
 		content: '';
 		pointer-events: none;
 		background: linear-gradient(
-			180deg,
-			rgba(30, 34, 41, 0) 7.89%,
-			rgba(8, 9, 11, 0.514484) 53.94%,
-			rgba(6, 6, 8, 0.568383) 63.54%,
-			rgba(4, 4, 5, 0.616146) 69.78%,
-			rgba(0, 0, 0, 0.7) 100%
-		);
+			90deg, rgba(1, 28, 47, 1), rgba(5, 33, 53, 0.55));
 		@include p_absolute_cover;
 	}
 	video {
@@ -290,6 +284,7 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
+		opacity: .3;
 	}
 }
 

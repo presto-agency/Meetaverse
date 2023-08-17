@@ -11,11 +11,12 @@
 	}
 
 	a {
-		color: $color-black;
-		font-weight: 400;
+		color: $gray-black;
+		font-weight: 600;
 		text-decoration: none;
 		font-family: 'Montserrat';
-		font-size: 1.8rem;
+		font-size: 1.4rem;
+		line-height: 130%; /* 19.5px */
 		padding: 1rem 2rem;
 
 		@include min(md) {
@@ -23,10 +24,14 @@
 		}
 
 		@include min(lg) {
-			font-size: 1.8rem;
+			font-size: 1.5rem;
 		}
 		&:hover {
-			color: $color-light-blue;
+			color: transparent;
+			background: var(--brand-cta-new-color, linear-gradient(177deg, #002698 0%, #3263F8 100%));
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 	}
 
@@ -64,6 +69,7 @@
 					a{
 						&:after{
 							transform: rotate(180deg);
+							background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath d='M12 10.5L8 6.5L4 10.5' stroke='url(%23paint0_linear_14501_327)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_14501_327' x1='8.53333' y1='10.5' x2='7.35044' y2='8.05435' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23002698'/%3E%3Cstop offset='1' stop-color='%233263F8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
 						}
 					}
 				}
@@ -76,7 +82,7 @@
 						position: absolute;
 						right: 0;
 						top: 1.4rem;
-						background-image: url("data:image/svg+xml,%3Csvg class='e-font-icon-svg e-fas-caret-down' viewBox='0 0 320 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z'%3E%3C/path%3E%3C/svg%3E");
+						background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath d='M4 6.5L8 10.5L12 6.5' stroke='%23011C2F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 						width: 1.6rem;
 						height: 1.6rem;
 						background-size: contain;
@@ -88,7 +94,7 @@
 						}
 						@include min(lg) {
 							right: 0;
-							top: 1.4rem;
+							top: 1.2rem;
 						}
 					}
 				}
@@ -98,8 +104,7 @@
 			&:hover {
 				a{
 					&:after {
-						transform: rotate(180deg);
-						background-image: url("data:image/svg+xml,%3Csvg class='e-font-icon-svg e-fas-caret-down' fill='%231075BB' viewBox='0 0 320 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z'%3E%3C/path%3E%3C/svg%3E");
+						background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath d='M12 10.5L8 6.5L4 10.5' stroke='url(%23paint0_linear_14501_327)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_14501_327' x1='8.53333' y1='10.5' x2='7.35044' y2='8.05435' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23002698'/%3E%3Cstop offset='1' stop-color='%233263F8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
 					}
 				}
 				> ul {
