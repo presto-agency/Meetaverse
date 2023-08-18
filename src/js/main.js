@@ -55,7 +55,7 @@ if (document.querySelector('[data-action="toggle"]')) {
 if (document.querySelector('.blockquote-slider')) {
 	tns({
 		container: '.blockquote-slider',
-		items: 1,
+		items: 2,
 		prevButton: '.blockquote-slider-prev',
 		nextButton: '.blockquote-slider-next',
 		slideBy: 'page',
