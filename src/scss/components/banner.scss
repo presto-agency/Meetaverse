@@ -11,7 +11,11 @@
 		text-align: left;
 		min-height: 60rem;
 	}
-
+	&.hero-banner{
+		@include min(lg) {
+			min-height: 90rem;
+		}
+	}
 	&-min {
 		@include min(md) {
 			min-height: 60rem;
@@ -34,14 +38,14 @@
 		}
 
 		&--blue {
-			&:before {
-				background: linear-gradient(
-					180deg,
-					rgba(16, 117, 187, 0.22) 8.63%,
-					rgba(13, 80, 152, 0.68) 70.83%,
-					#1075bb 100%
-				);
-			}
+			//&:before {
+			//	background: linear-gradient(
+			//		180deg,
+			//		rgba(16, 117, 187, 0.22) 8.63%,
+			//		rgba(13, 80, 152, 0.68) 70.83%,
+			//		#1075bb 100%
+			//	);
+			//}
 		}
 
 		&.__no_gradient {
@@ -52,6 +56,9 @@
 
 		img {
 			@include object_fit_cover;
+		}
+		img, picture{
+			opacity: .3;
 		}
 	}
 
@@ -183,12 +190,14 @@
 	}
 	&-full {
 		h2 {
-			text-transform: uppercase;
 			// font-weight: 600;
 			// letter-spacing: 0.7px;
+			font-size: 3.6rem;
+			text-transform: none !important;
 			margin: 2rem 0;
 		}
 		p {
+			font-size: 1.7rem;
 			margin: 1rem 0;
 			&:last-of-type {
 				margin-bottom: 5rem;
@@ -219,9 +228,20 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	border-top: 1px solid $color-white;
 	text-align: center;
-	padding: 2.9rem 0 1.4rem 0;
+	padding: 3.2rem 0 3.2rem 0;
+
+	&:before{
+		position: absolute;
+		content: '';
+		background-image: linear-gradient(180deg, #031F33 0%, rgba(2, 33, 54, 0.50) 100%);
+		width: 100%;
+		height: 100%;
+		opacity: .5;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
 	@include max(sm) {
 		display: flex;
 		flex-direction: column;
@@ -229,20 +249,40 @@
 	}
 	&-button {
 		font-family: 'Montserrat';
-		font-weight: 500;
-		font-size: 1.8rem;
-		line-height: 2.4rem;
+		padding: 7px 12px;
+		font-size: 1.3rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 130%; /* 16.9px */
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		color: $color-white;
-		margin-bottom: 1.5rem;
+		margin:0 0 1.5rem;
+		position: relative;
 		@include clear-btn;
 		@include max(sm) {
 			margin-bottom: 1rem;
 		}
+		@include min(md) {
+			margin:0 2.4rem 0;
+		}
+		&:after{
+			position: absolute;
+			content: '';
+			right: -2.4rem;
+			top: 10%;
+			height: 80%;
+			width: 1px;
+			background: rgba(255,255,255, .4);
+		}
+		&:last-of-type{
+			&:after{
+				display: none;
+			}
+		}
 		&.active {
-			font-weight: bold;
-			color: $color-light-blue;
+			border-radius: 100px;
+			background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
 		}
 	}
 }
@@ -282,6 +322,7 @@
 		object-position: center;
 		opacity: .3;
 	}
+
 }
 
 .text-banner_spaces {
