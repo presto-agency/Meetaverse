@@ -1,6 +1,6 @@
 .faq-title {
 	font-family: 'Montserrat' ;
-	color: #011C2F;
+	color: $gray-black;
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-size: 3.6rem;
@@ -55,7 +55,7 @@
 		font-size: 1.8rem;
 		margin-bottom: 2rem;
 		text-transform: uppercase;
-		color: #1075bb;
+		color: $color-blue;
 		padding-right: 6rem;
 		// margin-top: 0;
 		&:before {
@@ -105,7 +105,7 @@
 					top: 1.1rem;
 					width: .6rem;
 					height: .6rem;
-					background: #1075bb;
+					background: $color-blue;
 					border-radius: 50%;
 				}
 			}
@@ -117,14 +117,14 @@
 				counter-increment: my-awesome-counter;
 				&:before {
 					content: counter(my-awesome-counter) "";
-					color: #1075bb;
+					color: $color-blue;
 					margin-right: 1.4rem;
 				}
 			}
 
 		}
 		a{
-			color: #1075bb;
+			color: $color-blue;
 			text-decoration: underline;
 			&:hover{
 				text-decoration: none;
@@ -151,7 +151,7 @@
 			}
 		}
 		.faq-item-text {
-			color: #505E75;
+			color: $gray-700;
 			font-feature-settings: 'clig' off, 'liga' off;
 			/* Body/M */
 			font-family: 'Inter';
@@ -164,7 +164,7 @@
 			text-transform: unset;
 			cursor: pointer;
 			margin-bottom: 0;
-			color:  #011C2F;
+			color:  $gray-black;
 			font-feature-settings: 'clig' off, 'liga' off;
 			font-family: 'Montserrat';
 			font-size: 1.9rem;
