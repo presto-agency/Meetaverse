@@ -345,3 +345,65 @@ if (document.querySelector('.menu-item-has-children')) {
 		})
 	})
 }
+
+const doAnimationsOnScroll = function() {
+	const offset = $(window).scrollTop() + $(window).height()
+	const animatables = $('.animate-on-scroll');
+	
+	if (animatables.length === 0) {
+		$(window).off('scroll', doAnimationsOnScroll);
+	}
+	
+	animatables.each(function(i) {
+		const animatable = $(this);
+		if ((animatable.offset().top + animatable.height() - 20) < offset) {
+			animatable.removeClass('hidden');
+		}
+	});
+	
+};
+
+$(window).on('scroll', doAnimationsOnScroll);
+$(window).trigger('scroll');
+
+document.addEventListener('DOMContentLoaded', (event) => {
+	/*
+	* Button hover
+	* */
+	const ctaArray = document.querySelectorAll('.btn-cta, .btn-outline-white');
+	for (let i = 0; i < ctaArray.length; i++) {
+		const button = ctaArray[i];
+		
+		const bg = document.createElement('div')
+		bg.classList.add('bg');
+		button.appendChild(bg);
+		
+		button.addEventListener('mouseenter', function () {
+			bg.style.transition = 'top 0.3s ease-out';
+			bg.style.top = '-42%';
+		});
+		
+		button.addEventListener('mouseleave', function () {
+			bg.style.top = '-210%';
+			
+			setTimeout(function () {
+				bg.style.opacity = `${0}`;
+				bg.style.top = '110%';
+				bg.style.transition = 'none';
+			}, 300);
+			setTimeout(function () {
+				bg.style.opacity = `${1}`;
+				bg.style.transition = 'top 0.3s ease-out';
+			}, 350);
+		});
+	}
+	
+	/*
+	* FAQ toggle
+	* */
+	$('.faq-item-title').on('click', function () {
+		const parent = $(this).parent('.faq-item');
+		parent.find('.faq-item-text').slideToggle(400);
+		parent.toggleClass('active');
+	});
+});

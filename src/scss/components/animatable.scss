@@ -1,0 +1,20 @@
+.animate-on-scroll{
+	transition: opacity .4s ease-out, transform .4s ease-out;
+	
+		&.hidden{
+			opacity: 0;
+			
+			&.fadeInUp{
+				transform: translateY(40px);
+			}
+			&.fadeInLeft{
+				transform: translateX(40px);
+			}
+			&.fadeInRight{
+				transform: translateX(-40px);
+			}
+			&.fadeInDown{
+				transform: translateX(-40px);
+			}
+		}
+}
