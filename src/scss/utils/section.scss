@@ -5,7 +5,85 @@ body {
 	margin: 7.2rem 0;
 	position: relative;
 	z-index: 1;
+	&.section-brand{
+		@include min(md) {
+			margin: 10.5rem 0 9rem;
+		}
+	}
+	&.section-image{
+		@include min(md) {
+			margin: 9rem 0 10.4rem;
+		}
+	}
+	&.section-card{
+		.section-header {
+			margin-bottom: 5.6rem;
+			.title-2{
+				letter-spacing: -1.98px;
+				text-transform: none;
+				font-weight: 700;
+			}
+		}
+		.card{
+			p{
+				margin-bottom: 0;
+			}
+		}
+		.btn-block{
+			margin: 2.4rem 0 0;
+			.btn-cta{
+				padding: 1.6rem 3.2rem;
+			}
+		}
 
+	}
+	&.section-step{
+		.section-header{
+			margin-bottom: 5.6rem;
+			h2{
+				font-weight: 700;
+				letter-spacing: -1.9px;
+				margin-top: 1px;
+			}
+		}
+		.card{
+			p{
+				margin: 1.2rem 0 0 ;
+			}
+		}
+	}
+	&.section-info{
+		.image-card-box-image{
+			padding: 1.6rem 0 1.6rem 1.6rem;
+		}
+		.image-card-box-text--white{
+			padding: 5rem 7.2rem 5rem;
+			p{
+				color: $gray-700;
+				font-feature-settings: 'clig' off, 'liga' off;
+				font-family: 'Inter';
+				font-size: 1.7rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 155%;
+				margin:0 0 1.6rem;
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+				&.color-blue{
+					color: $brand-secondary;
+				}
+			}
+		}
+		.text-capitalize{
+			letter-spacing: -1px;
+		}
+	}
+	&.section-reviews{
+		.section-header{
+			margin-bottom: 5.6rem;
+		}
+	}
 	@include min(md) {
 		margin: 10.4rem 0;
 	}
@@ -37,7 +115,11 @@ body {
 		}
 	}
 }
-
+.btn-block{
+	.btn-cta{
+		padding: 1.6rem 3.2rem;
+	}
+}
 .section-bg__gradient {
 	position: relative;
 	&:after, &:before{
@@ -73,17 +155,33 @@ body {
 	margin-bottom: 4rem;
 
 	@include min(md) {
-		margin-bottom: 5.4rem;
+		margin-bottom: 3.6rem;
+		font-size: 3.6rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 128%; /* 46.08px */
+		letter-spacing: -1.87px;
+		color: $gray-black;
 	}
 	h1,
 	h2,
 	h3 {
 		text-transform: capitalize;
 		// margin-bottom: 80px;
+
+	}
+	h2{
+		font-weight: 700;
+		letter-spacing: -1.9px;
+		margin-top: 1px;
 	}
 	.title-4{
 		color: $brand-secondary;
 		margin-bottom: 1.2rem;
+		text-transform: none;
+		position: relative;
+		left: 0;
+		letter-spacing: 0;
 	}
 	.title-2{
 		margin: 0;

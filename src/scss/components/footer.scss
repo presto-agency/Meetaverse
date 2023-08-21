@@ -1,13 +1,12 @@
 .page-footer {
 	//@extend .color-lighter;
 	background: $gray-black;
-	padding: 8rem 0 3.2rem;
-	text-align: center;
+	padding: 4rem 0 3.2rem;
 	position: relative;
 	@include min(sm) {
+		padding: 8rem 0 3.2rem;
 		text-align: left;
 	}
-
 	a {
 		//@extend .color-lighter;
 		text-decoration: none;
@@ -42,7 +41,8 @@
 			display: flex;
 		}
 		li{
-			margin-right: 4.8rem;
+			margin-right: 5.3rem;
+			margin-bottom: 6px;
 			&:last-of-type{
 				margin-right: 0;
 			}
@@ -55,9 +55,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		.label{
-			max-width: 29.6rem;
 			display: block;
-			margin-right: 1.2rem;
+			margin-right: 8px;
+			max-width: 100%;
+			width: 298px;
 		}
 		.input{
 			width: 100%;
@@ -145,26 +146,32 @@
 	}
 	&--center{
 		align-items: center;
+		.btn-cta{
+			padding: 1.6rem 2.1rem;
+		}
 	}
 	&--top {
 		margin-bottom: 5rem;
-
+		.page-footer--left {
+			p{
+				display: block;
+				color: $color-white;
+				font-feature-settings: 'clig' off, 'liga' off;
+				font-family: 'Inter';
+				font-size: 1.5rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 155%;
+				margin: 2.2rem 0;
+			}
+		}
 		@include min(sm) {
-			margin-bottom: 10rem;
-
+			margin-bottom: 6rem;
 			.page-footer--left {
 				max-width: 22rem;
 				margin-right: 2rem;
 				p{
-					display: block;
-					color: $color-white;
-					font-feature-settings: 'clig' off, 'liga' off;
-					font-family: 'Inter';
 					font-size: 1.7rem;
-					font-style: normal;
-					font-weight: 400;
-					line-height: 155%;
-					margin: 2.4rem 0;
 				}
 			}
 		}
@@ -194,18 +201,20 @@
 	}
 
 	@include min(md) {
-		margin-left: 2rem;
-		margin-right: 2rem;
+		margin-left: 7.2rem;
+		margin-right: 0rem;
 	}
 	h4{
 		color: $brand-secondary;
 		font-feature-settings: 'clig' off, 'liga' off;
 		font-family: 'Inter';
-		font-size: 1.7rem;
 		font-style: normal;
 		font-weight: 600;
 		line-height: 155%; /* 26.35px */
-		margin-bottom: 2.4rem;
+		text-transform: none;
+		font-size: 1.6rem;
+		margin: .2rem 0 2.4rem;
+		letter-spacing: .5px;
 	}
 	ul {
 		margin: 0;
@@ -213,7 +222,7 @@
 
 		li {
 			@include min(sm) {
-				margin: 2rem 0;
+				margin: 1.6rem 0;
 			}
 
 			padding: 0;
@@ -232,37 +241,42 @@
 		}
 	}
 
-	h4 {
-		@include min(sm) {
-			font-size: 1.6rem;
-		}
-		@include min(md) {
-			font-size: 1.8rem;
-		}
-		@include down(sm) {
-			margin-top: 2rem;
-			margin-bottom: 1rem;
-		}
-	}
+	//h4 {
+	//	@include min(sm) {
+	//		font-size: 1.6rem;
+	//	}
+	//	@include min(md) {
+	//		font-size: 1.8rem;
+	//	}
+	//	@include down(sm) {
+	//		margin-top: 2rem;
+	//		margin-bottom: 1rem;
+	//	}
+	//}
 }
 .grecaptcha-badge{
 	z-index: 999;
 }
 .footer{
 	&-center{
-		padding-bottom: 1.2rem;
+		padding-bottom: 0;
 		border-bottom: 1px solid $gray-800;
-		margin-bottom: 3.2rem;
+		margin-bottom: 4.1rem;
 	}
 	&-bottom{
 		&__nav{
 			ul{
 				display: flex;
+				flex-wrap: wrap;
 			}
 			li{
-				margin-right: 4rem;
-				&:last-of-type{
-					margin-right: 0;
+				width: 50%;
+				@include min(sm) {
+					margin-right: 4rem;
+					width: auto;
+					&:last-of-type{
+						margin-right: 0;
+					}
 				}
 			}
 			a{

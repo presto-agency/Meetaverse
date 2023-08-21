@@ -12,6 +12,12 @@
 	@include max(md) {
 		margin-bottom: 3.2rem;
 	}
+	.card-img{
+		height: 7.6rem;
+		//img{
+		//	margin: 2.5rem 0 .8rem;
+		//}
+	}
 	h4,
 	.title-4 {
 		&.text-wide {
@@ -30,6 +36,8 @@
         font-style: normal;
         font-weight: 500;
         line-height: 128%; /* 30.72px */
+	    margin: 2rem 0 -.9rem;
+	    letter-spacing: 0;
       }
     }
 	&-light-gray {
@@ -243,19 +251,20 @@
 .content-box {
 	justify-content: space-between;
 	&-text {
-		padding: 7.2rem 6.4rem;
+		padding: 4rem 2.4rem;
+
 		//margin-bottom: 2rem;
 	}
 
 	@include min(md) {
 		display: flex;
-
 		&-text {
-			width: 47%;
+			padding: 6.6rem 7.2rem 6rem;
+			width: 50%;
 		}
 
 		&-image {
-			width: 53%;
+			width: 50%;
 			padding: 1.6rem 1.6rem 1.6rem 0;
 			overflow: hidden;
 			img, picture{
@@ -279,6 +288,12 @@
 	h2,
 	h3 {
 		margin: 0 0 4rem;
+		font-size: 3.6rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 128%; /* 46.08px */
+		letter-spacing: -1.98px;
+
 		// font-weight: 500;
 		// margin-bottom: 30px;
 		// font-size: 30px;
@@ -293,13 +308,15 @@
 		font-family: 'Inter';
 		font-weight: 500;
 		font-size: 1.7rem;
-		line-height: 155%;
+		line-height: 152%;
 		margin: 0 0 1.2rem;
 		&:last-of-type{
 			margin: 0 0 2.4rem;
 		}
 	}
-
+	.btn-cta{
+		padding: 1.6rem 3.2rem;
+	}
 	ul {
 		li {
 			margin-bottom: 2rem;
@@ -361,7 +378,7 @@
 			padding: 4rem;
 		}
 		@include min(lg) {
-			padding: 6.4rem 7.2rem;
+			padding: 4.5rem 7.2rem 5.1rem;
 		}
 		// h2 {
 		// 	font-size: 30px;
@@ -369,11 +386,42 @@
 		// 		font-size: 40px;
 		// 	}
 		// }
-		li {
-			&:before {
-				background-color: $color-white;
+		h4{
+			text-transform: none;
+			font-size: 1.4rem;
+			letter-spacing: 1.22px;
+			margin-bottom: 0;
+		}
+		h2{
+			letter-spacing: -1.61px;
+			margin: 1.4rem 0 3.8rem;
+			line-height: 128%;
+		}
+		ul.list{
+			li {
+				/* Body/S */
+				font-family: 'Inter';
+				font-size: 1.5rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 155%;
+				padding-left: 2rem;
+				color: $gray-300;
+				margin-bottom: 1.2rem;
+				b{
+					font-size: 1.7rem;
+					font-style: normal;
+					font-weight: 600;
+					line-height: 155%;
+				}
+				&:before {
+					left: 0;
+					top: .8rem;
+					background-color: $color-white;
+				}
 			}
 		}
+
 		p {
 			font-family: 'Montserrat';
 			font-weight: 300;
@@ -449,13 +497,13 @@
 	margin-top: 7.7rem;
 }
 .blockquote-slider{
-	margin: 0 -1.6rem;
-	.tns-item{
-		padding: 0 1.6rem;
-	}
+	//margin: 0 -1.6rem;
+	//.tns-item{
+	//	padding: 0 1.6rem;
+	//}
 }
 .quote-section {
-	padding: 4.7rem 4.8rem;
+	padding: 3.2rem 2.4rem 4.6rem 4.7rem;
 	background: $color-white;
 	border-radius: 1.6rem;
 	display: flex;
@@ -479,7 +527,8 @@
 		margin-bottom: 5.6rem;
 		font-style: normal;
 		font-weight: 600;
-		line-height: 128%;
+		letter-spacing: -.2px;
+		line-height: 126%;
 		transition: all ease 300ms;
 		b{
 			background: var(--brand-cta, linear-gradient(180deg, #36BEE4 0%, #1075BB 100%));
@@ -497,7 +546,8 @@
 		font-style: normal;
 		font-weight: 600;
 		line-height: 155%; /* 26.35px */
-		margin: 0;
+		text-transform: none;
+		margin: .7rem 0 .5rem;
 	}
 	span{
 		color: $gray-700;
@@ -557,6 +607,7 @@
 	}
 }
 .quote-img{
+	margin-left: .2rem;
 	margin-right: 2.4rem;
 	width: 7.2rem;
 	height: 7.2rem;
@@ -692,13 +743,31 @@ a {
 	h4{
 		text-transform: none;
 		color: $brand-secondary;
+		margin: 0 0 1.4rem;
+		font-size: 1.4rem;
 	}
 	h3{
+		line-height: 126%;
 		text-transform: none;
 	}
 
 	ul{
 		li{
+			color: $gray-700;
+			font-feature-settings: 'clig' off, 'liga' off;
+			font-family: 'Inter';
+			font-size: 1.5rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 155%;
+			padding-left: 2rem;
+			margin-bottom: 1.2rem;
+			b{
+				color: $brand-secondary;
+				font-size: 1.7rem;
+				font-weight: 600;
+				line-height: 155%; /* 26.35px */
+			}
 			&:before{
 				background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
 			}

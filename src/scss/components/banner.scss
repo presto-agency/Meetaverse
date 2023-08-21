@@ -13,7 +13,7 @@
 	}
 	&.hero-banner{
 		@include min(lg) {
-			min-height: 90rem;
+			min-height: 69.9rem;
 		}
 	}
 	&-min {
@@ -69,23 +69,11 @@
 		z-index: 1;
 		h1,
 		h4 {
-			text-transform: uppercase;
+			text-transform: none;
 		}
-
-		// h4 {
-		// 	font-size: 14px;
-
-		// 	@include min(sm) {
-		// 		font-size: 18px;
-		// 	}
-		// }
-
 		h1 {
-			// font-size: 26px;
-			// letter-spacing: 0.7px;
-			// line-height: 1.35;
-			margin: 3rem 0 1.2rem;
-
+			font-size: 1.42rem;
+			margin: .8rem 0 0;
 			// @include min(sm) {
 			// 	font-size: 50px;
 			// }
@@ -106,21 +94,21 @@
 			font-size: 1.8rem;
 			font-weight: 600;
 			margin: 1.6rem 0 5.4rem;
-			display: flex;
 			@include min(sm) {
 				font-size: 2.4rem;
+				display: flex;
 			}
 
 			li {
 				margin: 0 3.2rem 0 0;
-				padding-left: 2.6rem;
+				//padding-left: 2.6rem;
 				font-family: 'Inter';
 				font-size: 1.5rem;
 				font-style: normal;
 				font-weight: 400;
 				line-height: 155%; /* 23.25px */
 				@include min(sm) {
-					padding-left: 3.3rem;
+					padding-left: 2.5rem;
 					position: relative;
 				}
 
@@ -133,7 +121,7 @@
 					position: static;
 
 					@include min(sm) {
-						left: .8rem;
+						left: 0rem;
 						top: 0;
 						position: absolute;
 					}
@@ -185,7 +173,18 @@
 
 		h2 {
 			// letter-spacing: 0.7px;
-			margin: 3rem 0 1.6rem;
+			margin: 1.3rem 0 2.4rem;
+		}
+		p{
+			color: $color-white;
+			font-feature-settings: 'clig' off, 'liga' off;
+			font-family: 'Inter';
+			font-size: 1.7rem;
+			font-style: normal;
+			font-weight: 400;
+			@include min(md) {
+				max-width: 65rem;
+			}
 		}
 	}
 	&-full {
@@ -217,7 +216,7 @@
 		margin: 1rem 0;
 
 		@include min(sm) {
-			margin: 0 3.2rem 0 0;
+			margin: 0 2.8rem 0 0;
 			@include first_last_list_marign();
 		}
 	}
@@ -229,8 +228,7 @@
 	left: 0;
 	width: 100%;
 	text-align: center;
-	padding: 3.2rem 0 3.2rem 0;
-
+	padding: 3.4rem 0 4.2rem 0;
 	&:before{
 		position: absolute;
 		content: '';
@@ -249,12 +247,12 @@
 	}
 	&-button {
 		font-family: 'Montserrat';
-		padding: 7px 12px;
+		padding: .7rem 1.2rem;
 		font-size: 1.3rem;
 		font-style: normal;
 		font-weight: 600;
 		line-height: 130%; /* 16.9px */
-		letter-spacing: 1px;
+		letter-spacing: .9px;
 		text-transform: uppercase;
 		color: $color-white;
 		margin:0 0 1.5rem;
@@ -332,7 +330,35 @@
 		padding-bottom: 18rem;
 	}
 	@include min(lg) {
-		padding-top: 14rem;
-		padding-bottom: 24rem;
+		padding-top: 13.2rem;
+		padding-bottom: 20.1rem;
+	}
+	h4{
+		font-size: 1.5rem;
+		letter-spacing: .6px;
+		margin: 0;
+	}
+	.title-1{
+		font-size: 3.4rem;
+		position: relative;
+		left: 0;
+		letter-spacing: -.6px;
+		margin: 1.9rem 0 1.9rem;
+	}
+	p{
+		/* Body/M */
+		font-family: 'Inter';
+		font-size: 1.7rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 155%;
+		&:last-of-type{
+			margin-bottom: 3.2rem;
+		}
+	}
+	.btn-outline{
+		padding: 16px 32px;
+		font-size: 13px;
+		letter-spacing: 1.6px;
 	}
 }

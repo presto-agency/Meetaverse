@@ -19,15 +19,12 @@
 
 .slider-nav-bottom {
 	position: relative;
-	padding-bottom: 7.5rem;
-
 	.tns-controls {
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		width: 100%;
 		text-align: center;
-
 		button {
 			margin-left: 6.4rem;
 			margin-right: 6.4rem;
@@ -177,27 +174,56 @@
 		}
 	}
 }
+.section-reviews{
+	.slider-nav-bottom{
+		max-width: 109rem;
+		margin: 0 auto;
+	}
+}
+
 .blockquote-controls{
-	bottom: 0;
+	margin-top: 2.8rem;
+	bottom: 50%;
 	left: 0;
 	position: absolute;
 	text-align: center;
 	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	.blockquote-slider-prev,
 	.blockquote-slider-next{
-		width: 31px;
-		svg{
-			width: 100%;
-			height: 100%;
+		position: absolute;
+		top: -2.8rem;
+		width: 4.8rem;
+		height: 4.8rem;
+		background-size: cover;
+		background-repeat: no-repeat;
+		outline: none;
+		cursor: pointer;
+		@include min(lg) {
+			width: 5.6rem;
+			height: 5.6rem;
 		}
 	}
 	.blockquote-slider-prev{
-		margin-right: 6.4rem;
+		left: 0;
+		background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='56' y='56' width='56' height='56' rx='28' transform='rotate(-180 56 56)' fill='url(%23paint0_linear_14319_2577)'/%3E%3Cpath d='M34 28L22 28M22 28L27 33M22 28L27 23' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_14319_2577' x1='80.2667' y1='56' x2='101.379' y2='77.8256' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23002698'/%3E%3Cstop offset='1' stop-color='%233263F8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+		@include min(lg) {
+			left: -11.2rem;
+		}
+		&:hover{
+			background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M34 28L22 28M22 28L27 33M22 28L27 23' stroke='url(%23paint0_linear_14319_2577)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='55.5' y='55.5' width='55' height='55' rx='27.5' transform='rotate(-180 55.5 55.5)' stroke='url(%23paint1_linear_14319_2577)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_14319_2577' x1='28.8' y1='33' x2='25.1137' y2='28.4271' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23002698'/%3E%3Cstop offset='1' stop-color='%233263F8'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_14319_2577' x1='80.2667' y1='56' x2='101.379' y2='77.8256' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23002698'/%3E%3Cstop offset='1' stop-color='%233263F8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+		}
 	}
 	.blockquote-slider-next{
-		margin-left: 6.4rem;
+		right: 0;
+		background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='56' height='56' rx='28' fill='url(%23paint0_linear_14319_2578)'/%3E%3Cpath d='M22 28H34M34 28L29 23M34 28L29 33' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_14319_2578' x1='24.2667' y1='-5.87481e-07' x2='45.3795' y2='21.8256' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23002698'/%3E%3Cstop offset='1' stop-color='%233263F8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+		@include min(lg) {
+			right: -11.2rem;
+		}
+		&:hover{
+			background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 28H34M34 28L29 23M34 28L29 33' stroke='url(%23paint0_linear_14319_2578)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='0.5' y='0.5' width='55' height='55' rx='27.5' stroke='url(%23paint1_linear_14319_2578)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_14319_2578' x1='27.2' y1='23' x2='30.8863' y2='27.5729' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23002698'/%3E%3Cstop offset='1' stop-color='%233263F8'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_14319_2578' x1='24.2667' y1='-5.87481e-07' x2='45.3795' y2='21.8256' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23002698'/%3E%3Cstop offset='1' stop-color='%233263F8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+		}
 	}
 }

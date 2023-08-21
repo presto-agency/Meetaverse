@@ -1,7 +1,7 @@
 .btn-primary{
 	border-radius: 10rem;
 	display: inline-block;
-	padding: 1.8rem 3.2rem;
+	padding: 1.6rem 3.8rem;
 	transition: all ease 300ms;
 	letter-spacing: 1px;
 	text-decoration: none;
@@ -11,11 +11,11 @@
 	//background-image: linear-gradient(177deg, #002698 0%, #3263F8 100%);
 	position: relative;
 	.text{
-		font-weight: 600;
 		font-feature-settings: 'clig' off, 'liga' off;
 		color: $color-white;
 		text-transform: uppercase;
-		font-size: 1.6rem;
+		font-size: 1.3rem;
+		font-weight: 500;
 		transition: all ease 300ms;
 	}
 	.bg{
@@ -73,14 +73,17 @@
 	}
 }
 .btn-cta {
+	font-family: 'Montserrat';
+	font-style: normal;
 	border-radius: 10rem;
 	font-weight: 600;
 	font-feature-settings: 'clig' off, 'liga' off;
 	color: $color-white;
 	display: inline-block;
 	text-transform: uppercase;
-	padding: 1.8rem 1.2rem;
-	font-size: 1.6rem;
+	padding: 1.2rem 1.8rem;
+	font-size: 1.3rem;
+	line-height: 130%;
 	letter-spacing: 1px;
 	text-decoration: none;
 	white-space: nowrap;
@@ -146,17 +149,17 @@
 		}
 	}
 	@include clear-btn;
-	@include min(md) {
-		letter-spacing: 2px;
-		padding: 2rem 2.8rem;
-		font-size: 1.8rem;
-	}
+	//@include min(md) {
+	//	letter-spacing: 2px;
+	//	padding: 2rem 2.8rem;
+	//	font-size: 1.8rem;
+	//}
 
-	@include min(lg) {
-		letter-spacing: 3px;
-		font-size: 1.8rem;
-		padding: 2rem 3.4rem;
-	}
+	//@include min(lg) {
+	//	letter-spacing: 3px;
+	//	font-size: 1.8rem;
+	//	padding: 2rem 3.4rem;
+	//}
 
 	&-sm {
 		@include min(lg) {

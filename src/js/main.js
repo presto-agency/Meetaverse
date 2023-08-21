@@ -56,6 +56,7 @@ if (document.querySelector('.blockquote-slider')) {
 	tns({
 		container: '.blockquote-slider',
 		items: 2,
+		gutter: 32,
 		prevButton: '.blockquote-slider-prev',
 		nextButton: '.blockquote-slider-next',
 		slideBy: 'page',

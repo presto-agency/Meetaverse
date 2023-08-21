@@ -15,9 +15,10 @@
 		font-weight: 600;
 		text-decoration: none;
 		font-family: 'Montserrat';
+		display: block;
 		font-size: 1.4rem;
 		line-height: 130%; /* 19.5px */
-		padding: 1rem 2rem;
+		padding: 1rem 2rem 3.8rem;
 
 		@include min(md) {
 			font-size: 1.6rem;
@@ -41,7 +42,6 @@
 
 		@include min(md) {
 			flex-direction: row;
-			height: 3.6rem;
 		}
 		> li {
 			display: inline-block;
@@ -50,13 +50,13 @@
 			text-align: center;
 			&:not(:last-child) {
 				@include min(md) {
-					margin-right: 1rem;
+					//margin-right: 1rem;
 				}
 			}
 			@include min(md) {
 				// padding: 0 12px;
+				margin: 0 2.4rem;
 				position: relative;
-				margin: 0;
 			}
 
 			@include min(lg) {
@@ -76,6 +76,8 @@
 				& > a {
 					//pointer-events: none;
 					// padding: 10px 20px;
+
+					padding-right: 2rem;
 					position: relative;
 					&:after {
 						content: '';
@@ -89,11 +91,9 @@
 						background-repeat: no-repeat;
 						background-position: center;
 						@include min(md) {
-							right: -0;
 							top: 1.2rem;
 						}
 						@include min(lg) {
-							right: 0;
 							top: 1.2rem;
 						}
 					}
@@ -109,7 +109,7 @@
 				}
 				> ul {
 
-					margin: 2rem 0 0 0;
+					margin: 0;
 					@include min(md) {display: block;}
 				}
 			}
@@ -121,27 +121,50 @@
 				}
 				@include min(md) {
 					position: absolute;
-					background-color: $color-white;
-					padding: 1.5rem 2rem .5rem 2rem;
+					border-radius: 1.6rem;
+					border-top: 2px solid $color-light-blue;
+					background: $gray-300;
+					padding: 1.6rem 1.2rem;
 					width: 100%;
 					min-width: max-content;
 					left: 50%;
+					top: 100%;
 					transform: translate(-50%, 0);
-					top: .5rem;
-					&:before {
-						position: absolute;
-						content: '';
-						top: 0;
-						left: 0;
-						right: 0;
-						width: 100%;
-						height: 2px;
-						background-color: $color-light-blue;
-					}
+					//top: .5rem;
 					li {
 						text-align: center;
-						margin-bottom: 1rem;
+						margin-bottom: .4rem;
+						&:last-of-type{
+							margin-bottom: 0;
+						}
+						a{
+							position: relative;
+							z-index: 2;
+							border-radius: 10rem;
+							padding: .8rem 1.2rem;
+							&:after{
+								position: absolute;
+								content: '';
+								left: 0;
+								top: 0;
+								z-index: -1;
+								width: 100%;
+								height: 100%;
+								border-radius: 10rem;
+								pointer-events: none;
+								opacity: 0;
+								background-image: linear-gradient(177deg, #002698 0%, #3263F8 100%) !important;
+							}
+							&:hover{
+								color: $color-white;
+								-webkit-text-fill-color: #fff;
+								&:after{
+									opacity: 1;
+								}
+							}
+						}
 					}
+
 				}
 			}
 		}
@@ -154,52 +177,45 @@
 
 .toggle-menu {
 	@include clear-btn;
-	width: 3.4rem;
-	height: 3rem;
+	width: 2.6rem;
+	height: 2.4rem;
 	position: relative;
 	cursor: pointer;
 	z-index: 20;
-
 	@include min(md) {
 		display: none;
 	}
-
 	i {
 		display: block;
-		height: .6rem;
-		border-radius: .3rem;
-		background-color: rgba($color-black, 0.7);
+		height: .2rem;
+		background-size: cover;
+		background-image: url("data:image/svg+xml,%3Csvg width='26' height='2' viewBox='0 0 26 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1H25' stroke='url(%23paint0_linear_14601_523)' stroke-width='2' stroke-linecap='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_14601_523' x1='13' y1='1' x2='13' y2='2' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2336BEE4'/%3E%3Cstop offset='1' stop-color='%231075BB'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
 		position: absolute;
 		transform: rotate(0deg);
 		transition: 0.2s;
 		left: 0;
-
+		width: 100%;
+		max-width: 2.6rem;
 		&:nth-child(1) {
-			width: 3.4rem;
 			top: 0;
 		}
-
 		&:nth-child(2) {
-			width: 3.4rem;
 			top: 50%;
-			transform: translateY(-50%);
+			margin-top: -.1rem;
 			opacity: 1;
 		}
-
 		&:nth-child(3) {
-			width: 3.4rem;
-			bottom: 0;
+			top: 100%;
+			margin-top: -.1rem;
 		}
 	}
 
 	&.active {
 		i {
 			&:nth-child(1) {
-				height: 3.4rem;
-				width: .6rem;
-				top: -.2rem;
+				top: 50%;
 				transform: rotate(45deg);
-				left: 1.4rem;
+				margin-top: -.2rem;
 			}
 
 			&:nth-child(2) {
@@ -207,11 +223,9 @@
 			}
 
 			&:nth-child(3) {
-				height: 3.4rem;
-				width: .6rem;
-				bottom: -.2rem;
+				top: 50%;
 				transform: rotate(-45deg);
-				left: 1.4rem;
+				margin-top: -.2rem;
 			}
 		}
 	}
