@@ -96,6 +96,10 @@ body {
 		}
 		.card{
 			padding: 2.4rem;
+			&:hover{
+				background: transparent;
+				transform: scale(1.1);
+			}
 			@include min(sm) {
 				padding: 3.2rem;
 			}
