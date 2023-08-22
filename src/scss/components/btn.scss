@@ -138,10 +138,12 @@
 .hero-play{
 	color: $color-white;
 	font-feature-settings: 'clig' off, 'liga' off;
-	font-size: 1.3rem;
+	width: 5rem;
+	margin-left: 3rem;
 	font-style: normal;
 	outline: none;
 	border: 0;
+	font-size: 0;
 	font-weight: 600;
 	line-height: 130%; /* 16.9px */
 	letter-spacing: 1px;
@@ -150,11 +152,16 @@
 	background: transparent;
 	padding-left: 6.2rem;
 	position: relative;
+	@include min(sm) {
+		width: auto;
+		margin-left: 0;
+		font-size: 1.3rem;
+	}
 	&:before{
 		position: absolute;
 		content: '';
 		left: 0;
-		top: 0;
+		top: 1rem;
 		background-image: url("data:image/svg+xml,%3Csvg width='48' height='49' viewBox='0 0 48 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.9727 22.574C31.3896 23.3784 32.0979 23.7807 32.3409 24.2957C32.553 24.7454 32.553 25.2546 32.3409 25.7044C32.0979 26.2193 31.3896 26.6216 29.9727 27.4261L23.3181 31.2047C21.7456 32.0976 20.9593 32.544 20.3105 32.4966C19.7449 32.4553 19.2264 32.1943 18.8881 31.7804C18.5 31.3057 18.5 30.4633 18.5 28.7786V21.2214C18.5 19.5367 18.5 18.6944 18.8881 18.2196C19.2264 17.8058 19.7449 17.5447 20.3105 17.5034C20.9593 17.456 21.7456 17.9025 23.3181 18.7954L29.9727 22.574Z' fill='white'/%3E%3Crect x='0.5' y='1' width='47' height='47' rx='23.5' stroke='white'/%3E%3C/svg%3E%0A");
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -162,6 +169,9 @@
 		width: 5rem;
 		height: 5rem;
 		transition: all ease 300ms;
+		@include min(sm) {
+			top: 0;
+		}
 	}
 	&:hover{
 		color: transparent;

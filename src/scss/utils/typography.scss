@@ -282,7 +282,7 @@ ul.list {
 		// font-size: 18px;
 		position: relative;
 		font-weight: 300;
-		padding-left: 3rem;
+//		padding-left: 3rem;
 
 		&:before {
 			content: '';
@@ -290,7 +290,7 @@ ul.list {
 			background-color: $color-white;
 			position: absolute;
 			left: 1rem;
-			top: 1.4rem;
+			top: 1.6rem;
 		}
 	}
 }

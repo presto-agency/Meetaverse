@@ -27,10 +27,43 @@ body{
 	.btn-cta{
 		padding: 1.2rem 1.5rem;
 	}
-}
 
+}
+@include max(md) {
+	.page-header-right{
+		&.d-none{
+			position: fixed;
+			max-width: 31.2rem;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			bottom: 6rem;
+			.btn-cta{
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
 .menu-open {
 	overflow: hidden;
+	.logo{
+		img{
+			&.open{
+				display: none;
+			}
+			&.open-mobile{
+				display: block;
+			}
+		}
+	}
+	.page-header-right{
+		&.d-none{
+			position: fixed;
+			display: block !important;
+			z-index: 12;
+		}
+	}
 }
 
 .logo {
@@ -48,7 +81,12 @@ body{
 		display: block;
 		width: 100%;
 		position: relative;
-
+		&.open{
+			display: block;
+		}
+		&.open-mobile{
+			display: none;
+		}
 		@include min(xs) {
 			top: -.6rem;
 		}
