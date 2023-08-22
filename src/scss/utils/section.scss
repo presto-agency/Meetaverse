@@ -2,7 +2,7 @@ body {
 	background-color: $color-light-200;
 }
 .section {
-	margin: 7.2rem 0;
+	margin: 7.3rem 0;
 	position: relative;
 	z-index: 1;
 	&.section-brand{
@@ -11,13 +11,47 @@ body {
 		}
 	}
 	&.section-image{
-		@include min(md) {
+		.container{
+			padding: 0;
+		}
+		@include min(sm) {
+			.container{
+				padding: 0 2.4rem;
+			}
+		}
+		@include min(lg) {
 			margin: 9rem 0 10.4rem;
+			.container{
+				padding: 0 6.4rem;
+			}
+		}
+		.content-box-image{
+			img{
+				max-height: 23.7rem;
+				width: 100%;
+				border-radius: .8rem;
+				@include min(sm) {
+					max-height: 100%;
+					width: 100%;
+					border-radius: .8rem;
+				}
+			}
+
 		}
 	}
 	&.section-card{
+      margin: 7.3rem 0 -.4rem;
+      @include min(sm) {
+        margin: 10.4rem 0;
+      }
+		.row{
+			margin: 0 -1.6rem;
+		}
 		.section-header {
-			margin-bottom: 5.6rem;
+			margin-bottom: 4.2rem;
+            @include min(sm) {
+              margin-bottom: 5.6rem;
+            }
 			.title-2{
 				letter-spacing: -1.98px;
 				text-transform: none;
@@ -30,7 +64,10 @@ body {
 			}
 		}
 		.btn-block{
-			margin: 2.4rem 0 0;
+          margin: 1.1rem 0 0;
+          @include min(sm) {
+            margin: 2.4rem 0 0;
+          }
 			.btn-cta{
 				padding: 1.6rem 3.2rem;
 			}
@@ -39,22 +76,53 @@ body {
 	}
 	&.section-step{
 		.section-header{
-			margin-bottom: 5.6rem;
+			margin-bottom: 4rem;
+			@include min(sm) {
+				margin-bottom: 4.8rem;
+			}
 			h2{
 				font-weight: 700;
-				letter-spacing: -1.9px;
-				margin-top: 1px;
+				letter-spacing: -1.6px;
+				margin-top: 1.4rem;
+				line-height: 140%;
+				@include min(sm) {
+					letter-spacing: -1.9px;
+					margin-top: .1rem;
+				}
 			}
 		}
+		.row{
+			margin: 0 -1.6rem;
+		}
 		.card{
+			padding: 2.4rem;
+			@include min(sm) {
+				padding: 3.2rem;
+			}
+			.title-6{
+				font-size: 1.8rem;
+				margin: 2.6rem 0 0;
+				@include min(sm) {
+					font-size: 2.4rem;
+				}
+			}
 			p{
 				margin: 1.2rem 0 0 ;
+			}
+		}
+		.btn-block{
+			margin: 1.7rem 0 0 ;
+			@include min(sm) {
+				margin: 5.6rem 0 0 ;
 			}
 		}
 	}
 	&.section-info{
 		.image-card-box-image{
-			padding: 1.6rem 0 1.6rem 1.6rem;
+			padding: 1.8rem 2.4rem 0;
+			@include min(md) {
+				padding: 1.6rem 0 1.6rem 1.6rem;
+			}
 		}
 		.image-card-box-text--white{
 			padding: 5rem 7.2rem 5rem;
@@ -62,11 +130,15 @@ body {
 				color: $gray-700;
 				font-feature-settings: 'clig' off, 'liga' off;
 				font-family: 'Inter';
-				font-size: 1.7rem;
+				font-size: 1.5rem;
 				font-style: normal;
 				font-weight: 400;
-				line-height: 155%;
-				margin:0 0 1.6rem;
+				line-height: 154%;
+				margin:0 0 1.1rem;
+				@include min(md) {
+					font-size: 1.7rem;
+					margin:0 0 1.6rem;
+				}
 				&:last-of-type{
 					margin-bottom: 0;
 				}
@@ -81,7 +153,12 @@ body {
 	}
 	&.section-reviews{
 		.section-header{
-			margin-bottom: 5.6rem;
+			max-width: 80%;
+			margin: 8.9rem auto 4rem;
+			@include min(md) {
+				max-width: 100%;
+				margin: 0 auto 5.6rem;
+			}
 		}
 	}
 	@include min(md) {
@@ -120,6 +197,12 @@ body {
 		padding: 1.6rem 3.2rem;
 	}
 }
+.image-card-box{
+  margin: 0 -2.4rem;
+  @include min(md) {
+    margin: 0 0;
+  }
+}
 .section-bg__gradient {
 	position: relative;
 	&:after, &:before{
@@ -147,8 +230,11 @@ body {
 	//}
 }
 .btn-block{
-	margin: 5.4rem 0 0;
+	margin: 4rem 0 0;
 	text-align: center;
+	@include min(md) {
+		margin: 5.4rem 0 0;
+	}
 }
 .section-header {
 	text-align: center;
@@ -270,6 +356,116 @@ ul.checkmark-list {
 		li {
 			&:before {
 				content: url('../img/checkmark-blue.svg');
+			}
+		}
+	}
+}
+.section-info{
+	.image-card-box{
+		.image-card-box-image{
+			img, picture{
+				margin: 0 auto;
+				height: 27.2rem;
+				display: block;
+				@include min(sm) {
+					height: auto;
+				}
+			}
+			.text-capitalize{
+				display: block;
+				color: $gray-black;
+				font-weight: 700;
+				letter-spacing: -1.7px;
+				margin-bottom: 2.4rem;
+				@include min(md) {
+					display: none;
+				}
+			}
+		}
+		.image-card-box-text{
+			padding: 2.4rem;
+			@include min(md) {
+				padding: 5rem 7.2rem;
+			}
+			.text-capitalize{
+				display: none;
+				@include min(md) {
+					display: block;
+				}
+			}
+		}
+	}
+}
+.section-brand{
+	z-index: 2;
+	.section-header{
+		font-size: 2.4rem;
+		margin: 0 -1.4rem 2.5rem -1.4rem;
+		letter-spacing: -1.2px;
+		line-height: 140%;
+		@include min(sm) {
+			font-size: 2.6rem;
+			margin: 0 0 4rem;
+		}
+		@include min(md) {
+			font-size: 3.6rem;
+			font-weight: 700;
+			letter-spacing: -1.87px;
+			line-height: 128%;
+			margin-bottom: 3.6rem;
+		}
+	}
+}
+.section-with-popup{
+	.box-white{
+		margin: 0 -2.4rem;
+		@include min(sm) {
+			margin: 0 0;
+		}
+	}
+	.content-box-image {
+		padding: 3.7rem 2.4rem 0;
+		@include min(sm) {
+			padding: 4rem 2.4rem 0;
+		}
+		@include min(md) {
+			padding: 1.6rem 1.6rem;
+		}
+		picture, img{
+			min-height: 22.3rem;
+			display: block;
+		}
+		h4{
+			margin: 0 0 3.2rem;
+			@include min(sm) {
+				margin: 2rem 0 ;
+			}
+		}
+	}
+	.content-box{
+		display: flex;
+		flex-direction: column-reverse;
+		.content-box-text{
+			padding: 3.4rem 2.4rem 3.6rem;
+			h4{
+				display: none;
+			}
+			h3{
+				line-height: 141%;
+			}
+			@include min(sm) {
+				padding: 2.4rem 2.4rem 3.6rem;
+			}
+			@include min(md) {
+				padding: 6rem 7.2rem 5.4rem;
+			}
+		}
+		@include min(sm) {
+			flex-direction: row;
+			.content-box-text{
+				h4{
+					display: block;
+				}
 			}
 		}
 	}

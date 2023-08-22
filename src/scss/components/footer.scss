@@ -28,17 +28,31 @@
 	}
 	&--copy{
 		color: $gray-700;
-		text-align: right;
+		text-align: left;
 		font-feature-settings: 'clig' off, 'liga' off;
 		font-family: 'Inter';
-		font-size: 15px;
+		font-size: 1.3rem;
 		font-style: normal;
 		font-weight: 400;
 		line-height: 155%; /* 23.25px */
+		margin-bottom: 1.2rem;
+		@include min(sm) {
+			text-align: right;
+			font-size: 1.5rem;
+			margin-bottom: 0;
+		}
 	}
 	&--social{
+		margin-bottom: 2.4rem;
+		@include min(sm) {
+			margin-bottom: 0;
+		}
 		ul{
 			display: flex;
+			justify-content: space-between;
+			@include min(sm) {
+				justify-content: flex-start;
+			}
 		}
 		li{
 			margin-right: 5.3rem;
@@ -54,11 +68,18 @@
 	form{
 		display: flex;
 		flex-wrap: wrap;
+		margin-bottom: 4.8rem;
+		@include min(md) {
+			margin-bottom: 0;
+		}
 		.label{
 			display: block;
-			margin-right: 8px;
 			max-width: 100%;
-			width: 298px;
+			width: 100%;
+			@include min(sm) {
+				max-width: 29.8rem;
+				margin-right: .8rem;
+			}
 		}
 		.input{
 			width: 100%;
@@ -75,6 +96,7 @@
 			border-radius: 1.6rem;
 			border: 1px solid $gray-500;
 			background: $color-white;
+
 		}
 		.btn-cta{
 			font-family: 'Montserrat';
@@ -85,6 +107,12 @@
 			line-height: 130%; /* 16.9px */
 			letter-spacing: 1px;
 			text-transform: uppercase;
+			width: 100%;
+			margin: 1.1rem 0 0;
+			@include min(sm) {
+				margin: 0 0 0;
+				width: auto;
+			}
 		}
 		.modal-group{
 			margin-top: 1.6rem;
@@ -92,12 +120,17 @@
 				display: block;
 				color: $gray-500;
 				font-family: 'Inter';
-				font-size: 1.5rem;
+				font-size: 1.3rem;
 				font-style: normal;
 				font-weight: 400;
 				position: relative;
-				line-height: 155%;
+				line-height: 169%;
+				max-width: 90%;
 				padding-left: 3.6rem;
+				@include min(sm) {
+					font-size: 1.5rem;
+					line-height: 155%;
+				}
 				a{
 					color: $gray-500;
 					text-decoration: underline;
@@ -137,7 +170,17 @@
 		}
 	}
 }
-
+.footer-link{
+	text-align: center;
+	.btn-cta{
+		width: 100%;
+		max-width: 31.2rem;
+		@include min(sm) {
+			width: auto;
+			max-width: 100%;
+		}
+	}
+}
 .footer-row {
 	@include min(sm) {
 		display: flex;
@@ -148,10 +191,15 @@
 		align-items: center;
 		.btn-cta{
 			padding: 1.6rem 2.1rem;
+			margin-top: 1.2rem;
 		}
 	}
 	&--top {
-		margin-bottom: 5rem;
+		margin-bottom: 2.2rem;
+		@include min(md) {
+			margin-bottom: 5rem;
+		}
+
 		.page-footer--left {
 			p{
 				display: block;
@@ -168,17 +216,20 @@
 		@include min(sm) {
 			margin-bottom: 6rem;
 			.page-footer--left {
-				max-width: 22rem;
+				max-width: 28rem;
 				margin-right: 2rem;
+				.btn-cta{
+					margin-top: 0;
+				}
 				p{
 					font-size: 1.7rem;
 				}
 			}
 		}
 		@include min(md) {
-
+			margin-bottom: 3.7rem;
 			.page-footer--left {
-				max-width: 43rem;
+				max-width: 45rem;
 				margin-right: 1rem;
 			}
 		}
@@ -193,33 +244,91 @@
 }
 
 .footer-menu-column {
-	@include first_last_list_marign;
+	text-align: center;
 
+	@include first_last_list_marign;
 	@include min(sm) {
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
 
 	@include min(md) {
+		text-align: left;
 		margin-left: 7.2rem;
-		margin-right: 0rem;
+		margin-right: 0;
 	}
 	h4{
-		color: $brand-secondary;
+		color: $color-white;
 		font-feature-settings: 'clig' off, 'liga' off;
-		font-family: 'Inter';
+		font-family: 'Montserrat';
 		font-style: normal;
 		font-weight: 600;
-		line-height: 155%; /* 26.35px */
+		line-height: 128%; /* 26.35px */
 		text-transform: none;
-		font-size: 1.6rem;
-		margin: .2rem 0 2.4rem;
+		font-size: 1.9rem;
+		margin: 0 0 2.7rem;
 		letter-spacing: .5px;
+		position: relative;
+		&.active{
+			color: var(--brand-third, #36BEE4);
+			&:after{
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M14 11L8 5L2 11' stroke='%2336BEE4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+			}
+		}
+		&.has-sub{
+			display: inline-block;
+			&:after{
+				position: relative;
+				display: inline-block;
+				content: '';
+				width: 1.6rem;
+				height: 1.6rem;
+				right: 0;
+				top: 0;
+				margin-left: 2.4rem;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M2 5L8 11L14 5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				@include min(md) {
+					display: none;
+				}
+			}
+		}
+
+		@include min(md) {
+			font-family: 'Inter';
+			color: $brand-secondary;
+			line-height: 155%; /* 26.35px */
+			font-size: 1.6rem;
+			margin: .2rem 0 2.8rem;
+		}
+		a{
+			color: inherit;
+			font-feature-settings: 'clig' off, 'liga' off;
+			font-family: inherit;
+			font-style: normal;
+			font-weight: inherit;
+			line-height: inherit; /* 26.35px */
+			text-transform: none;
+			font-size: inherit;
+			margin: inherit;
+			letter-spacing: inherit;
+		}
 	}
 	ul {
+		display: none;
+		width: auto;
 		margin: 0;
-		padding: 0;
-
+		padding: 2rem 0;
+		border-radius: 1.2rem;
+		border-top: 2px solid #36BEE4;
+		&.active{
+			display: block;
+		}
+		@include min(md) {
+			display: block;
+			border-radius: 0;
+			border-top: 0;
+		}
 		li {
 			@include min(sm) {
 				margin: 1.6rem 0;
@@ -261,10 +370,17 @@
 	&-center{
 		padding-bottom: 0;
 		border-bottom: 1px solid $gray-800;
-		margin-bottom: 4.1rem;
+		margin-bottom: 2.1rem;
+		@include min(sm) {
+			margin-bottom: 4.1rem;
+		}
 	}
 	&-bottom{
 		&__nav{
+			margin-bottom: 4rem;
+			@include min(sm) {
+				margin-bottom: 0;
+			}
 			ul{
 				display: flex;
 				flex-wrap: wrap;

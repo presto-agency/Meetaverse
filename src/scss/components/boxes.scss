@@ -4,7 +4,7 @@
 	border-radius: 1.6rem;
 	// margin-bottom: 27px;
 	padding: 2rem;
-
+	margin-bottom: 0;
 	@include min(md) {
 		padding: 3.2rem;
 		height: 100%;
@@ -12,8 +12,17 @@
 	@include max(md) {
 		margin-bottom: 3.2rem;
 	}
+	@include max(sm) {
+		margin-bottom: 0;
+	}
 	.card-img{
-		height: 7.6rem;
+		height: 6.9rem;
+		img{
+			max-height: 5rem;
+		}
+		@include min(sm) {
+			height: 7.6rem;
+		}
 		//img{
 		//	margin: 2.5rem 0 .8rem;
 		//}
@@ -32,12 +41,15 @@
         color: $brand-secondary;
         text-align: center;
         font-feature-settings: 'clig' off, 'liga' off;
-        font-size: 2.4rem;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 500;
         line-height: 128%; /* 30.72px */
 	    margin: 2rem 0 -.9rem;
 	    letter-spacing: 0;
+		  @include min(sm) {
+			  font-size: 2.4rem;
+		  }
       }
     }
 	&-light-gray {
@@ -118,12 +130,17 @@
 }
 .card{
 	border-radius: 1.6rem;
-	height: 100%;
+	height: auto;
 	padding: 3.2rem;
+	margin-bottom: 2.4rem;
 	background: $color-white;
+	@include min(md) {
+		height: 100%;
+		margin-bottom: 0;
+	}
 	.color-gradient{
 		font-family: 'Montserrat';
-		font-size: 7.2rem;
+		font-size: 4.2rem;
 		font-style: normal;
 		font-weight: 700;
 		line-height: 110%; /* 79.2px */
@@ -134,6 +151,9 @@
 		-webkit-text-fill-color: transparent;
 		margin-bottom: 2.4rem;
 		text-align: center;
+		@include min(md) {
+			font-size: 7.2rem;
+		}
 	}
 	.text-wide {
 		color: $brand-secondary;
@@ -149,11 +169,14 @@
 		text-align: center;
 		font-feature-settings: 'clig' off, 'liga' off;
 		/* Body/M */
-		font-family: Inter;
-		font-size: 17px;
+		font-family: 'Inter';
+		font-size: 1.5rem;
 		font-style: normal;
 		font-weight: 400;
 		line-height: 155%; /* 26.35px */
+		@include min(sm) {
+			font-size: 1.7rem;
+		}
 	}
 }
 .card-wrapper{
@@ -251,16 +274,33 @@
 .content-box {
 	justify-content: space-between;
 	&-text {
-		padding: 4rem 2.4rem;
-
+		padding: 2.4rem 2.4rem 3.6rem;
+		h4, .title-2{
+			display: none;
+		}
+		@include min(sm) {
+          padding: 4rem 2.4rem;
+			.title-2{
+				display: block;
+			}
+		}
 		//margin-bottom: 2rem;
 	}
-	&-image{}
+	&-image{
+		padding: 4rem 2.4rem 0;
+		h4, .title-2{
+			margin-top: 0;
+			display: block;
+			@include min(sm) {
+				display: none;
+			}
+		}
+	}
 
-	@include min(md) {
+	@include min(sm) {
 		display: flex;
 		&-text {
-			padding: 3.2rem 4.2rem 3rem;
+			padding: 3.2rem 2.4rem 3rem;
 			width: 50%;
 		}
 		&-image {
@@ -272,6 +312,11 @@
 				height: 100%;
 				border-radius: .8rem;
 			}
+		}
+	}
+	@include min(md) {
+		&-text {
+			padding: 3.2rem 4.4rem 3rem;
 		}
 	}
 	@include min(lg) {
@@ -291,12 +336,24 @@
 
 	h2,
 	h3 {
-		margin: 0 0 4rem;
-		font-size: 2.6rem;
+		font-size: 2.4rem;
 		font-style: normal;
 		font-weight: 700;
-		line-height: 128%; /* 46.08px */
-		letter-spacing: -1.98px;
+		letter-spacing: -1.62px;
+		line-height: 141%;
+		margin: 0 0 2.4rem;
+		@include min(sm) {
+			margin: 0 0 2.4rem;
+			font-size: 2.4rem;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 128%; /* 46.08px */
+			letter-spacing: -1.98px;
+		}
+		@include min(md) {
+			font-size: 2.6rem;
+			margin: 0 0 4rem;
+		}
 		@include min(lg) {
 			font-size: 3.6rem;
 		}
@@ -312,16 +369,32 @@
 
 	p {
 		font-family: 'Inter';
-		font-weight: 500;
-		font-size: 1.7rem;
+		font-weight: 400;
+		font-size: 1.5rem;
 		line-height: 152%;
-		margin: 0 0 1.2rem;
+		margin: 0 0 1rem;
 		&:last-of-type{
-			margin: 0 0 2.4rem;
+			margin: 0 0 1.4rem;
+          @include min(md) {
+            margin: 0 0 2.4rem;
+          }
+		}
+		@include min(md) {
+			font-weight: 500;
+			font-size: 1.7rem;
+			line-height: 152%;
+            margin: 0 0 1.2rem;
 		}
 	}
 	.btn-cta{
 		padding: 1.6rem 3.2rem;
+        width: 100%;
+        max-width: 32rem;
+        text-align: center;
+		@include min(md) {
+			width: auto;
+			max-width: 100%;
+		}
 	}
 	ul {
 		li {
@@ -348,6 +421,7 @@
 	overflow: hidden;
 	color: $color-white;
 	display: flex;
+	flex-wrap: wrap;
 	&--transparent {
 		background-color: transparent;
 		color: $color-black;
@@ -361,12 +435,15 @@
 	}
 
 	&-image {
-		display: none;
+		h4{
+			display: block;
+		}
 		padding: 1.6rem;
 		background: $color-white;
 		@include min(md) {
-			display: block;
-
+			h4{
+				display: none;
+			}
 			img , picture {
 				width: 100%;
 				height: 100%;
@@ -377,7 +454,7 @@
 	}
 
 	&-text {
-		padding: 2rem;
+		padding: 2.8rem 2.4rem;
 		background-color: $brand-secondary;
 
 		@include min(md) {
@@ -399,26 +476,38 @@
 			margin-bottom: 0;
 		}
 		h2{
-			letter-spacing: -1.61px;
-			margin: 1.4rem 0 3.8rem;
-			line-height: 128%;
+			letter-spacing: -1.41px;
+			line-height: 140%;
+			margin: 1.4rem 0 2.4rem;
+			@include min(md) {
+				letter-spacing: -1.61px;
+				line-height: 128%;
+				margin: 1.4rem 0 3.8rem;
+			}
 		}
 		ul.list{
 			li {
 				/* Body/S */
 				font-family: 'Inter';
-				font-size: 1.5rem;
+				font-size: 1.3rem;
 				font-style: normal;
 				font-weight: 400;
 				line-height: 155%;
 				padding-left: 2rem;
 				color: $gray-300;
-				margin-bottom: 1.2rem;
+				margin-bottom: 1rem;
+				@include min(md) {
+					font-size: 1.5rem;
+					margin-bottom: 1.2rem;
+				}
 				b{
-					font-size: 1.7rem;
+					font-size: 1.5rem;
 					font-style: normal;
 					font-weight: 600;
 					line-height: 155%;
+					@include min(md) {
+						font-size: 1.7rem;
+					}
 				}
 				&:before {
 					left: 0;
@@ -472,19 +561,41 @@
 	align-items: center;
 	justify-content: center;
 	background-color: $color-white;
-	display: none;
+	width: 100%;
+	h4{
+		display: block;
+		color: $gray-black;
+		margin: 4rem .4rem .5rem;
+	}
 	@include min(md) {
+		height: auto;
+		h4{
+			display: none;
+		}
 		width: 50%;
 		display: flex;
 	}
 	video {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+		margin-left: -2.4rem;
+		width: calc(100% + 4.8rem);
+		height: auto;
 		object-fit: cover;
 		object-position: center;
+		@include min(md) {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+.image-card-box-text{
+	h4{
+		display: none;
+		@include min(md) {
+			display: block;
+		}
 	}
 }
 [data-toggle] {
@@ -509,13 +620,16 @@
 	//}
 }
 .quote-section {
-	padding: 3.2rem 2.4rem 4.6rem 4.7rem;
+	padding: 2.8rem 2.4rem;
 	background: $color-white;
 	border-radius: 1.6rem;
 	display: flex;
 	transition: all ease 300ms;
 	flex-wrap: wrap;
 	align-items: flex-start;
+	@include min(md) {
+		padding: 3.2rem 2.4rem 4.6rem 4.7rem;
+	}
 	&:hover{
 		background: $gray-black;
 		p{
@@ -529,13 +643,19 @@
 		display: block;
 		width: 100%;
 		font-family: 'Montserrat';
-		font-size: 1.9rem;
-		margin-bottom: 5.6rem;
+		font-size: 1.6rem;
+		margin-bottom: 4rem;
 		font-style: normal;
 		font-weight: 600;
-		letter-spacing: -.2px;
-		line-height: 126%;
+		letter-spacing: 0;
+		line-height: 138%;
 		transition: all ease 300ms;
+		@include min(md) {
+			line-height: 126%;
+			font-size: 1.9rem;
+			margin-bottom: 5.6rem;
+			letter-spacing: -.2px;
+		}
 		b{
 			background: var(--brand-cta, linear-gradient(180deg, #36BEE4 0%, #1075BB 100%));
 			background-clip: text;
@@ -548,7 +668,7 @@
 		color: $brand-secondary;
 		font-feature-settings: 'clig' off, 'liga' off;
 		font-family: 'Inter';
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 		font-style: normal;
 		font-weight: 600;
 		line-height: 155%; /* 26.35px */
@@ -559,11 +679,16 @@
 		color: $gray-700;
 		font-feature-settings: 'clig' off, 'liga' off;
 		font-family: 'Inter';
-		font-size: 1.7rem;
+		font-size: 1.5rem;
 		font-style: normal;
 		transition: all ease 300ms;
 		font-weight: 400;
 		line-height: 155%; /* 26.35px */
+
+	}
+	@include min(md) {
+		h4{font-size: 1.7rem;}
+		span{font-size: 1.7rem;}
 	}
 
 	figcaption {
@@ -611,6 +736,9 @@
 		text-transform: uppercase;
 		color: #1075bb;
 	}
+}
+.quote-desc{
+	width: calc(100% - 9.8rem);
 }
 .quote-img{
 	margin-left: .2rem;
@@ -762,17 +890,27 @@ a {
 			color: $gray-700;
 			font-feature-settings: 'clig' off, 'liga' off;
 			font-family: 'Inter';
-			font-size: 1.5rem;
+			font-size: 1.3rem;
 			font-style: normal;
 			font-weight: 400;
 			line-height: 155%;
 			padding-left: 2rem;
-			margin-bottom: 1.2rem;
-			b{
+			margin-bottom: 1rem;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+			@include min(sm) {
+				font-size: 1.5rem;
+				margin-bottom: 1.2rem;
+			}
+			b, strong{
 				color: $brand-secondary;
-				font-size: 1.7rem;
+				font-size: 1.5rem;
 				font-weight: 600;
 				line-height: 155%; /* 26.35px */
+				@include min(sm) {
+					font-size: 1.7rem;
+				}
 			}
 			&:before{
 				background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
@@ -781,6 +919,20 @@ a {
 				color: $brand-secondary;
 			}
 			color: #505E75;
+		}
+	}
+}
+.section-image{
+	.content-box{
+		display: flex;
+		flex-direction: column-reverse;
+		@include min(sm) {
+			flex-direction: row;
+		}
+		&-image {
+			.title-2{
+				margin-bottom: 2.4rem;
+			}
 		}
 	}
 }

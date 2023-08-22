@@ -3,16 +3,17 @@
 	display: flex;
 	align-items: center;
 	z-index: 0;
-	padding: 8rem 0 14rem;
+	padding: 12rem 0 8rem;
 	overflow: hidden;
 	min-height: 40rem;
 	@include max(sm) {
-		padding: 6rem 0 16rem;
+		padding: 12rem 0 8rem;
 		text-align: left;
 		min-height: 60rem;
 	}
 	&.hero-banner{
 		@include min(lg) {
+            padding: 2.5rem 0 8rem;
 			min-height: 69.9rem;
 		}
 	}
@@ -71,12 +72,23 @@
 		h4 {
 			text-transform: none;
 		}
+		.title-1{
+			max-width: 80%;
+			@include min(sm) {
+				max-width: 100%;
+			}
+		}
 		h1 {
-			font-size: 1.42rem;
-			margin: .8rem 0 0;
-			// @include min(sm) {
+			margin: .6rem 0 0;
+			font-size: 1.2rem;
+			font-weight: 600;
+			letter-spacing: 1.08px;
+
+			 @include min(sm) {
+				 font-size: 1.42rem;
+				 margin: .8rem 0 0;
 			// 	font-size: 50px;
-			// }
+			 }
 		}
 
 		p {
@@ -93,14 +105,15 @@
 		ul {
 			font-size: 1.8rem;
 			font-weight: 600;
-			margin: 1.6rem 0 5.4rem;
+			margin: 0rem 0 2.4rem;
 			@include min(sm) {
+				margin: 1.6rem 0 5.4rem;
 				font-size: 2.4rem;
 				display: flex;
 			}
 
 			li {
-				margin: 0 3.2rem 0 0;
+				margin: 0 3.2rem .4rem 0;
 				//padding-left: 2.6rem;
 				font-family: 'Inter';
 				font-size: 1.5rem;
@@ -116,11 +129,13 @@
 					content: url('../img/checkmark.svg');
 					height: 2rem;
 					width: 2rem;
-					margin-right: 1rem;
+					margin-right: .7rem;
 					background-color: transparent;
-					position: static;
-
+					position: relative;
+					top: .5rem;
+					left: 0;
 					@include min(sm) {
+						margin-right: 1rem;
 						left: 0rem;
 						top: 0;
 						position: absolute;
@@ -130,9 +145,7 @@
 		}
 
 		&--limiter {
-			max-width: 50rem;
-			margin: 0 auto;
-
+			max-width: 100%;
 			@include min(sm) {
 				margin: 0;
 				max-width: 75.2rem;
@@ -158,7 +171,7 @@
 		}
 
 		&--body {
-			margin-bottom: 5rem;
+			margin-bottom: 3.7rem;
 		}
 	}
 	&-hero {
@@ -179,13 +192,34 @@
 			color: $color-white;
 			font-feature-settings: 'clig' off, 'liga' off;
 			font-family: 'Inter';
-			font-size: 1.7rem;
+			font-size: 1.5rem;
 			font-style: normal;
 			font-weight: 400;
 			@include min(md) {
+				font-size: 1.7rem;
 				max-width: 65rem;
 			}
+			&:last-of-type{
+				margin-bottom: .8rem;
+				@include min(md) {
+					margin-bottom: 1.3rem;
+				}
+			}
 		}
+		ul{
+			li{
+				font-size: 1.3rem;
+			}
+		}
+		.btn-cta{
+			width: 32rem;
+			max-width: 100%;
+			@include min(md) {
+				width: auto;
+				max-width: 100%;
+			}
+		}
+
 	}
 	&-full {
 		h2 {
@@ -241,14 +275,20 @@
 		top: 0;
 		z-index: -1;
 	}
+	@include max(md) {
+      padding: 1rem 0;
+    }
 	@include max(sm) {
 		display: flex;
 		flex-direction: column;
-		padding: 1rem 0;
+		padding: 3rem 0 2rem;
+
 	}
 	&-button {
+      max-width: 250px;
+      width: 100%;
 		font-family: 'Montserrat';
-		padding: .7rem 1.2rem;
+		padding: 1.2rem 1.2rem;
 		font-size: 1.3rem;
 		font-style: normal;
 		font-weight: 600;
@@ -256,11 +296,14 @@
 		letter-spacing: .9px;
 		text-transform: uppercase;
 		color: $color-white;
-		margin:0 0 1.5rem;
 		position: relative;
+		margin: 0 auto 0;
 		@include clear-btn;
-		@include max(sm) {
-			margin-bottom: 1rem;
+		@include min(sm) {
+          padding: .7rem 1.2rem;
+			margin:0 0 1.5rem;
+			max-width: 100%;
+            width: auto;
 		}
 		@include min(md) {
 			margin:0 2.4rem 0;
@@ -272,7 +315,11 @@
 			top: 10%;
 			height: 80%;
 			width: 1px;
+			display: none;
 			background: rgba(255,255,255, .4);
+			@include min(md) {
+				display: block;
+			}
 		}
 		&:last-of-type{
 			&:after{
@@ -325,7 +372,9 @@
 }
 
 .text-banner_spaces {
-	padding-bottom: 28rem;
+    padding: 8rem 0 .3rem;
+    align-items: flex-start;
+    min-height: 50.3rem;
 	@include min(sm) {
 		padding-top: 10rem;
 		padding-bottom: 18rem;
@@ -335,27 +384,50 @@
 		padding-bottom: 20.1rem;
 	}
 	h4{
-		font-size: 1.5rem;
-		letter-spacing: .6px;
+      font-size: 1.4rem;
+      letter-spacing: -.4px;
 		margin: 0;
+		color: $brand-secondary;
+		@include min(sm) {
+          font-size: 1.5rem;
+          letter-spacing: .6px;
+			color: $color-white;
+		}
 	}
 	.title-1{
-		font-size: 3.4rem;
+        max-width: 100%;
+        font-size: 2.4rem;
 		position: relative;
 		left: 0;
-		letter-spacing: -.6px;
-		margin: 1.9rem 0 1.9rem;
+		letter-spacing: -1.4px;
+		margin: 1.7rem 0 1.9rem;
+        @include min(sm) {
+          font-size: 3.4rem;
+          letter-spacing: -.6px;
+          margin: 1.9rem 0 1.9rem;
+        }
 	}
 	p{
 		/* Body/M */
 		font-family: 'Inter';
-		font-size: 1.7rem;
+        font-size: 1.5rem;
 		font-style: normal;
 		font-weight: 400;
 		line-height: 155%;
+        position: relative;
+        left: .4rem;
+        margin: 0 -.1rem 2.3rem;
 		&:last-of-type{
-			margin-bottom: 3.2rem;
+          margin-bottom: 2.3rem;
+          @include min(sm) {
+            margin-bottom: 3.2rem;
+          }
 		}
+      @include min(sm) {
+        font-size: 1.7rem;
+        position: static;
+        margin: 0 0 1.3rem;
+      }
 	}
 	.btn-outline{
 		padding: 16px 32px;
