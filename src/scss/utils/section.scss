@@ -59,8 +59,15 @@ body {
 			}
 		}
 		.card{
+			transition: opacity .4s ease-out,transform .4s ease-out,-webkit-transform .4s ease-out;
 			p{
 				margin-bottom: 0;
+			}
+			@include min(md) {
+				&:hover{
+					background: transparent;
+					transform: scale(1.1);
+				}
 			}
 		}
 		.btn-block{
@@ -96,12 +103,14 @@ body {
 		}
 		.card{
 			padding: 2.4rem;
-			&:hover{
-				background: transparent;
-				transform: scale(1.1);
-			}
 			@include min(sm) {
 				padding: 3.2rem;
+			}
+			@include min(md) {
+				&:hover{
+					background: transparent;
+					transform: scale(1.1);
+				}
 			}
 			.title-6{
 				font-size: 1.8rem;
