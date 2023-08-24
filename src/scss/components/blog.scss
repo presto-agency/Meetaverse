@@ -79,6 +79,20 @@
 			display: flex;
 		}
 	}
+	.center-figure{
+		display: block;
+		margin:1.6rem 0 2.4rem;
+		text-align: center;
+		font-feature-settings: 'clig' off, 'liga' off;
+		font-family: 'Montserrat';
+		font-size: 1.5rem;
+		font-weight: 500;
+		line-height: 155%; /* 23.25px */
+		background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 }
 .text-entry__blog {
 	width: 100%;
