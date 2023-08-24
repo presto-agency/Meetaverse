@@ -1,21 +1,17 @@
 /*
     * Button hover
     * */
-console.log('start');
 const ctaArray = document.querySelectorAll('.btn-cta, .btn-outline-white');
 for (let i = 0; i < ctaArray.length; i++) {
 	const button = ctaArray[i];
-	console.log('btn-cta');
 	const bg = document.createElement('div');
 	bg.classList.add('bg');
 	button.appendChild(bg);
-	console.log('add bg');
 
 	button.addEventListener('mouseenter', function () {
 		bg.style.transition = 'top 0.3s ease-out';
 		bg.style.top = '-42%';
 	});
-	console.log('mouseenter');
 	button.addEventListener('mouseleave', function () {
 		bg.style.top = '-210%';
 
@@ -29,20 +25,8 @@ for (let i = 0; i < ctaArray.length; i++) {
 			bg.style.transition = 'top 0.3s ease-out';
 		}, 350);
 	});
-	console.log('mouseleave');
 }
-document.addEventListener('DOMContentLoaded', (event) => {
 
-
-    /*
-    * FAQ toggle
-    * */
-    $('.faq-item-title').on('click', function () {
-        const parent = $(this).parent('.faq-item');
-        parent.find('.faq-item-text').slideToggle(400);
-        parent.toggleClass('active');
-    });
-});
 // Toggle menu button
 if (
 	document.querySelector('#toggleMenu') &&
@@ -118,7 +102,27 @@ if (document.querySelector('.blockquote-slider')) {
 		},
 	});
 }
-
+if (document.querySelector('.empower-slider')) {
+	tns({
+		container: '.empower-slider',
+		items: 2,
+		gutter: 32,
+		prevButton: '.empower-slider-prev',
+		nextButton: '.empower-slider-next',
+		slideBy: 'page',
+		nav: false,
+		responsive: {
+			0: {
+				items: 1,
+				gutter: 0,
+			},
+			900: {
+				items: 2,
+				gutter: 32,
+			}
+		},
+	});
+}
 
 if (document.querySelector('.guides-slider')) {
 	tns({
@@ -581,3 +585,13 @@ const doAnimationsOnScroll = function() {
 
 $(window).on('scroll', doAnimationsOnScroll);
 $(window).trigger('scroll');
+document.addEventListener('DOMContentLoaded', (event) => {
+	/*
+    * FAQ toggle
+    * */
+	$('.faq-item-title').on('click', function () {
+		const parent = $(this).parent('.faq-item');
+		parent.find('.faq-item-text').slideToggle(400);
+
+	});
+});

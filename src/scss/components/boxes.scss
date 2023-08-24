@@ -945,13 +945,33 @@ a {
 .content-box-text{
 	&.content-box-text__full{
 		padding: 0;
+		img{
+			border-radius: 1.6rem 1.6rem 0 0;
+		}
+		@include min(md) {
+			img{
+				border-radius: 1.6rem 0 0 1.6rem;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+		}
 	}
 }
 .content-box-image{
 	&.image-card-box-text__full{
 		padding: 2.8rem 2.4rem;
+		img{
+			border-radius: 1.6rem 1.6rem 0 0;
+		}
 		@include min(md) {
 			padding: 4rem;
+			img{
+				border-radius: 1.6rem 0 0 1.6rem;
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
 		}
 		@include min(lg) {
 			padding: 6.4rem 7.2rem 6.4rem;

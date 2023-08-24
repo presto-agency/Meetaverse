@@ -6,6 +6,53 @@
 	padding: 12rem 0 8rem;
 	overflow: hidden;
 	min-height: 40rem;
+	.container{
+		.breadcrumb {
+			position: absolute;
+			left: 0;
+			right: 0;
+			width: 100%;
+			max-width: 131.1rem;
+			margin: 0 auto;
+			display: flex;
+			top: 1.9rem;
+			overflow: auto;
+			@include min(md) {
+				top: 3.6rem;
+			}
+			.breadcrumbs__separator{
+				margin: 0 1.2rem;
+			}
+			li{
+				color: #FFF;
+				font-family: 'Inter';
+				font-size: 1.4rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 150%; /* 21px */
+				&:last-of-type{
+					span{
+						text-decoration: none;
+						color: #A3AAB5;
+					}
+				}
+			}
+			a{
+				white-space: nowrap;
+				color: #FFF;
+				font-family: 'Inter';
+				font-size: 1.4rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 150%; /* 21px */
+				text-decoration-line: underline;
+				&:hover{
+					text-decoration-line: none;
+				}
+			}
+
+		}
+	}
 	@include max(sm) {
 		padding: 12rem 0 8rem;
 		text-align: left;
@@ -75,7 +122,7 @@
 		.title-1{
 			max-width: 80%;
 			@include min(sm) {
-				max-width: 100%;
+				max-width: 80%;
 			}
 		}
 		h1 {
