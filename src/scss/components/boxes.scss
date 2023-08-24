@@ -435,7 +435,7 @@
 	}
 
 	&-image {
-		h4{
+		h4, .text-capitalize{
 			display: block;
 		}
 		padding: 1.6rem;
@@ -447,7 +447,7 @@
 			}
 		}
 		@include min(md) {
-			h4{
+			h4, .text-capitalize{
 				display: none;
 			}
 			img , picture {
@@ -939,6 +939,22 @@ a {
 			.title-2{
 				margin-bottom: 2.4rem;
 			}
+		}
+	}
+}
+.content-box-text{
+	&.content-box-text__full{
+		padding: 0;
+	}
+}
+.content-box-image{
+	&.image-card-box-text__full{
+		padding: 2.8rem 2.4rem;
+		@include min(md) {
+			padding: 4rem;
+		}
+		@include min(lg) {
+			padding: 6.4rem 7.2rem 6.4rem;
 		}
 	}
 }
