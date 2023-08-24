@@ -1,3 +1,46 @@
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    /*
+    * Button hover
+    * */
+    const ctaArray = document.querySelectorAll('.btn-cta, .btn-outline-white');
+    for (let i = 0; i < ctaArray.length; i++) {
+        const button = ctaArray[i];
+
+        const bg = document.createElement('div')
+        bg.classList.add('bg');
+        button.appendChild(bg);
+
+        button.addEventListener('mouseenter', function () {
+            bg.style.transition = 'top 0.3s ease-out';
+            bg.style.top = '-42%';
+        });
+
+        button.addEventListener('mouseleave', function () {
+            bg.style.top = '-210%';
+
+            setTimeout(function () {
+                bg.style.opacity = `${0}`;
+                bg.style.top = '110%';
+                bg.style.transition = 'none';
+            }, 300);
+            setTimeout(function () {
+                bg.style.opacity = `${1}`;
+                bg.style.transition = 'top 0.3s ease-out';
+            }, 350);
+        });
+    }
+
+    /*
+    * FAQ toggle
+    * */
+    $('.faq-item-title').on('click', function () {
+        const parent = $(this).parent('.faq-item');
+        parent.find('.faq-item-text').slideToggle(400);
+        parent.toggleClass('active');
+    });
+});
 // Toggle menu button
 if (
 	document.querySelector('#toggleMenu') &&
@@ -339,11 +382,11 @@ if (singleEditor) {
         let titles = document.querySelectorAll('.text-entry__blog>h2');
         const relativeBlock = document.querySelector('.text-sidebar__list');
         let first_el = document.createElement('a');
-        firstTitles.setAttribute('id', `top`);
-        first_el.setAttribute('href', `#top`);
-        first_el.setAttribute('class', `active-color`);
-        first_el.append(firstTitles.innerHTML);
-        relativeBlock.append(first_el);
+        //firstTitles.setAttribute('id', `top`);
+        //first_el.setAttribute('href', `#top`);
+        //first_el.setAttribute('class', `active-color`);
+        //first_el.append(firstTitles.innerHTML);
+        //relativeBlock.append(first_el);
         titles.forEach(function (title, i) {
             title.setAttribute('id', `${i+1}`);
         });
@@ -536,45 +579,3 @@ const doAnimationsOnScroll = function() {
 
 $(window).on('scroll', doAnimationsOnScroll);
 $(window).trigger('scroll');
-
-document.addEventListener('DOMContentLoaded', (event) => {
-	/*
-	* Button hover
-	* */
-	const ctaArray = document.querySelectorAll('.btn-cta, .btn-outline-white');
-	for (let i = 0; i < ctaArray.length; i++) {
-		const button = ctaArray[i];
-		
-		const bg = document.createElement('div')
-		bg.classList.add('bg');
-		button.appendChild(bg);
-		
-		button.addEventListener('mouseenter', function () {
-			bg.style.transition = 'top 0.3s ease-out';
-			bg.style.top = '-42%';
-		});
-		
-		button.addEventListener('mouseleave', function () {
-			bg.style.top = '-210%';
-			
-			setTimeout(function () {
-				bg.style.opacity = `${0}`;
-				bg.style.top = '110%';
-				bg.style.transition = 'none';
-			}, 300);
-			setTimeout(function () {
-				bg.style.opacity = `${1}`;
-				bg.style.transition = 'top 0.3s ease-out';
-			}, 350);
-		});
-	}
-	
-	/*
-	* FAQ toggle
-	* */
-	$('.faq-item-title').on('click', function () {
-		const parent = $(this).parent('.faq-item');
-		parent.find('.faq-item-text').slideToggle(400);
-		parent.toggleClass('active');
-	});
-});
