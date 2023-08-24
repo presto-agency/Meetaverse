@@ -70,7 +70,7 @@
 				font-style: normal;
 				font-weight: 400;
 				line-height: 155%; /* 26.35px */
-				&:hover{
+				&:hover, &.active-color{
 					color: $gray-black;
 				}
 			}
@@ -126,17 +126,14 @@
 	h4{}
 	ul{
 		padding-left: 1.6rem;
-
-		&.disc{
-			li{
-				&:before{
-					top: .9rem;
-					left: 0;
-					width: .8rem;
-					height: .8rem;
-					border-radius:50%;
-					background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
-				}
+		li{
+			&:before{
+				top: .9rem;
+				left: 0;
+				width: .8rem;
+				height: .8rem;
+				border-radius:50%;
+				background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
 			}
 		}
 		&.check{
@@ -158,6 +155,7 @@
 					left: 0;
 					width: 1.2rem;
 					height: 1.2rem;
+					border-radius: 0;
 					background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
 				}
 			}
@@ -180,7 +178,6 @@
 			&:before{
 				position: absolute;
 				content: '';
-
 			}
 			span{
 				background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
@@ -198,11 +195,27 @@
 			}
 		}
 	}
-	.number{
+	ol{
 		counter-reset: my-awesome-counter;
 		ul{
 			counter-reset: my-awesome-counter;
-			li{}
+			li{
+				position: relative;
+				counter-increment: my-awesome-counter;
+				&:before{
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 2.4rem;
+					text-align: center;
+					height: 100%;
+					content: counter(my-awesome-counter,  lower-alpha) '.';
+					background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
 		}
 		li{
 			position: relative;
@@ -222,27 +235,33 @@
 			}
 		}
 	}
-	.alphabet {
-		counter-reset: awesome-counter;
-		li{
-			position: relative;
-			counter-increment: awesome-counter;
-			&:before{
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 2.4rem;
-				text-align: center;
-				height: 100%;
-				content: counter(awesome-counter,  lower-alpha) '.';
-				background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
-				background-clip: text;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
+}
+.info-post{
+	display: flex;
+	flex-wrap: wrap;
+	li{
+		color: #FFF;
+		font-feature-settings: 'clig' off, 'liga' off;
+		/* Body/S */
+		font-family: 'Inter';
+		font-size: 1.5rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 155%;
+		margin-right: 2rem;
+		position: relative;
+		&:after{
+			position: absolute;
+			content: '·';
+			right: .8rem;
+			top: 0;
+		}
+		&:last-of-type{
+			&:after{
+				display: none;
 			}
 		}
 	}
-
 }
 .text-entry {
 	color: rgba(0, 0, 0, 0.8);

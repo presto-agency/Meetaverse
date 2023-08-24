@@ -440,6 +440,12 @@
 		}
 		padding: 1.6rem;
 		background: $color-white;
+		&.image-card-box-image__full{
+			padding: 0;
+			img{
+				border-radius: 0;
+			}
+		}
 		@include min(md) {
 			h4{
 				display: none;

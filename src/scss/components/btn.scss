@@ -280,15 +280,15 @@
 			}
 		}
 
-	@include min(md) {
-		letter-spacing: 2px;
-		padding: 2rem 2.8rem;
-		font-size: 1.8rem;
-	}
-
-	@include min(lg) {
-		letter-spacing: 3px;
-		font-size: 1.8rem;
-		padding: 2rem 3.2rem;
-	}
+	//@include min(md) {
+	//	letter-spacing: 2px;
+	//	padding: 2rem 2.8rem;
+	//	font-size: 1.8rem;
+	//}
+	//
+	//@include min(lg) {
+	//	letter-spacing: 3px;
+	//	font-size: 1.8rem;
+	//	padding: 2rem 3.2rem;
+	//}
 }
