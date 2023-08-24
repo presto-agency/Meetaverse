@@ -1,19 +1,21 @@
 /*
     * Button hover
     * */
+console.log('start');
 const ctaArray = document.querySelectorAll('.btn-cta, .btn-outline-white');
 for (let i = 0; i < ctaArray.length; i++) {
 	const button = ctaArray[i];
-
-	const bg = document.createElement('div')
+	console.log('btn-cta');
+	const bg = document.createElement('div');
 	bg.classList.add('bg');
 	button.appendChild(bg);
+	console.log('add bg');
 
 	button.addEventListener('mouseenter', function () {
 		bg.style.transition = 'top 0.3s ease-out';
 		bg.style.top = '-42%';
 	});
-
+	console.log('mouseenter');
 	button.addEventListener('mouseleave', function () {
 		bg.style.top = '-210%';
 
@@ -27,6 +29,7 @@ for (let i = 0; i < ctaArray.length; i++) {
 			bg.style.transition = 'top 0.3s ease-out';
 		}, 350);
 	});
+	console.log('mouseleave');
 }
 document.addEventListener('DOMContentLoaded', (event) => {
 
