@@ -1,0 +1,65 @@
+.section-experience{
+	margin: 0;
+	@include min(md) {
+		margin: 0;
+	}
+	.container{
+		padding: 7.2rem 0;
+		border-radius: 1.6rem;
+		background: $gray-300;
+		@include min(md) {
+			padding: 10.4rem 0;
+		}
+	}
+}
+.experience{
+	&-list{
+		width: calc(100% - 12.8rem);
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1.6rem 0;
+		@include min(md) {
+			width: calc(100% - 12.8rem);
+			margin: 0 auto 0;
+		}
+	}
+	&-item{
+		padding: 2.4rem;
+		background: $color-white;
+		border-radius: 1.6rem;
+		margin: 0 1.6rem 2.4rem;
+		position: relative;
+		overflow: hidden;
+		&:after{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			content: url('../img/mask-logo.svg');
+			width: 100%;
+			height: auto;
+			max-width: 17.6rem;
+		}
+		@include min(md) {
+			margin: 0 1.6rem 5.6rem;
+			width: calc(33.3333% - 3.2rem ) ;
+		}
+		img{
+			margin-bottom: 3.2rem;
+			width: 100%;
+			display: block;
+		}
+		li{
+			color: $gray-black;
+			font-feature-settings: 'clig' off, 'liga' off;
+			font-family: 'Inter';
+			font-size: 17px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 155%;
+			margin-bottom: 1.2rem;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+		}
+	}
+}

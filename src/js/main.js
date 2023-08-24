@@ -1,36 +1,35 @@
-
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    /*
+/*
     * Button hover
     * */
-    const ctaArray = document.querySelectorAll('.btn-cta, .btn-outline-white');
-    for (let i = 0; i < ctaArray.length; i++) {
-        const button = ctaArray[i];
+const ctaArray = document.querySelectorAll('.btn-cta, .btn-outline-white');
+for (let i = 0; i < ctaArray.length; i++) {
+	const button = ctaArray[i];
 
-        const bg = document.createElement('div')
-        bg.classList.add('bg');
-        button.appendChild(bg);
+	const bg = document.createElement('div')
+	bg.classList.add('bg');
+	button.appendChild(bg);
 
-        button.addEventListener('mouseenter', function () {
-            bg.style.transition = 'top 0.3s ease-out';
-            bg.style.top = '-42%';
-        });
+	button.addEventListener('mouseenter', function () {
+		bg.style.transition = 'top 0.3s ease-out';
+		bg.style.top = '-42%';
+	});
 
-        button.addEventListener('mouseleave', function () {
-            bg.style.top = '-210%';
+	button.addEventListener('mouseleave', function () {
+		bg.style.top = '-210%';
 
-            setTimeout(function () {
-                bg.style.opacity = `${0}`;
-                bg.style.top = '110%';
-                bg.style.transition = 'none';
-            }, 300);
-            setTimeout(function () {
-                bg.style.opacity = `${1}`;
-                bg.style.transition = 'top 0.3s ease-out';
-            }, 350);
-        });
-    }
+		setTimeout(function () {
+			bg.style.opacity = `${0}`;
+			bg.style.top = '110%';
+			bg.style.transition = 'none';
+		}, 300);
+		setTimeout(function () {
+			bg.style.opacity = `${1}`;
+			bg.style.transition = 'top 0.3s ease-out';
+		}, 350);
+	});
+}
+document.addEventListener('DOMContentLoaded', (event) => {
+
 
     /*
     * FAQ toggle
