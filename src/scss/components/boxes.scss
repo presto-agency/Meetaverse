@@ -290,6 +290,12 @@
 				display: block;
 			}
 		}
+      h2.title-4{
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -.35px;
+      }
 		//margin-bottom: 2rem;
 	}
 	&-image{
@@ -301,6 +307,12 @@
 				display: none;
 			}
 		}
+      h2.title-4{
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -.35px;
+      }
 	}
 
 	@include min(sm) {
@@ -363,6 +375,7 @@
 		@include min(lg) {
 			font-size: 3.6rem;
 		}
+
 		// font-weight: 500;
 		// margin-bottom: 30px;
 		// font-size: 30px;
@@ -402,24 +415,38 @@
 			max-width: 100%;
 		}
 	}
-	ul {
-		padding-left: 0;
-		li {
-			margin-bottom: 1.2rem;
-			// font-size: 18px;
-			line-height: 1.5em;
-			position: relative;
-			&:before {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 1.3rem;
-				display: block;
-				background-color: $color-black;
-				@include circle(.7rem);
-			}
-		}
-	}
+  ul{
+    li {
+      /* Body/S */
+      font-family: 'Inter';
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 155%;
+      padding-left: 2rem;
+      color: $color-black;
+      margin-bottom: 1rem;
+      @include min(md) {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+      }
+      b, strong{
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 155%;
+        @include min(md) {
+          font-size: 1.7rem;
+        }
+      }
+      &:before {
+        left: 0;
+        top: .8rem;
+        background-color: $color-black;
+      }
+    }
+  }
+
 }
 
 .image-card-box {
@@ -497,7 +524,7 @@
 				margin: 1.4rem 0 3.8rem;
 			}
 		}
-		ul.list{
+		ul{
 			li {
 				/* Body/S */
 				font-family: 'Inter';
@@ -512,7 +539,7 @@
 					font-size: 1.5rem;
 					margin-bottom: 1.2rem;
 				}
-				b{
+				b, strong{
 					font-size: 1.5rem;
 					font-style: normal;
 					font-weight: 600;
@@ -629,10 +656,14 @@
 	margin-top: 7.7rem;
 }
 .blockquote-slider{
+  display: flex;
 	//margin: 0 -1.6rem;
 	//.tns-item{
 	//	padding: 0 1.6rem;
 	//}
+  .tns-item{
+    height: auto;
+  }
 }
 .quote-section {
 	padding: 2.8rem 2.4rem;
