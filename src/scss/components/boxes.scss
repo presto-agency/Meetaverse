@@ -680,6 +680,7 @@
 	display: flex;
 	transition: all ease 300ms;
 	flex-wrap: wrap;
+  height: 100%;
 	align-items: flex-start;
 	@include min(md) {
 		padding: 3.2rem 2.4rem 4.6rem 4.7rem;

@@ -152,10 +152,13 @@ if (document.querySelector('.guides-slider')) {
 if (document.querySelector('.logo-slider')) {
 	tns({
 		container: '.logo-slider',
+		autoplayButton: false,pre
 		items: 7,
 		loop: true,
 		controls: false,
 		nav: false,
+		autoplayButton: false,
+		autoplay: true,
 		gutter: 32,
 		mouseDrag: true,
 		slideBy: 1,
@@ -163,28 +166,26 @@ if (document.querySelector('.logo-slider')) {
 			0: {
 				items: 2,
 				gutter: 24,
-				loop: false,
 				controls: true,
 				controlsPosition: 'bottom',
 			},
 			567: {
 				items: 2,
-				loop: false,
 			},
 			768: {
 				items: 3,
-				loop: false,
 			},
 			900: {
 				items: 4,
-				loop: false,
 			},
 			992: {
 				items: 5,
-				loop: false,
 			},
 			1200: {
 				items: 7,
+				loop: true,
+				controls: false,
+				autoplayButton: false,
 			},
 		},
 	});

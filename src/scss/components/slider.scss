@@ -33,6 +33,10 @@
 	}
 }
 
+
+button[data-action='stop'] {
+	display: none;
+}
 .middle-controls-slider {
 	position: relative;
 	padding: 0 3rem;
