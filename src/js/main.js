@@ -1,7 +1,7 @@
 /*
     * Button hover
     * */
-const ctaArray = document.querySelectorAll('.btn-cta, .btn-outline-white');
+const ctaArray = document.querySelectorAll('.btn-cta, .btn-outline-white, .actions');
 for (let i = 0; i < ctaArray.length; i++) {
 	const button = ctaArray[i];
 	const bg = document.createElement('div');

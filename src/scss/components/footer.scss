@@ -81,23 +81,30 @@
 				margin-right: .8rem;
 			}
 		}
-		.input{
+		.hs_email{
 			width: 100%;
-			color: $gray-black;
-			font-feature-settings: 'clig' off, 'liga' off;
-			font-family: 'Inter';
-			font-size: 1.7rem;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 155%; /* 26.35px */
-			display: block;
-			outline: none;
-			padding: 1.2rem 1.6rem;
-			border-radius: 1.6rem;
-			border: 1px solid $gray-500;
-			background: $color-white;
+			.input{
+				input{
+					width: 100%;
+					color: $gray-black;
+					font-feature-settings: 'clig' off, 'liga' off;
+					font-family: 'Inter';
+					font-size: 1.7rem;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 155%; /* 26.35px */
+					display: block;
+					outline: none;
+					padding: 1.2rem 1.6rem;
+					border-radius: 1.6rem !important;
+					border: 1px solid $gray-500;
+					background: $color-white;
+				}
 
+
+			}
 		}
+
 		.btn-cta{
 			font-family: 'Montserrat';
 			font-size: 1.3rem;
@@ -109,9 +116,38 @@
 			text-transform: uppercase;
 			width: 100%;
 			margin: 1.1rem 0 0;
-			@include min(sm) {
+			@include min(md) {
 				margin: 0 0 0;
 				width: auto;
+			}
+		}
+		.legal-consent-container .hs-form-booleancheckbox-display>span{
+			margin-left: 1rem;
+		}
+		.hs-form-required{
+			color: $gray-500;
+			display: inline-block;
+		}
+		.legal-consent-container .hs-form-booleancheckbox-display p{
+			display: inline-block;
+			color: $gray-500;
+			font-family: 'Inter';
+			font-size: 1.3rem;
+			font-style: normal;
+			font-weight: 400;
+			position: relative;
+			line-height: 169%;
+			max-width: 90%;
+			@include min(sm) {
+				font-size: 1.5rem;
+				line-height: 155%;
+			}
+			a{
+				color: $gray-500;
+				text-decoration: underline;
+				&:hover{
+					text-decoration: none;
+				}
 			}
 		}
 		.modal-group{
@@ -168,6 +204,62 @@
 				}
 			}
 		}
+
+	}
+	.hbspt-form .actions{
+	}
+	.hbspt-form .hs-button{
+		font-family: 'Montserrat';
+		font-style: normal;
+		border-radius: 10rem;
+		font-weight: 600;
+		font-feature-settings: 'clig' off, 'liga' off;
+		color: $color-white;
+		display: inline-block;
+		text-transform: uppercase;
+		padding: 1.6rem 3.2rem;
+		font-size: 1.3rem;
+		line-height: 130%;
+		letter-spacing: 1px;
+		text-decoration: none;
+		white-space: nowrap;
+		z-index: 1;
+		overflow: hidden;
+		border: 1px solid transparent !important;
+		position: relative;
+		background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
+
+		span{
+			position: relative;
+			display: inline-block;
+			color: inherit;
+			z-index: 1;
+			transition: color .3s ease-out;
+		}
+
+		&:hover{
+			border-color: #002698;
+			color: $color-white;
+		}
+		@include clear-btn;
+		//@include min(md) {
+		//	letter-spacing: 2px;
+		//	padding: 2rem 2.8rem;
+		//	font-size: 1.8rem;
+		//}
+
+		//@include min(lg) {
+		//	letter-spacing: 3px;
+		//	font-size: 1.8rem;
+		//	padding: 2rem 3.4rem;
+		//}
+
+		&-sm {
+			@include min(lg) {
+				font-size: 1.6rem;
+				padding: 1.7rem 3.6rem;
+			}
+		}
 	}
 }
 .footer-link{
@@ -218,9 +310,7 @@
 			.page-footer--left {
 				max-width: 28rem;
 				margin-right: 2rem;
-				.btn-cta{
-					margin-top: 0;
-				}
+				.btn-cta{}
 				p{
 					font-size: 1.7rem;
 				}

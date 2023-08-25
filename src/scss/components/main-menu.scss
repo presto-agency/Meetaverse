@@ -157,16 +157,23 @@
 					}
 
 					> ul {
-
 						margin: 0;
 						@include min(md) {
 							display: block;
+							top: 100%;
+							opacity: 1;
+							visibility: visible;
+							z-index: 1;
 						}
 					}
 				}
 			}
 			> ul {
-				display: none;
+				position: absolute;
+				opacity: 0;
+				visibility: hidden;
+				z-index: -1;
+				transition: all ease 300ms;
 				border-radius: 1.6rem;
 				border-top: 2px solid $color-light-blue;
 				a{
@@ -177,20 +184,29 @@
 					line-height: 155%; /* 23.25px */
 				}
 				&.active{
-					display: block;
+
+					position: relative;
+					opacity: 1;
+					visibility: visible;
+					z-index: 1;
 				}
 				@include min(md) {
+					display: block;
 					position: absolute;
+					transition: all ease 300ms;
+					top: 90%;
+					opacity: 0;
+					visibility: hidden;
+					z-index: -1;
 					background: $gray-300;
 					padding: 1.6rem 1.2rem;
 					width: 100%;
 					min-width: max-content;
 					left: 50%;
-					top: 100%;
 					transform: translate(-50%, 0);
 					//top: .5rem;
 					li {
-						text-align: center;
+						text-align: left;
 						margin-bottom: .4rem;
 						&:last-of-type{
 							margin-bottom: 0;
@@ -200,7 +216,7 @@
 							position: relative;
 							z-index: 2;
 							border-radius: 10rem;
-							padding: .8rem 1.2rem;
+							padding: .4rem 0 .2rem;
 							&:after{
 								position: absolute;
 								content: '';
@@ -212,14 +228,17 @@
 								border-radius: 10rem;
 								pointer-events: none;
 								opacity: 0;
-								background-image: linear-gradient(177deg, #002698 0%, #3263F8 100%) !important;
+								//background-image: linear-gradient(177deg, #002698 0%, #3263F8 100%) !important;
 							}
 							@include min(md) {
 							&:hover{
-								color: $color-white;
-								-webkit-text-fill-color: #fff;
+								color: transparent;
+								background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
+								background-clip: text;
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
 								&:after{
-									opacity: 1;
+									opacity: 0;
 								}
 							}
 							}
