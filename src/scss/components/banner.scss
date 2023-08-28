@@ -120,9 +120,9 @@
 			text-transform: none;
 		}
 		.title-1{
-			max-width: 80%;
+			max-width: 100%;
 			@include min(sm) {
-				max-width: 80%;
+				max-width: 100%;
 			}
 		}
 		h1 {

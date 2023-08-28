@@ -152,7 +152,7 @@ if (document.querySelector('.guides-slider')) {
 if (document.querySelector('.logo-slider')) {
 	tns({
 		container: '.logo-slider',
-		autoplayButton: false,pre
+		autoplayButton: false,
 		items: 7,
 		loop: true,
 		controls: false,
@@ -385,8 +385,12 @@ if (singleEditor) {
 
     (function addTitlesToRelativeBlock() {
         // document.querySelector('.wrapper').classList.add('wrapper-visible');
+        // document.querySelector('.wrapper').classList.add('wrapper-visible');
         //const  firstTitles = document.querySelector('.description__content>h1');
-        let titles = document.querySelectorAll('.text-entry__blog>h2');
+        let titles = document.querySelectorAll('.text-entry__blog h2');
+        //add FAQ title to side bar`
+
+
         const relativeBlock = document.querySelector('.text-sidebar__list');
         let first_el = document.createElement('a');
         //firstTitles.setAttribute('id', `top`);

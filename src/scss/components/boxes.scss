@@ -516,7 +516,7 @@
 		// 		font-size: 40px;
 		// 	}
 		// }
-		h4{
+		h4, .title-4{
 			text-transform: none;
 			font-size: 1.4rem;
 			letter-spacing: 1.22px;
@@ -612,14 +612,14 @@
 	justify-content: center;
 	background-color: $color-white;
 	width: 100%;
-	h4{
+	h4, .title-4{
 		display: block;
 		color: $gray-black;
 		margin: 4rem .4rem .5rem;
 	}
 	@include min(md) {
 		height: auto;
-		h4{
+		h4, .title-4{
 			display: none;
 		}
 		width: 50%;
@@ -641,7 +641,7 @@
 	}
 }
 .image-card-box-text{
-	h4{
+	h4, .title-4{
 		display: none;
 		@include min(md) {
 			display: block;
@@ -719,7 +719,7 @@
 
 		}
 	}
-	h4{
+	h4, .title-4{
 		color: $brand-secondary;
 		font-feature-settings: 'clig' off, 'liga' off;
 		font-family: 'Inter';
@@ -742,7 +742,7 @@
 
 	}
 	@include min(md) {
-		h4{font-size: 1.7rem;}
+		h4, .title-4{font-size: 1.7rem;}
 		span{font-size: 1.7rem;}
 	}
 
