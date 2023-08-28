@@ -280,3 +280,12 @@
 		}
 	}
 }
+.section-card-solution{
+	.col-md-4:nth-child(-n+2) {
+		width: 100%;
+		@include min(sm) {
+			width: 50%;
+		}
+
+	}
+}
