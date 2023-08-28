@@ -62,7 +62,14 @@
 			}
 		}
 		a{
-			img{}
+			img{
+			}
+			&:hover{
+				img{
+					filter: invert(46%) sepia(69%) saturate(6564%) hue-rotate(187deg) brightness(87%) contrast(87%);
+
+				}
+			}
 		}
 	}
 	form{

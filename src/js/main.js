@@ -594,9 +594,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	/*
     * FAQ toggle
     * */
-	$('.faq-item-title').on('click', function () {
-		const parent = $(this).parent('.faq-item');
-		parent.find('.faq-item-text').slideToggle(400);
-
-	});
+	// $('.faq-item-title').on('click', function () {
+	// 	const parent = $(this).parent('.faq-item');
+	// 	parent.find('.faq-item-text').slideToggle(400);
+    //
+	// });
 });

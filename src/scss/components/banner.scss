@@ -84,7 +84,6 @@
 
 			@include p_absolute_cover;
 		}
-
 		&--blue {
 			//&:before {
 			//	background: linear-gradient(
@@ -95,13 +94,11 @@
 			//	);
 			//}
 		}
-
 		&.__no_gradient {
 			&:before {
 				content: none;
 			}
 		}
-
 		img {
 			@include object_fit_cover;
 		}
@@ -119,24 +116,7 @@
 		h4 {
 			text-transform: none;
 		}
-		.title-1{
-			max-width: 100%;
-			@include min(sm) {
-				max-width: 100%;
-			}
-		}
-		h1 {
-			margin: .6rem 0 0;
-			font-size: 1.2rem;
-			font-weight: 600;
-			letter-spacing: 1.08px;
 
-			 @include min(sm) {
-				 font-size: 1.42rem;
-				 margin: .8rem 0 0;
-			// 	font-size: 50px;
-			 }
-		}
 
 		p {
 			font-size: 1.8rem;
@@ -147,6 +127,69 @@
 			@include min(sm) {
 				font-size: 2.4rem;
 			}
+		}
+		h1,
+		.title-1 {
+			font-size: 4.2rem;
+			margin: 0;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 110%;
+			letter-spacing: -1px;
+			@include min(sm) {
+				font-size: 4rem;
+			}
+			@include min(lg) {
+				font-size: 7.2rem;
+			}
+		}
+		h2,
+		.title-2 {
+			margin: 2rem 0;
+			font-size: 3.2rem;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 128%; /* 46.08px */
+			letter-spacing: -1px;
+			@include min(lg) {
+				font-size: 3.6rem;
+			}
+		}
+		h3,
+		.title-3 {
+			font-size: 2.6rem;
+			line-height: 1.3em;
+			@include min(sm) {
+				font-size: 2.8rem;
+			}
+			@include min(lg) {
+				font-size: 3rem;
+			}
+		}
+		.title-4{
+			margin: .6rem 0 0;
+			font-size: 1.2rem;
+			font-weight: 600;
+			letter-spacing: 1.08px;
+			@include min(sm) {
+				font-size: 1.42rem;
+				margin: .8rem 0 0;
+			}
+		}
+
+		h5,
+		.title-5 {
+			margin: 0;
+			font-size: 1.8rem;
+			line-height: 1.25em;
+			font-weight: 500;
+		}
+		h6,
+		.title-6 {
+			margin: 0;
+			font-size: 1.6rem;
+			line-height: 1.25em;
+			font-weight: 500;
 		}
 
 		ul {
