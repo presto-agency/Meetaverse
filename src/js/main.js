@@ -421,7 +421,7 @@ if (singleEditor) {
         (function featureRelativeBlock() {
             const menu = document.querySelector('.text-sidebar__list');
             const editor = document.querySelector('.text-entry__blog');
-            let topValue = 84;
+            let topValue = 104;
             let bottomValue = 0;
             showMenu(menu, editor, topValue, bottomValue)
         }());
