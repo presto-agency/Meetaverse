@@ -664,6 +664,9 @@
 		transform: scale(1);
 		z-index: auto;
 	}
+	.bg{
+		z-index: -1;
+	}
 }
 
 .__top-offset-lg {
