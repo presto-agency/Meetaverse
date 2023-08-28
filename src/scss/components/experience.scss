@@ -63,8 +63,21 @@
 			font-weight: 400;
 			line-height: 155%;
 			margin-bottom: 1.2rem;
+			padding-left: 3.3rem;
+			position: relative;
+			text-align: left;
 			&:last-of-type{
 				margin-bottom: 0;
+			}
+			&:before{
+				position: absolute;
+				left: 0;
+			}
+		}
+		ul.checkmark-list.color-blue li{
+			padding-left: 3.3rem;
+			&:before{
+				position: absolute;
 			}
 		}
 	}
@@ -137,7 +150,10 @@
 			width: 100%;
 		}
 		.image-card-box-text__full{
-			padding: 5rem 7.2rem 6.1rem;
+			padding: 2.8rem 2.4rem;
+			@include min(md) {
+				padding: 5rem 7.2rem 6.1rem;
+			}
 			h2{
 				letter-spacing: -1.02px;
 				margin-bottom: 4rem;
@@ -178,7 +194,7 @@
 			width: 100%;
 			display: block;
 		}
-		@include min(md) {
+		@include min(sm) {
 			width: 100%;
 			.image-card-box-image__full{
 				width: 50%;
