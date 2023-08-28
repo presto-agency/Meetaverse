@@ -34,8 +34,9 @@
 }
 
 
+button[data-action='start'],
 button[data-action='stop'] {
-	display: none;
+	display: none !important;
 }
 .middle-controls-slider {
 	position: relative;
