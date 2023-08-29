@@ -132,8 +132,10 @@ body {
 	}
 	&.section-info{
 		.image-card-box-image{
+			width: 100%;
 			padding: 1.8rem 2.4rem 0;
 			@include min(md) {
+				width: 50%;
 				padding: 1.6rem 0 1.6rem 1.6rem;
 			}
 		}
@@ -211,10 +213,12 @@ body {
 	}
 }
 .image-card-box{
-  margin: 0 -2.4rem;
-  @include min(md) {
-    margin: 0 0;
-  }
+  	margin: 0 -2.4rem;
+	width: calc(100% + 4.8rem);
+  	@include min(md) {
+    	margin: 0 0;
+	  	width: calc(100% + 4.8rem);
+  	}
 }
 .section-bg__gradient {
 	position: relative;
@@ -449,6 +453,7 @@ ul.checkmark-list {
 			padding: 1.6rem 1.6rem;
 		}
 		picture, img{
+			width: 100%;
 			min-height: 22.3rem;
 			display: block;
 		}
@@ -477,7 +482,7 @@ ul.checkmark-list {
 				padding: 6rem 7.2rem 5.4rem;
 			}
 		}
-		@include min(sm) {
+		@include min(md) {
 			flex-direction: row;
 			.content-box-text{
 				h4{
