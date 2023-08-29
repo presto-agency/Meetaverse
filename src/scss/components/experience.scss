@@ -145,9 +145,11 @@
 	&.card-box-secondary{
 	margin: 9.1rem 0 10rem;
 	.image-card-box{
+		margin: 0 -2.4rem;
 		width: calc(100% + 4.8rem);
 		@include min(md) {
-			width: calc(100% + 4.8rem);
+			width: 100%;
+			margin: 0;
 		}
 		.image-card-box-image__full{
 			width: 100%;

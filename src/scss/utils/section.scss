@@ -388,8 +388,10 @@ ul.checkmark-list {
 				margin: 0 auto;
 				height: 27.2rem;
 				display: block;
-				@include min(sm) {
-					height: auto;
+				@include min(md) {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
 				}
 			}
 			.text-capitalize{
