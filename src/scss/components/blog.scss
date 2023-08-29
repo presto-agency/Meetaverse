@@ -199,7 +199,7 @@
 	}
 	ol{
 		counter-reset: my-awesome-counter;
-		ul{
+		ul, ol{
 			counter-reset: my-awesome-counter;
 			li{
 				position: relative;

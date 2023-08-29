@@ -17,7 +17,7 @@
 	}
 }
 .post-list-title {
-	margin:12rem 0  6.7rem;
+	margin: 7.2rem  0  4rem;
 	color: $gray-black;
 	text-align: center;
 	font-feature-settings: 'clig' off, 'liga' off;
@@ -28,6 +28,7 @@
 	line-height: 110%; /* 79.2px */
 	letter-spacing: -1px;
 	@include min(md) {
+		margin: 11.5rem  0  5.6rem;
 		font-size: 4.2rem;
 	}
 }
@@ -58,7 +59,7 @@
 		padding: 1.6rem;
 		border-bottom: 0;
 		.post-item-image{
-			height: 23.3rem;
+			height: 19.2rem;
 			border-radius: .4rem;
 			a{}
 			img{
@@ -110,7 +111,7 @@
 			padding: 2.4rem;
 			margin: 0 1.6rem 5.6rem;
 			.post-item-image{
-				height: 22.3rem;
+				height: 19.2rem;
 				border-radius: .4rem;
 				margin-bottom: 3.2rem;
 				a{
@@ -125,7 +126,7 @@
 				height: calc(100% - 22.3rem);
 				p{
 					font-size: 1.6rem;
-					margin: 1rem 0;
+					margin: 0 0 1.8rem;
 				}
 			}
 			.post-item-title{
