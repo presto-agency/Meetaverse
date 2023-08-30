@@ -164,7 +164,7 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
-		width: 5rem;
+		width: 5.1rem;
 		height: 5rem;
 		transition: all ease 300ms;
 		@include min(sm) {
@@ -237,7 +237,7 @@
 .btn-outline {
 	background: transparent;
 	border-radius: 4rem;
-	font-weight: 600;
+	font-weight: 500;
 	display: inline-block;
 	text-transform: uppercase;
 	padding: 1.6rem 3.2rem;
