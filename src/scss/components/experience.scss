@@ -1,5 +1,5 @@
 .section-experience{
-	margin: 0;
+	margin: 7.2rem 0 0;
 	@include min(md) {
 		margin: 0;
 	}
@@ -84,7 +84,13 @@
 }
 .section-content-box{
 	.content-box{
+		width: calc(100% + 4.8rem);
+		margin: 0 -2.4rem;
 		background: $color-white;
+		@include min(md) {
+			width: 100%;
+			margin: 0 0;
+		}
 	}
 	.title-4, h4{
 		color: #536ff5;
@@ -270,7 +276,7 @@
 	margin: 0 auto;
 	text-align: center;
 	width: 100%;
-	max-width: 14rem;
+	max-width: 12.7rem;
 	display: flex;
 	z-index: 2;
 	align-items: center;

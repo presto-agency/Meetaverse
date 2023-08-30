@@ -851,7 +851,7 @@ a {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, 20%);
 	opacity: 0.8;
 	width: 7.2rem;
 	height: 7.2rem;
@@ -860,6 +860,9 @@ a {
 	background-color: transparent;
 	cursor: pointer;
 	padding: 0;
+	@include min(md) {
+		transform: translate(-50%, -50%);
+	}
 	&:before{
 		position: absolute;
 		content: '';
