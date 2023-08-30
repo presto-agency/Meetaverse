@@ -560,6 +560,7 @@
 }
 .image-card-box-text{
 	h4, .title-4{
+		color: $brand-secondary;
 		display: none;
 		@include min(md) {
 			display: block;
