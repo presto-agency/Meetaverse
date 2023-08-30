@@ -72,16 +72,20 @@
 			border: 0;
 		}
 		.post-item-title{
-			color: $gray-black;
 			font-feature-settings: 'clig' off, 'liga' off;
-			font-family: 'Montserrat';
-			font-size: 1.7rem;
+			font-family: "Montserrat";
+			font-size: 1.6rem;
 			font-style: normal;
 			font-weight: 600;
-			line-height: 128%;
+			line-height: 140%; /* 22.4px */
+			@include min(md) {
+				font-size: 1.9rem;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 128%; /* 24.32px */
+			}
+			color: $gray-black;
 			margin-bottom: 1.2rem;
-			min-height: auto;
-
 		}
 		.post-item-text{
 			p{
