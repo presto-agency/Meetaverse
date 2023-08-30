@@ -1,8 +1,6 @@
 .card-wrapper .card {
 	background: $color-white;
-	//box-shadow: 0px 4px 4px rgba($color-black, 0.1);
 	border-radius: 1.6rem;
-	// margin-bottom: 27px;
 	padding: 2rem;
 	margin-bottom: 0;
 	@include min(md) {
@@ -23,15 +21,10 @@
 		@include min(sm) {
 			height: 7.6rem;
 		}
-		//img{
-		//	margin: 2.5rem 0 .8rem;
-		//}
 	}
 	h4,
 	.title-4 {
 		&.text-wide {
-			// font-size: 16px;
-			// line-height: 129.8%;
 			margin: 3rem 0;
 			color: $color-blue;
 		}
@@ -40,16 +33,7 @@
       &.text-wide {
         color: $brand-secondary;
         text-align: center;
-        font-feature-settings: 'clig' off, 'liga' off;
-        font-size: 2rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 128%; /* 30.72px */
 	    margin: 2rem 0 -.9rem;
-	    letter-spacing: 0;
-		  @include min(sm) {
-			  font-size: 2.4rem;
-		  }
       }
     }
 	&-light-gray {
@@ -57,7 +41,6 @@
 	}
 	&-wrapper {
 		margin-bottom: 3.2rem;
-		// display: flex;
 		height: 100%;
 	}
 	&-white-transparent {
@@ -79,11 +62,6 @@
 			text-transform: capitalize;
 		}
 	}
-
-	.title-2 {
-		text-transform: capitalize;
-	}
-
 	.card-text {
 		font-family: 'Inter'  ,sans-serif;
 		font-style: normal;
@@ -253,19 +231,7 @@
 
 .box {
 	background: $color-white;
-	//box-shadow: 5px 10px 10px rgba($color-black, 0.03);
 	border-radius: 1.6rem;
-
-	&-lg {
-		//padding: 2rem 1.5rem;
-		@include min(sm) {
-			//padding: 4rem 3rem;
-		}
-		@include min(md) {
-			//padding: 6.8rem 10rem;
-		}
-	}
-
 	&-white {
 		background-color: $color-white;
 	}
@@ -290,13 +256,6 @@
 				display: block;
 			}
 		}
-      h2.title-4{
-        font-size: 1.4rem;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: -.35px;
-      }
-		//margin-bottom: 2rem;
 	}
 	&-image{
 		padding: 4rem 2.4rem 0;
@@ -307,14 +266,7 @@
 				display: none;
 			}
 		}
-      h2.title-4{
-        font-size: 1.4rem;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: -.35px;
-      }
 	}
-
 	@include min(md) {
 		display: flex;
 		&-text {
@@ -355,36 +307,16 @@
 
 	h2,
 	h3 {
-		font-size: 2.4rem;
-		font-style: normal;
-		font-weight: 700;
-		letter-spacing: -1.62px;
-		line-height: 141%;
 		margin: 0 0 2.4rem;
 		@include min(sm) {
 			margin: 0 0 2.4rem;
-			font-size: 2.4rem;
-			font-style: normal;
-			font-weight: 700;
-			line-height: 128%; /* 46.08px */
-			letter-spacing: -1.98px;
 		}
 		@include min(md) {
-			font-size: 2.6rem;
 			margin: 0 0 4rem;
 		}
 		@include min(lg) {
 			font-size: 3.6rem;
 		}
-
-		// font-weight: 500;
-		// margin-bottom: 30px;
-		// font-size: 30px;
-
-		// @include min(md) {
-		// line-height: 50px;
-		// font-size: 40px;
-		// }
 	}
 
 	p {
@@ -480,7 +412,6 @@
 		h4, .text-capitalize{
 			display: block;
 			color: $gray-black;
-
 		}
 		video{
 			height: auto;
@@ -517,25 +448,12 @@
 		@include min(lg) {
 			padding: 4.5rem 7.2rem 5.1rem;
 		}
-		// h2 {
-		// 	font-size: 30px;
-		// 	@include min(sm) {
-		// 		font-size: 40px;
-		// 	}
-		// }
 		h4, .title-4{
-			text-transform: none;
-			font-size: 1.4rem;
-			letter-spacing: 1.22px;
 			margin-bottom: 0;
 		}
 		h2{
-			letter-spacing: -1.41px;
-			line-height: 140%;
 			margin: 1.4rem 0 2.4rem;
 			@include min(md) {
-				letter-spacing: -1.61px;
-				line-height: 128%;
 				margin: 1.4rem 0 3.8rem;
 			}
 		}
@@ -601,7 +519,6 @@
 	align-items: center;
 	justify-content: center;
 	background-color: $color-white;
-	.title-4{}
 	@include min(md) {
 		width: 50%;
 		display: flex;
@@ -609,7 +526,6 @@
 			display: none;
 		}
 	}
-	&_inner {}
 }
 .image-card-box-video_full {
 	position: relative;
@@ -683,10 +599,6 @@
 }
 .blockquote-slider{
   display: flex;
-	//margin: 0 -1.6rem;
-	//.tns-item{
-	//	padding: 0 1.6rem;
-	//}
   .tns-item{
     height: auto;
   }
@@ -698,7 +610,7 @@
 	display: flex;
 	transition: all ease 300ms;
 	flex-wrap: wrap;
-  height: 100%;
+  	height: 100%;
 	align-items: flex-start;
 	@include min(md) {
 		padding: 3.2rem 2.4rem 4.6rem 4.7rem;
@@ -739,13 +651,6 @@
 	}
 	h4, .title-4{
 		color: $brand-secondary;
-		font-feature-settings: 'clig' off, 'liga' off;
-		font-family: 'Inter';
-		font-size: 1.5rem;
-		font-style: normal;
-		font-weight: 600;
-		line-height: 155%; /* 26.35px */
-		text-transform: none;
 		margin: .7rem 0 .5rem;
 	}
 	span{
@@ -760,7 +665,6 @@
 
 	}
 	@include min(md) {
-		h4, .title-4{font-size: 1.7rem;}
 		span{font-size: 1.7rem;}
 	}
 
@@ -915,11 +819,6 @@ a {
 	position: relative;
 	padding: 3.2rem 2.4rem;
 	.title-4{
-		font-size: 1.6rem;
-		font-style: normal;
-		font-weight: 700;
-		letter-spacing: -1.61px;
-		line-height: 128%;
 		margin: 1.4rem 0 3.8rem;
 	}
 	@include min(md) {
@@ -989,16 +888,9 @@ a {
 }
 .content-box-text.color-secondary{
 	h4, .title-4{
-		text-transform: none;
 		color: $brand-secondary;
 		margin: 0 0 1.4rem;
-		font-size: 1.4rem;
 	}
-	h3{
-		line-height: 126%;
-		text-transform: none;
-	}
-
 	ul{
 		li{
 			color: $gray-700;
@@ -1010,9 +902,6 @@ a {
 			line-height: 155%;
 			padding-left: 2rem;
 			margin-bottom: 1rem;
-			&:last-of-type{
-				margin-bottom: 0;
-			}
 			@include min(sm) {
 				font-size: 1.5rem;
 				margin-bottom: 1.2rem;

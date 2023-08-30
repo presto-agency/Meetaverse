@@ -107,84 +107,87 @@
 }
 h1,
 .title-1 {
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: 'Montserrat';
 	font-size: 4.2rem;
-	margin: 0;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 110%; /* 79.2px */
+	line-height: 110%; /* 46.2px */
 	letter-spacing: -1px;
 	@include min(sm) {
-		font-size: 4rem;
+		font-size: 4.6rem;
 	}
-	@include min(lg) {
+	@include min(md) {
 		font-size: 7.2rem;
 	}
 }
-
 h2,
-h3,
-.title-3,
 .title-2 {
-	margin: 2rem 0;
-	font-size: 3.6rem;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: "Montserrat";
+	font-size: 2.4rem;
 	font-style: normal;
 	font-weight: 600;
-	line-height: 128%; /* 46.08px */
+	line-height: 140%; /* 33.6px */
 	letter-spacing: -1px;
-}
-
-h2,
-.title-2 {
-	font-size: 2.4rem;
-	line-height: 140%;
 	@include min(sm) {
-		font-size: 2.4rem;
-		line-height: 1.25em;
-	}
-	@include min(md) {
 		font-size: 3rem;
 	}
-	@include min(lg) {
+	@include min(md) {
 		font-size: 3.6rem;
+		line-height: 128%; /* 46.08px */
 	}
 }
 
 h3,
 .title-3 {
-	font-size: 2.6rem;
-	line-height: 1.3em;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: 'Montserrat';
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 128%; /* 25.6px */
 	@include min(sm) {
 		font-size: 2.8rem;
 	}
 	@include min(lg) {
-		font-size: 3rem;
+		font-size: 2.4rem;
+		font-weight: 500;
+		line-height: 128%; /* 30.72px */
 	}
 }
 
 h4,
 .title-4 {
-	margin: 2rem 0;
-	line-height: 130%;
-	font-size: 1.4rem;
-	letter-spacing: -.35px;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: "Montserrat";
+	font-size: 1.6rem;
 	font-style: normal;
-	font-weight: 700;
-	@include min(sm) {
-		font-size: 1.6rem;
-		letter-spacing: 1px;
+	font-weight: 600;
+	line-height: 140%; /* 22.4px */
+	@include min(md) {
+		font-size: 1.9rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 128%; /* 24.32px */
 	}
 }
 h5,
 .title-5 {
-	margin: 0;
-	font-size: 1.8rem;
-	line-height: 1.25em;
-	font-weight: 500;
+	font-feature-settings: 'clig' off, 'liga' off;
+	font-family: 'Montserrat';
+	font-size: 1.4rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 130%; /* 18.2px */
+	@include min(md) {
+		font-size: 1.6rem;
+	}
 }
 h6,
 .title-6 {
 	margin: 0;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	line-height: 1.25em;
 	font-weight: 500;
 }

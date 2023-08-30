@@ -73,26 +73,13 @@
 		@include p_absolute_cover;
 		pointer-events: none;
 		z-index: -1;
-
 		&:before {
 			content: '';
 			pointer-events: none;
-
 			background: linear-gradient(
 				90deg, rgba(1, 28, 47, 1), rgba(5, 33, 53, 0.55)
 			);
-
 			@include p_absolute_cover;
-		}
-		&--blue {
-			//&:before {
-			//	background: linear-gradient(
-			//		180deg,
-			//		rgba(16, 117, 187, 0.22) 8.63%,
-			//		rgba(13, 80, 152, 0.68) 70.83%,
-			//		#1075bb 100%
-			//	);
-			//}
 		}
 		&.__no_gradient {
 			&:before {
@@ -112,12 +99,6 @@
 		color: $color-white;
 		position: relative;
 		z-index: 1;
-		h1,
-		h4 {
-			text-transform: none;
-		}
-
-
 		p {
 			font-size: 1.8rem;
 			font-weight: 500;
@@ -128,70 +109,13 @@
 				font-size: 2.4rem;
 			}
 		}
-		h1,
-		.title-1 {
-			font-size: 4.2rem;
-			margin: 0;
-			font-style: normal;
-			font-weight: 700;
-			line-height: 110%;
-			letter-spacing: -1px;
-			@include min(sm) {
-				font-size: 4rem;
-			}
-			@include min(lg) {
-				font-size: 7.2rem;
-			}
-		}
 		h2,
 		.title-2 {
 			margin: 2rem 0;
-			font-size: 3.2rem;
-			font-style: normal;
-			font-weight: 600;
-			line-height: 128%; /* 46.08px */
-			letter-spacing: -1px;
-			@include min(lg) {
-				font-size: 3.6rem;
-			}
-		}
-		h3,
-		.title-3 {
-			font-size: 2.6rem;
-			line-height: 1.3em;
-			@include min(sm) {
-				font-size: 2.8rem;
-			}
-			@include min(lg) {
-				font-size: 3rem;
-			}
 		}
 		h4, .title-4{
 			margin: .6rem 0 0;
-			font-size: 1.2rem;
-			font-weight: 600;
-			letter-spacing: 1.08px;
-			@include min(sm) {
-				font-size: 1.42rem;
-				margin: .8rem 0 0;
-			}
 		}
-
-		h5,
-		.title-5 {
-			margin: 0;
-			font-size: 1.8rem;
-			line-height: 1.25em;
-			font-weight: 500;
-		}
-		h6,
-		.title-6 {
-			margin: 0;
-			font-size: 1.6rem;
-			line-height: 1.25em;
-			font-weight: 500;
-		}
-
 		ul {
 			font-size: 1.8rem;
 			font-weight: 600;
@@ -265,17 +189,7 @@
 		}
 	}
 	&-hero {
-		// h1 {
-		// 	font-size: 16px;
-		// 	letter-spacing: 1.3px;
-
-		// 	@include min(sm) {
-		// 		font-size: 18px;
-		// 	}
-		// }
-
 		h2 {
-			// letter-spacing: 0.7px;
 			margin: 1.3rem 0 2.4rem;
 		}
 		p{
@@ -313,10 +227,6 @@
 	}
 	&-full {
 		h2 {
-			// font-weight: 600;
-			// letter-spacing: 0.7px;
-			font-size: 3.6rem;
-			text-transform: none !important;
 			margin: 2rem 0;
 		}
 		p {
@@ -335,7 +245,6 @@
 	@include min(sm) {
 		width: 100%;
 	}
-
 	> a {
 		text-align: center;
 		margin: 1rem 0;
@@ -485,15 +394,8 @@
 		}
 	}
 	.title-1{
-        max-width: 100%;
-        font-size: 2.4rem;
-		position: relative;
-		left: 0;
-		letter-spacing: -1.4px;
 		margin: 1.7rem 0 1.9rem;
         @include min(sm) {
-          font-size: 3.4rem;
-          letter-spacing: -.6px;
           margin: 1.9rem 0 1.9rem;
         }
 	}

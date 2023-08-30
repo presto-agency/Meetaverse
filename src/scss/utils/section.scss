@@ -52,11 +52,6 @@ body {
             @include min(sm) {
               margin-bottom: 5.6rem;
             }
-			.title-2{
-				letter-spacing: -1.98px;
-				text-transform: none;
-				font-weight: 700;
-			}
 		}
 		.card{
 			transition: opacity .4s ease-out,transform .4s ease-out,-webkit-transform .4s ease-out;
@@ -88,12 +83,8 @@ body {
 				margin-bottom: 4.8rem;
 			}
 			h2{
-				font-weight: 700;
-				letter-spacing: -1.6px;
 				margin-top: 1.4rem;
-				line-height: 140%;
 				@include min(sm) {
-					letter-spacing: -1.9px;
 					margin-top: .1rem;
 				}
 			}
@@ -273,11 +264,6 @@ body {
 		// margin-bottom: 80px;
 
 	}
-	h2{
-		font-weight: 700;
-		letter-spacing: -1.9px;
-		margin-top: 1px;
-	}
 	.title-4{
 		color: $brand-secondary;
 		margin-bottom: 1.2rem;
@@ -306,22 +292,8 @@ body {
 		}
 	}
 
-	// h2,
-	// h3 + .btn-cta {
-	// 	margin-top: 60px;
-	// }
-
 	&-subtitle {
-		// font-weight: 500;
-		// font-size: 18px;
-		// line-height: 129.8%;
-		// margin-bottom: 20px;
 		&__blue {
-			// margin-top: 20px;
-			// font-weight: 500;
-			// font-size: 28px;
-			// line-height: 129.8%;
-			// margin-bottom: 20px;
 			color: $color-blue;
 		}
 	}

@@ -235,17 +235,8 @@
 		}
 		.title-2{
 			color:$brand-secondary;
-			font-feature-settings: 'clig' off, 'liga' off;
-			font-family: 'Montserrat';
-			font-size: 2rem;
-			font-style: normal;
-			font-weight: 500;
-			line-height: 128%; /* 30.72px */
 			margin-bottom: 1.2rem;
 			text-align: left;
-			@include min(md) {
-				font-size: 2.4rem;
-			}
 		}
 		.card-text{
 			color: $gray-700;
