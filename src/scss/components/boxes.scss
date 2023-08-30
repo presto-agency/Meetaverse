@@ -495,8 +495,7 @@
 		}
 		&--white {
 			background-color: $color-white;
-			color: rgba($color-black, 0.8);
-
+			color: $gray-black;
 			li {
 				&:before {
 					background-color: $color-black;

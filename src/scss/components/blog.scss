@@ -102,18 +102,18 @@
 	}
 	h2{
 		color: $gray-black;
-		font-feature-settings: 'clig' off, 'liga' off;
-		/* Heading Mob/H2 */
-		font-family: 'Montserrat';
-		font-size: 2.4rem;
-		font-style: normal;
-		font-weight: 600;
-		line-height: 140%; /* 33.6px */
-		letter-spacing: -1px;
+		//font-feature-settings: 'clig' off, 'liga' off;
+		///* Heading Mob/H2 */
+		//font-family: 'Montserrat';
+		//font-size: 2.4rem;
+		//font-style: normal;
+		//font-weight: 600;
+		//line-height: 140%; /* 33.6px */
+		//letter-spacing: -1px;
 		margin-bottom: 2.4rem;
-		@include min(md) {
-			font-size: 3.6rem;
-		}
+		//@include min(md) {
+		//	font-size: 3.6rem;
+		//}
 	}
 	hr{
 		background: $gray-400;

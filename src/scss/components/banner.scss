@@ -254,6 +254,10 @@
 			@include first_last_list_marign();
 		}
 	}
+	.btn-cta{
+		border: 0 !important;
+		//width: 215px;
+	}
 }
 
 .banner-switcher {
