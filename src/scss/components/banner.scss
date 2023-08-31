@@ -138,12 +138,11 @@
 				font-size: 1.5rem;
 				font-style: normal;
 				font-weight: 400;
+				position: relative;
 				line-height: 155%; /* 23.25px */
 				@include min(sm) {
 					padding-left: 2.5rem;
-					position: relative;
 				}
-
 				&:before {
 					content: '';
 					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='19' viewBox='0 0 18 19' fill='none'%3E%3Cpath d='M9 2C4.86 2 1.5 5.36 1.5 9.5C1.5 13.64 4.86 17 9 17C13.14 17 16.5 13.64 16.5 9.5C16.5 5.36 13.14 2 9 2ZM6.9675 12.7175L4.275 10.025C3.9825 9.7325 3.9825 9.26 4.275 8.9675C4.5675 8.675 5.04 8.675 5.3325 8.9675L7.5 11.1275L12.66 5.9675C12.9525 5.675 13.425 5.675 13.7175 5.9675C14.01 6.26 14.01 6.7325 13.7175 7.025L8.025 12.7175C7.74 13.01 7.26 13.01 6.9675 12.7175Z' fill='white'/%3E%3C/svg%3E");
