@@ -27,7 +27,7 @@
 			li{
 				width: 100%;
 				padding: 0 2.4rem;
-				text-align: left;
+				text-align: center;
 				ul{
 					padding-top: 1rem;
 					li{
@@ -88,7 +88,7 @@
 			display: inline-block;
 			margin: 1rem 0;
 			position: relative;
-			text-align: center;
+			text-align: left;
 			&:not(:last-child) {
 				@include min(md) {
 					//margin-right: 1rem;
@@ -181,6 +181,8 @@
 					font-style: normal;
 					font-weight: 400;
 					line-height: 155%; /* 23.25px */
+					width: auto;
+					display: inline-block;
 				}
 				&.active{
 					position: relative;
@@ -204,7 +206,7 @@
 					transform: translate(-50%, 0);
 					//top: .5rem;
 					li {
-						text-align: center;
+						text-align: left;
 						margin-bottom: .4rem;
 						&:last-of-type{
 							margin-bottom: 0;

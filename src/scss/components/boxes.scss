@@ -560,7 +560,7 @@
 }
 .image-card-box-text{
 	h4, .title-4{
-		color: $brand-secondary;
+		//color: $brand-secondary;
 		display: none;
 		@include min(md) {
 			display: block;
@@ -846,7 +846,9 @@ a {
 		object-fit: cover;
 	}
 }
-
+.color-white{
+	color: $color-white;
+}
 .btn-play {
 	position: absolute;
 	top: 50%;

@@ -218,15 +218,21 @@ if (document.querySelector('.cover-slider')) {
 	});
 }
 
-// const spans = Array.from(document.querySelectorAll('.faq-item-title'));
-//
-// const addClassToSubmenu = (el) => {
-// 	el.target.parentNode.classList.toggle('active');
-// 	el.target.nextElementSibling.classList.toggle('active');
-// };
-// spans.forEach((span) => {
-// 	span.addEventListener('click', addClassToSubmenu);
+// $('.faq-item-title').on('click', function () {
+// 	const parent = $(this).parent('.faq-item');
+// 	parent.find('.faq-item-text').slideToggle(400);
+// 	parent.toggleClass('active');
 // });
+
+const spans = Array.from(document.querySelectorAll('.faq-item-title'));
+
+const addClassToSubmenu = (el) => {
+	el.target.parentNode.classList.toggle('active');
+	el.target.nextElementSibling.classList.toggle('active');
+};
+spans.forEach((span) => {
+	span.addEventListener('click', addClassToSubmenu);
+});
 
 const sections = document.querySelectorAll('.section');
 
@@ -246,7 +252,7 @@ playVideos.forEach((play) => {
 		sections.forEach((section) => {
 			section.style.zIndex = '-1';
 		});
-		document.querySelector('header').style.zIndex = '-1';
+		document.querySelector('header').style.display  = 'none';
 		 document.querySelector('.section-with-popup').style.zIndex = '4';
 	});
 });
@@ -256,7 +262,7 @@ closeVideos.forEach((close) => {
 
 	close.addEventListener('click', (e) => {
 		// e.target.nextElementSibling.nextElementSibling.classList.add('open');
-		document.querySelector('header').style.zIndex = '3';
+		document.querySelector('header').style.display = 'block';
 		document.querySelector('body').classList.remove('menu-open');
 		sections.forEach((section) => {
 			section.style.zIndex = '1';
@@ -594,10 +600,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	/*
     * FAQ toggle
     * */
-	$('.faq-item-title').on('click', function () {
-		const parent = $(this).parent('.faq-item');
-		parent.find('.faq-item-text').slideToggle(400);
-		parent.toggleClass('active');
 
-	});
 });

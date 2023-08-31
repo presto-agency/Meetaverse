@@ -184,7 +184,21 @@
 		}
 		.faq-item-text {
 			padding-top: 1rem;
-			display: none;
+			visibility: hidden;
+			position: absolute;
+			left: -9999px;
+			top: -9999px;
+			margin-top: 10px;
+			opacity: 0;
+			transition: margin-top 0.7s ease, opacity 0.4s ease;
+			&.active{
+				visibility: visible;
+				position: relative;
+				left: 0;
+				top: 0;
+				margin-top: 0;
+				opacity: 1;
+			}
 		}
 	}
 	&-wrap{
