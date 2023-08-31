@@ -12,6 +12,9 @@
 			padding: 10.4rem 0;
 		}
 	}
+	.btn-block{
+		margin: 2rem 0 0;
+	}
 }
 .experience{
 	&-list{
@@ -46,7 +49,6 @@
 			width: calc(50% - 3.2rem ) ;
 		}
 		@include min(md) {
-			margin: 0 1.6rem 5.6rem;
 			width: calc(33.3333% - 3.2rem ) ;
 		}
 		img{
