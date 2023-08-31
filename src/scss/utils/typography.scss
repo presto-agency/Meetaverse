@@ -127,7 +127,7 @@ h2,
 	font-family: "Montserrat";
 	font-size: 2.4rem;
 	font-style: normal;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 140%; /* 33.6px */
 	letter-spacing: -1px;
 	@include min(sm) {
@@ -304,7 +304,9 @@ ul.list {
 		}
 	}
 }
-
+b, strong{
+	font-weight: 600 !important;
+}
 .color-blue {
 	color: $brand-secondary;
 }
