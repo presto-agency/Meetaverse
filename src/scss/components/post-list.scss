@@ -101,6 +101,13 @@
 				line-height: 155%;
 			}
 			height: calc(100% - 19.2rem);
+			a{
+				&:hover{
+					h2{
+						color: $brand-secondary;
+					}
+				}
+			}
 		}
 		@include min(sm) {
 			margin:0 1.6rem 3.2rem;
