@@ -814,7 +814,11 @@ a {
 		}
 	}
 }
+.content-box-video{
+	@include min(md) {
 
+	}
+}
 .content-box-video,
 .content-box-autoplay {
 	width: 100%;
@@ -827,7 +831,7 @@ a {
 	@include min(md) {
 		padding: 0;
 		width: 50%;
-		.title-4, .title-2{
+		h4, .title-4,  h2, .title-2{
 			display: none;
 		}
 		margin: 1.6rem;
@@ -857,7 +861,7 @@ a {
 }
 .btn-play {
 	position: absolute;
-	top: 50%;
+	top: 23rem;
 	left: 50%;
 	transform: translate(-50%, 20%);
 	opacity: 0.8;
@@ -868,6 +872,9 @@ a {
 	background-color: transparent;
 	cursor: pointer;
 	padding: 0;
+	@include min(sm) {
+		top: 50%;
+	}
 	@include min(md) {
 		transform: translate(-50%, -50%);
 	}
