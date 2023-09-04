@@ -142,13 +142,20 @@
 		text-transform: uppercase
 	}
 	.card-hover{
+		padding: 0;
+		margin-bottom: 2.4rem;
 		p, .card-text{
 			font-size: 1.5rem;
 		}
 	}
+	.card-hover-top{
+		padding: 2.4rem;
+	}
 	.card-hover-back{
+		padding: 2.4rem;
 		.text-small{
 			color: $color-white;
+			text-align: left;
 		}
 	}
 
