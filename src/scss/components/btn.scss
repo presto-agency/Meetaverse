@@ -44,7 +44,7 @@
 		transition: all ease 600ms;
 	}
 	&:before{
-		background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
+		background: linear-gradient(160deg, #002698 0%, #3263F8 100%);
 	}
 	&:after{
 		//background: $color-white;
@@ -56,7 +56,7 @@
 	&:hover{
 		.text{
 			color: transparent;
-			background: var(--brand-cta-new-color, linear-gradient(177deg, #002698 0%, #3263F8 100%));
+			background: var(--brand-cta-new-color, linear-gradient(160deg, #002698 0%, #3263F8 100%));
 			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
@@ -91,7 +91,7 @@
 	overflow: hidden;
 	border: 1px solid transparent !important;
 	position: relative;
-	background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
+	background: linear-gradient(160deg, #002698 0%, #3263F8 100%);
 		.bg{
 			position: absolute;
 			background-color: $color-white;
@@ -182,7 +182,7 @@
 	}
 	&:hover{
 		color: transparent;
-		background: var(--brand-cta-new-color, linear-gradient(177deg, #002698 0%, #3263F8 100%));
+		background: var(--brand-cta-new-color, linear-gradient(160deg, #002698 0%, #3263F8 100%));
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -195,7 +195,7 @@
 	}
 }
 .btn-arrow{
-	background: var(--brand-cta-new-color, linear-gradient(177deg, #002698 0%, #3263F8 100%));
+	background: var(--brand-cta-new-color, linear-gradient(160deg, #002698 0%, #3263F8 100%));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -251,7 +251,7 @@
 	
 		.bg{
 			position: absolute;
-			background: linear-gradient(177deg, #002698 0%, #3263F8 100%);
+			background: linear-gradient(160deg, #002698 0%, #3263F8 100%);
 			width: 120%;
 			height: 200%;
 			border-radius: 50%;
