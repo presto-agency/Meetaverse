@@ -487,11 +487,14 @@
 
 		p {
 			font-family: 'Montserrat';
-			font-weight: 300;
+
 		}
 		&--white {
 			background-color: $color-white;
 			color: $gray-black;
+			h2, .title-2, h4, .title-4{
+				color: $gray-black;
+			}
 			h4, .title-4{
 				color: $brand-secondary;
 			}
