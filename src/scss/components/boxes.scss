@@ -16,7 +16,11 @@
 	.card-img{
 		height: 6.9rem;
 		img{
-			max-height: 5rem;
+			height: 100%;
+			max-height: 6.4rem;
+			@include min(sm) {
+				max-height: 7.2rem;
+			}
 		}
 		@include min(sm) {
 			height: 7.6rem;

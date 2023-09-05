@@ -94,7 +94,7 @@
 		img {
 			@include object_fit_cover;
 		}
-		img, picture{
+		img{
 			opacity: .3;
 		}
 	}

@@ -503,6 +503,10 @@ if (document.querySelector('.menu-item-has-children')) {
 			}
 		});
 	}
+	$('.section-blog__item table').each(function(e){
+		$(this).wrap( "<div class='table-wrap'></div>" );
+
+	});
 	// var imageDateInmages = $('img');
 	// for (let i = 0; i < imageDateInmages.length; i++) {
 	// 	console.log($(imageDateInmages[i]).offset().top);

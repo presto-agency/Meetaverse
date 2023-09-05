@@ -109,10 +109,10 @@ h1,
 .title-1 {
 	font-feature-settings: 'clig' off, 'liga' off;
 	font-family: 'Montserrat';
-	font-size: 4.2rem;
+	font-size: 3.2rem;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 110%; /* 46.2px */
+	line-height: 130%; /* 46.2px */
 	letter-spacing: -1px;
 	color: $gray-black;
 	@include min(sm) {
@@ -120,6 +120,7 @@ h1,
 	}
 	@include min(md) {
 		font-size: 7.2rem;
+		line-height: 110%;
 	}
 }
 h2,
@@ -315,9 +316,9 @@ p {
 		}
 	}
 }
-b, strong{
-	font-weight: 600 !important;
-}
+//b, strong{
+//	font-weight: 600 !important;
+//}
 .color-blue {
 	color: $brand-secondary;
 }
