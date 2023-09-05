@@ -206,24 +206,34 @@ h6,
 ul li,
 p {
 
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	margin-bottom: 1rem;
 	font-family: 'Montserrat';
-	line-height: 1.7em;
+	line-height: 155%;
 	@include min(md) {
-		font-size: 1.8rem;
+		font-size: 1.7rem;
+
 	}
 }
 ol {
 	li {
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 		margin-bottom: 1rem;
 		font-family: 'Montserrat';
-		line-height: 1.7em;
+		line-height: 155%;
 		@include min(md) {
-			font-size: 1.8rem;
+			font-size: 1.7rem;
 		}
 	}
+}
+.text-s{
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+		font-family: 'Montserrat';
+		line-height: 155%;
+		@include min(md) {
+			font-size: 1.5rem;
+		}
 }
 .text-center {
 	text-align: center;

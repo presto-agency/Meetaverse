@@ -277,6 +277,7 @@ closeVideos.forEach((close) => {
 
 	});
 });
+
 // window.addEventListener('message', event => {
 // 	if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmit') {
 // 		// const arrDataSubmit = new Array ();

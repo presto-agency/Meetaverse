@@ -288,6 +288,7 @@ table{
 		th{
 			&:first-of-type{
 				border-radius: 8px 0px 0px 0px;
+				border-left-color: transparent;
 
 			}
 			&:last-of-type{
@@ -318,9 +319,10 @@ table{
 		line-height: 150%; /* 18px */
 		padding: 1.2rem 1.6rem;
 		border-bottom: 1px solid $gray-300;
-		border-left: 1px solid $gray-300;
+		border-right: 1px solid $gray-300;
 		&:first-child{
 			font-weight: 500;
+			border-left: 1px solid $gray-300;
 		}
 	}
 	th, td{
@@ -332,10 +334,11 @@ table{
 		}
 		&:first-of-type{
 			position: sticky;
-			left: 0;
+			left: -1px;
 			z-index: 2;
 			width: 8.8rem;
 			@include min(md) {
+				left: 0;
 				width: 19.2rem;
 			}
 		}
@@ -496,6 +499,25 @@ table{
 			left: 1rem;
 			top: 1.6rem;
 			background-color: rgba(0, 0, 0, 0.8);
+		}
+	}
+}
+.design-system{
+	padding: 10rem 0;
+}
+.design-item{
+	display: block;
+	margin-bottom: 4rem;
+	.design-item__title{
+		display: block;
+		font-size: 2.8rem;
+		line-height: 150%;
+		font-weight: 600;
+		color: $gray-black;
+	}
+	p{
+		strong{
+			font-weight: 600;
 		}
 	}
 }
