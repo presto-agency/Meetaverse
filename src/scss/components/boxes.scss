@@ -345,7 +345,8 @@
         text-align: center;
 		@include min(md) {
 			width: auto;
-			max-width: 100%;
+			max-width: 22rem;
+			margin: 2.6rem auto 0;
 		}
 	}
   ul{
@@ -367,7 +368,7 @@
       b, strong{
         font-size: 1.5rem;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 155%;
         color: $brand-secondary;
         @include min(md) {
@@ -454,7 +455,9 @@
 		h2{
 			margin: 1.4rem 0 2.4rem;
 			@include min(md) {
-				margin: 1.4rem 0 3.8rem;
+				margin: 1.2rem 0 3.8rem;
+				letter-spacing: -1.8px;
+				line-height: 128%;
 			}
 		}
 		ul{
@@ -535,7 +538,7 @@
 		}
 	}
 }
-.image-card-box-video_full {
+.image-card-box-video_full, .image-card-box-autoplay {
 	position: relative;
 	padding: 0 2rem;
 	align-items: center;
