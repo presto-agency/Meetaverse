@@ -300,7 +300,7 @@
 					text-align: left;
 					color: $color-white;
 					font-family: 'Inter';
-					font-size: 1.2rem;
+					font-size: 1.5rem;
 					padding: 1.2rem 1.6rem;
 					font-style: normal;
 					font-weight: 500;
@@ -309,13 +309,16 @@
 					border: 0;
 					border-bottom: 1px solid $color-white;
 					border-left: 1px solid $color-white;
+					@include min(md) {
+						font-size: 1.7rem;
+					}
 				}
 			}
 		}
 		td{
 			color: $gray-700;
 			font-family: 'Inter';
-			font-size: 1.2rem;
+			font-size: 1.5rem;
 			font-style: normal;
 			font-weight: 400;
 			vertical-align: middle;
@@ -323,6 +326,9 @@
 			padding: 1.2rem 1.6rem;
 			border-bottom: 1px solid $gray-300;
 			border-right: 1px solid $gray-300;
+			@include min(md) {
+				font-size: 1.7rem;
+			}
 			&:first-child{
 				font-weight: 500;
 				border-left: 1px solid $gray-300;
@@ -342,7 +348,7 @@
 				width: 8.8rem;
 				@include min(md) {
 					left: 0;
-					width: 19.2rem;
+					width: 24.2rem;
 				}
 			}
 		}

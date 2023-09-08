@@ -181,11 +181,11 @@
 		background-image: url("data:image/svg+xml,%3Csvg width='48' height='49' viewBox='0 0 48 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='0.5' width='48' height='48' rx='24' fill='url(%23paint0_linear_14531_1271)'/%3E%3Cpath d='M29.9727 22.574C31.3896 23.3784 32.0979 23.7807 32.3409 24.2957C32.553 24.7454 32.553 25.2546 32.3409 25.7044C32.0979 26.2193 31.3896 26.6216 29.9727 27.4261L23.3181 31.2047C21.7456 32.0976 20.9593 32.544 20.3105 32.4966C19.7449 32.4553 19.2264 32.1943 18.8881 31.7804C18.5 31.3057 18.5 30.4633 18.5 28.7786V21.2214C18.5 19.5367 18.5 18.6944 18.8881 18.2196C19.2264 17.8058 19.7449 17.5447 20.3105 17.5034C20.9593 17.456 21.7456 17.9025 23.3181 18.7954L29.9727 22.574Z' fill='white'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_14531_1271' x1='20.8' y1='0.499999' x2='38.8967' y2='19.2076' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23002698'/%3E%3Cstop offset='1' stop-color='%233263F8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
 	}
 	&:hover{
-		color: transparent;
-		background: var(--brand-cta-new-color, linear-gradient(160deg, #002698 0%, #3263F8 100%));
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		//color: transparent;
+		//background: var(--brand-cta-new-color, linear-gradient(160deg, #002698 0%, #3263F8 100%));
+		//background-clip: text;
+		//-webkit-background-clip: text;
+		//-webkit-text-fill-color: transparent;
 		&:before{
 			opacity: 0;
 		}

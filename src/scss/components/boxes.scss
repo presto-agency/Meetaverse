@@ -345,6 +345,7 @@
         text-align: center;
 		@include min(md) {
 			width: auto;
+			display: block;
 			max-width: 22rem;
 			margin: 2.6rem auto 0;
 		}
@@ -451,6 +452,7 @@
 		}
 		h4, .title-4{
 			margin-bottom: 0;
+			letter-spacing: 0;
 		}
 		h2{
 			margin: 1.4rem 0 2.4rem;
@@ -528,7 +530,7 @@
 	justify-content: center;
 	background-color: $color-white;
 	.title-4{
-		color: $brand-secondary;
+		color: $gray-black;
 	}
 	@include min(md) {
 		width: 50%;
@@ -547,7 +549,7 @@
 	width: 100%;
 	h4, .title-4{
 		display: block;
-		color: $brand-secondary;
+		color: $gray-black;
 		margin: 4rem .4rem .5rem;
 	}
 	@include min(md) {
@@ -571,6 +573,13 @@
 			top: 0;
 			left: 0;
 			margin-left: 0;
+		}
+	}
+}
+.section-image{
+	.image-card-box-video_full, .image-card-box-autoplay {
+		h4, .title-4{
+			color: $brand-secondary;
 		}
 	}
 }
