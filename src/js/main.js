@@ -599,9 +599,7 @@ if (document.querySelector('.menu-item-has-children')) {
 	})
 }
 
-document.querySelector('.to-top').onclick = function() {
-	window.scrollTo({ top: 0, behavior: 'smooth' })
-}
+
 const doAnimationsOnScroll = function() {
 	const offset = $(window).scrollTop() + $(window).height()
 	const animatables = $('.animate-on-scroll');
@@ -627,3 +625,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     * */
 
 });
+document.querySelector('.to-top').onclick = function() {
+	window.scrollTo({ top: 0, behavior: 'smooth' })
+}
