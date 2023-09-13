@@ -407,20 +407,10 @@ if (singleEditor) {
 
 
     (function addTitlesToRelativeBlock() {
-        // document.querySelector('.wrapper').classList.add('wrapper-visible');
-        // document.querySelector('.wrapper').classList.add('wrapper-visible');
-        //const  firstTitles = document.querySelector('.description__content>h1');
         let titles = document.querySelectorAll('.text-entry__blog h2');
-        //add FAQ title to side bar`
-
 
         const relativeBlock = document.querySelector('.text-sidebar__list');
         let first_el = document.createElement('a');
-        //firstTitles.setAttribute('id', `top`);
-        //first_el.setAttribute('href', `#top`);
-        //first_el.setAttribute('class', `active-color`);
-        //first_el.append(firstTitles.innerHTML);
-        //relativeBlock.append(first_el);
         titles.forEach(function (title, i) {
             title.setAttribute('id', `${i+1}`);
         });
@@ -525,10 +515,6 @@ if (document.querySelector('.menu-item-has-children')) {
 		$(this).wrap( "<div class='table-wrap'></div>" );
 
 	});
-	// var imageDateInmages = $('img');
-	// for (let i = 0; i < imageDateInmages.length; i++) {
-	// 	console.log($(imageDateInmages[i]).offset().top);
-	// }
 	var addClassOnScroll = function () {
 		if($(window).width() < 992 ){}else{}
 
@@ -610,7 +596,7 @@ const doAnimationsOnScroll = function() {
 	
 	animatables.each(function(i) {
 		const animatable = $(this);
-		if ((animatable.offset().top + animatable.height() - 150) < offset) {
+		if ((animatable.offset().top + animatable.height() - 200) < offset) {
 			animatable.removeClass('hidden');
 		}
 	});
@@ -619,12 +605,12 @@ const doAnimationsOnScroll = function() {
 
 $(window).on('scroll', doAnimationsOnScroll);
 $(window).trigger('scroll');
-document.addEventListener('DOMContentLoaded', (event) => {
-	/*
-    * FAQ toggle
-    * */
-
-});
+// document.addEventListener('DOMContentLoaded', (event) => {
+// 	/*
+//     * FAQ toggle
+//     * */
+//
+// });
 document.querySelector('.to-top').onclick = function() {
 	window.scrollTo({ top: 0, behavior: 'smooth' })
 }
