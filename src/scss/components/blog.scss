@@ -116,6 +116,8 @@
 		//}
 	}
 	hr{
+		border: 1px solid $gray-400;
+		border-bottom: 0;
 		background: $gray-400;
 		margin: 3.2rem 0;
 		@include min(md) {
